@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Aktuální výzkum a publikace Tomáše Havránka podle oborů. Články, data a kód k meta-analýzám.">
+<title>Výzkum – Tomáš Havránek</title>
+<link rel="alternate" hreflang="en" href="index.html">
+<link rel="alternate" hreflang="cs" href="cs.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,500;1,400&amp;display=swap" rel="stylesheet">
+<style>
+:root { --ink:#171717; --grey:#686868; }
+* { box-sizing:border-box; }
+html { scroll-behavior:auto; }
+body { margin:0; background:#fff; color:var(--ink); font-family:'Source Serif 4'; font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased; }
+a { color:inherit; text-decoration-thickness:1px; text-underline-offset:4px; }
+a:hover { text-decoration:underline; }
+a:focus-visible { outline:2px solid var(--ink); outline-offset:5px; }
+.skip { position:absolute; top:-70px; left:20px; background:#fff; padding:10px; }
+.skip:focus { top:10px; }
+.page { max-width:1040px; margin:auto; padding:0 30px; }
+header { display:flex; align-items:flex-start; justify-content:space-between; padding-top:54px; gap:32px; }
+.identity { display:flex; align-items:center; gap:22px; }
+.portrait { width:99px; height:99px; object-fit:cover; flex:none; }
+h1 { font-family:'Source Serif 4'; font-size:32px; line-height:1.1; font-weight:400; letter-spacing:-1.1px; margin:0 0 9px; }
+.role { font-size:14px; line-height:1.5; margin:0; color:var(--grey); }
+.email { display:inline-block; font-size:13px; margin-top:6px; text-decoration:none; }
+nav { padding-inline-end:32px; display:flex; gap:25px; font-size:14px; padding-top:7px; white-space:nowrap; }
+nav a { text-decoration:none; }
+nav [aria-current] { text-decoration:underline; }
+main { margin-top:73px; }
+.premise { display:grid; grid-template-columns:1.28fr 1fr; gap:62px; align-items:start; }
+.statement { font-family:'Source Serif 4'; font-size:32px; line-height:1.35; letter-spacing:-.55px; margin:0; font-weight:400; }
+.explanation { font-size:15px; line-height:1.7; max-width:460px; margin:24px 0 0; }
+figure { margin:5px 0 0; }
+figure svg { display:block; width:100%; height:auto; overflow:visible; }
+figcaption { font-family:'Source Serif 4'; font-size:12px; line-height:1.6; color:var(--grey); margin:17px 0 0; }
+.figure-note { margin-top:9px; font-size:11px; line-height:1.6; }
+.figure-note summary { cursor:pointer; text-decoration:underline; text-underline-offset:2px; }
+.figure-note p { margin:6px 0 0; }
+figcaption a { text-underline-offset:2px; }
+.research { margin-top:64px; border-top:1px solid var(--grey); padding-top:27px; }
+.section-head { display:flex; align-items:baseline; justify-content:space-between; gap:24px; }
+h2 { font-family:'Source Serif 4'; font-weight:400; font-size:25px; line-height:1.3; margin:0; letter-spacing:-.3px; }
+.section-head>a { font-size:13px; text-decoration:none; }
+.reading { font-family:'Source Serif 4'; font-size:17px; margin:16px 0 29px; }
+.papers { list-style:none; padding:0; margin:0; max-width:870px; }
+.papers li { margin-bottom:26px; padding-left:24px; text-indent:-24px; }
+.paper-title { font-family:'Source Serif 4'; font-size:20px; line-height:1.4; text-decoration:none; }
+.paper-title:hover { text-decoration:underline; }
+.authors { display:block; color:var(--grey); font-size:13px; line-height:1.6; margin-top:4px; text-indent:0; }
+.journal { display:block; font-family:'Source Serif 4'; font-size:16px; line-height:1.6; text-indent:0; }
+.hub { margin:30px 0 0; font-size:15px; }
+.nowrap { white-space:nowrap; }
+.about { border-top:1px solid var(--grey); margin-top:50px; padding-top:28px; display:grid; grid-template-columns:210px 1fr; gap:35px; }
+.about p { font-family:'Source Serif 4'; font-size:18px; line-height:1.6; margin:0 0 14px; max-width:700px; }
+footer { font-family:'Source Serif 4'; border-top:1px solid var(--grey); padding:25px 0 38px; margin-top:36px; display:flex; justify-content:space-between; align-items:flex-start; gap:30px; color:var(--grey); font-size:12px; }
+footer p { margin:0; }
+.profiles { display:flex; flex-wrap:wrap; gap:6px 20px; max-width:330px; }
+.profiles a { text-decoration:none; }
+@media (max-width:760px) {
+.page { padding:0 24px; }
+header { flex-direction:column-reverse; padding-top:24px; gap:32px; }
+nav { gap:6px 24px; padding:0; font-size:13px; flex-wrap:wrap; }
+.identity { gap:16px; }
+.portrait { width:83px; height:83px; }
+h1 { font-size:27px; letter-spacing:-.8px; margin-bottom:7px; }
+.role { font-size:12px; }
+.email { font-size:12px; margin-top:8px; }
+main { margin-top:37px; }
+.premise { grid-template-columns:1fr; gap:32px; }
+.statement { font-size:27px; line-height:1.35; letter-spacing:-.45px; }
+.explanation { font-size:14px; line-height:1.6; margin-top:20px; }
+figure { max-width:420px; margin:0 auto; width:100%; }
+figcaption { font-size:12px; margin-top:15px; }
+.research { margin-top:40px; padding-top:23px; }
+.section-head { gap:10px; }
+h2 { font-size:23px; }
+.section-head>a { font-size:12px; }
+.reading { font-size:16px; line-height:1.6; margin-bottom:26px; }
+.papers li { padding-left:17px; text-indent:-17px; margin-bottom:25px; }
+.paper-title { font-size:18px; line-height:1.45; }
+.authors { font-size:12px; }
+.journal { font-size:15px; }
+.hub { font-size:14px; }
+.about { grid-template-columns:1fr; gap:17px; margin-top:35px; }
+.about p { font-size:17px; }
+footer { flex-direction:column; gap:20px; padding-bottom:30px; }
+}
+@media print { .page { max-width:none; } nav,.skip { display:none; } header { padding-top:0; } main { margin-top:35px; } .papers li,figure { break-inside:avoid; } a { text-decoration:none; } }
+</style>
+<style>
+.identity-name { font-size:32px; line-height:1.1; font-weight:400; letter-spacing:-1.1px; margin:0 0 9px; }
+.research-intro { margin-top:16px; }
+.current-papers { margin-top:28px; }
+.project-detail { display:block; font-size:13px; line-height:1.6; text-indent:0; margin-top:3px; }
+.research-closing { max-width:870px; margin:30px 0 0; font-size:15px; line-height:1.7; }
+.publication-context { max-width:870px; margin:18px 0 0; font-size:15px; line-height:1.7; }
+.field { margin-top:38px; }
+.field + .field { margin-top:42px; }
+h3 { font-size:20px; line-height:1.4; font-weight:500; margin:0 0 24px; }
+.profile-links { display:flex; flex-wrap:wrap; gap:8px 22px; margin:36px 0 0; font-size:13px; color:var(--grey); }
+.profile-links a { text-decoration:none; }
+@media (max-width:760px) {
+.identity-name { font-size:27px; letter-spacing:-.8px; margin-bottom:7px; }
+.current-papers { margin-top:25px; }
+.project-detail { font-size:12px; }
+.research-closing,.publication-context { font-size:14px; line-height:1.6; }
+h3 { font-size:19px; margin-bottom:23px; }
+.field,.field + .field { margin-top:34px; }
+}
+@media print { h2,h3 { break-after:avoid; } }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Přejít k&nbsp;obsahu</a>
+<div class="page">
+<header>
+<div class="identity">
+<img class="portrait" src="../photo.jpg" width="99" height="99" alt="Tomáš Havránek">
+<div><p class="identity-name">Tomáš Havránek</p><p class="role">Profesor ekonomie<br>Univerzita Karlova, Praha</p><a class="email" href="mailto:tomas.havranek@fsv.cuni.cz">tomas.havranek@fsv.cuni.cz</a></div>
+</div>
+<nav aria-label="Hlavní navigace"><a href="../cs.html">Úvod</a><a href="cs.html" aria-current="page">Výzkum</a><a href="../impact/cs.html">Ohlas</a><a href="https://meta-analysis.cz/">meta-analysis.cz</a><a href="index.html" lang="en">English</a></nav>
+</header>
+
+<main id="main">
+<h1 class="statement">Výzkum</h1>
+<p class="hub research-intro">Články, data a&nbsp;kód najdete na <a href="https://meta-analysis.cz/">meta-analysis.cz</a>; data k&nbsp;jednotlivým studiím jsou v&nbsp;<a href="https://meta-analysis.cz/datasets/">datovém archivu</a>.</p>
+<section class="research" aria-labelledby="current-research">
+<h2 id="current-research">Aktuální výzkum</h2>
+<ol class="papers reference-list current-papers" role="list">
+<li><a class="paper-title" href="https://meta-analysis.cz/waive_ottawa.pdf" lang="en">Weighted Adjustment Instrumental Variable Estimator</a><span class="authors">spoluautoři: Pedro Bom, Petr Cala, Zuzana Irsova a Heiko Rachinger</span><span class="project-detail"><a href="https://meta-analysis.cz/waive_ottawa.pdf">Prezentace</a> · Experimentální metoda na <a href="https://www.easymeta.org/">easymeta.org</a>.</span></li>
+<li><a class="paper-title" href="https://meta-analysis.cz/rdt_chemnitz.pdf" lang="en">The Residual Discontinuity Test for p-Hacking</a><span class="authors">spoluautoři: Zuzana Irsova, Pedro Bom a Heiko Rachinger</span><span class="project-detail"><a href="https://meta-analysis.cz/rdt_chemnitz.pdf">Prezentace</a> · Také jako experimentální metoda na <a href="https://www.easymeta.org/">easymeta.org</a>.</span></li>
+<li><a class="paper-title" href="https://meta-analysis.cz/debate" lang="en">Does Multi-Agent Debate Improve AI Feedback on Research Papers?</a><span class="authors">spoluautorka: Zuzana Irsova</span></li>
+<li><a class="paper-title" href="https://meta-analysis.cz/outliers" lang="en">Do Decisions about Outliers and Influential Effects Matter? Evidence from 358 Behavioral Science Meta-Analyses</a><span class="authors">spoluautoři: Zuzana Irsova, Martina Luskova a T. D. Stanley</span></li>
+<li><a class="paper-title" href="https://meta-analysis.cz/pcc_survey" lang="en">Do Methods Matter in the Meta-Analysis of Partial Correlation Coefficients?</a><span class="authors">spoluautoři: T. D. Stanley, Petr Cala, Hristos Doucouliagos a Zuzana Irsova</span><span class="journal">R&amp;R <i lang="en">Research Synthesis Methods</i>.</span></li>
+<li><a class="paper-title" href="https://meta-analysis.cz/power" lang="en">The Power of Science: Statistical Power in Published Research Across Five Disciplines</a><span class="authors">spoluautoři: Yue Wang, Frantisek Bartos, Tom Coupe, Sanghyun Hong, Zuzana Irsova a W. Robert Reed</span></li>
+<li><a class="paper-title" href="https://meta-analysis.cz/beauty" lang="en">Meta-Analysis of Field Studies on Beauty and Professional Success</a><span class="authors">spoluautoři: Zuzana Irsova, Kseniya Bortnikova a Frantisek Bartos</span><span class="journal">R&amp;R <i lang="en">Nature Human Behaviour</i>.</span></li>
+<li><a class="paper-title" href="https://meta-analysis.cz/exercise/" lang="en">Effect of Exercise on Cognition, Memory, and Executive Function: A Study-Level Meta-Meta-Analysis Across Populations and Exercise Categories</a><span class="authors">spoluautoři: Frantisek Bartos, Martina Luskova, Kseniya Bortnikova, Karolina Hozova, Klara Kantova a Zuzana Irsova</span><span class="journal">R&amp;R <i lang="en">Sports Medicine</i>.</span></li>
+<li><a class="paper-title" href="https://meta-analysis.cz/learning" lang="en">Publication Bias and P-Hacking in the Effect of COVID-19 on Learning: A Meta-Analysis</a><span class="authors">spoluautoři: Martina Luskova, Nino Buliskeria, Ali Elminejad, Zuzana Irsova, Stepan Jurajda a Marek Kapicka</span></li>
+<li><a class="paper-title" href="https://meta-analysis.cz/inflation" lang="en">Optimal Inflation Rate: A Meta-Analysis</a><span class="authors">spoluautoři: Matej Opatrny, Martin Opatrny, Zuzana Irsova a Mojmir Hampl</span></li>
+<li><a class="paper-title" href="https://meta-analysis.cz/electricity" lang="en">Electricity Demand Has Not Become More Price-Responsive Despite Ninety Years of Technological Change</a><span class="authors">spoluautoři: Peter Kudela, Zuzana Irsova, Anna Kudelova a Vojtech Sikl</span></li>
+<li><a class="paper-title" href="https://meta-analysis.cz/migrant" lang="en">The Elasticity of Substitution between Native and Immigrant Labor: A Meta-Analysis</a><span class="authors">spoluautoři: Klara Kantova, Zuzana Irsova a Jiri Schwarz</span><span class="journal">R&amp;R <i lang="en">Journal of Economic Surveys</i>.</span></li>
+<li><a class="paper-title" href="https://meta-analysis.cz/trust" lang="en">Trust, Rule of Law, and the Size Premium: Evidence from a Meta-Analysis</a><span class="authors">spoluautoři: Jiri Schwarz, Zuzana Irsova a Jiri Novak</span></li>
+<li><a class="paper-title" href="https://meta-analysis.cz/esg" lang="en">Do Female Directors Raise ESG Ratings? A Meta-Analysis</a><span class="authors">spoluautoři: Karolina Hozova a Zuzana Irsova</span></li>
+<li><a class="paper-title" href="https://meta-analysis.cz/alphas/" lang="en">What Matters in Explaining the Variation in Hedge Fund Performance?</a><span class="authors">spoluautoři: Fan Yang, Zuzana Irsova a Jiri Novak</span><span class="journal">R&amp;R <i lang="en">International Review of Economics and Finance</i>.</span></li>
+</ol>
+<p class="research-closing">Rozpracováno: zkreslení směrem k&nbsp;nule versus publikační selektivita (s&nbsp;Johnem Ioannidisem), p-hacking versus publikační selektivita (s&nbsp;Nino Buliskerií), testy externí validity pro meta-analýzy (s&nbsp;Chishiem Furukawou), zdánlivá přesnost napříč obory (s&nbsp;Františkem Bartošem) a&nbsp;automatická replikace meta-analýz (s&nbsp;Petrem Čalou).</p>
+</section>
+<section class="research" aria-labelledby="publications">
+<h2 id="publications">Vybrané publikace</h2>
+<p class="publication-context">Jde o&nbsp;výběr. Úplný seznam mých článků v&nbsp;odborných časopisech najdete na <a href="https://meta-analysis.cz/publications/">meta-analysis.cz/publications</a>.</p>
+<p class="publication-context">Mou práci citovalo pět nositelů Nobelovy ceny. Prezidenti federálních rezervních bank v&nbsp;USA z&nbsp;ní vycházeli ve svých projevech, ECB, Bank of England, BIS a&nbsp;MMF ve svých zprávách. Úplný přehled najdete na <a href="https://meta-analysis.cz/impact/">meta-analysis.cz/impact</a>.</p><section class="field" aria-labelledby="field-1">
+<h3 id="field-1">Ekonomie trhu práce</h3>
+<ol class="papers reference-list" role="list">
+<li><a class="paper-title" href="https://www.journals.uchicago.edu/doi/epdf/10.1086/737989" lang="en">Publication Bias and Model Uncertainty in Measuring the Effect of Class Size on Achievement</a><span class="authors">2026 · spoluautoři: Matej Opatrny, Zuzana Irsova a Milan Scasny</span><span class="journal"><i lang="en">Journal of Labor Economics</i>, v&nbsp;tisku.</span></li>
+<li><a class="paper-title" href="https://meta-analysis.cz/skill2.pdf" lang="en">Publication and Attenuation Biases in Measuring Skill Substitution</a><span class="authors">2024 · spoluautoři: Lubica Laslopova, Olesia Zeynalova a Zuzana Irsova</span><span class="journal"><i lang="en">Review of Economics and Statistics</i> 106(5), 1187–1200.</span></li>
+<li><a class="paper-title" href="https://meta-analysis.cz/frisch2.pdf" lang="en">Intertemporal Elasticity in Labor Supply: A Meta-Analysis</a><span class="authors">2023 · spoluautoři: Ali Elminejad, Roman Horvath a Zuzana Irsova</span><span class="journal"><i lang="en">Review of Economic Dynamics</i> 51, 1095–1113.</span></li>
+<li><a class="paper-title" href="https://meta-analysis.cz/sigma2.pdf" lang="en">Measuring Capital-Labor Substitution: The Importance of Method Choices and Publication Bias</a><span class="authors">2022 · spoluautoři: Sebastian Gechert, Dominika Kolcunova a Zuzana Irsova</span><span class="journal"><i lang="en">Review of Economic Dynamics</i> 45, 55–82.</span></li>
+</ol>
+</section>
+<section class="field" aria-labelledby="field-2">
+<h3 id="field-2">Mezinárodní ekonomie</h3>
+<ol class="papers reference-list" role="list">
+<li><a class="paper-title" href="https://meta-analysis.cz/armington2.pdf" lang="en">Estimating the Armington Elasticity: The Importance of Study Design and Publication Bias</a><span class="authors">2020 · spoluautoři: Josef Bajzik, Jiri Schwarz a Zuzana Irsova</span><span class="journal"><i lang="en">Journal of International Economics</i> 127, 103383.</span></li>
+<li><a class="paper-title" href="https://meta-analysis.cz/border2.pdf" lang="en">Do Borders Really Slash Trade? A Meta-Analysis</a><span class="authors">2017 · spoluautorka: Zuzana Irsova</span><span class="journal"><i lang="en">IMF Economic Review</i> 65(2), 365–396.</span></li>
+<li><a class="paper-title" href="https://meta-analysis.cz/substitution/substitution2.pdf" lang="en">Cross-Country Heterogeneity in Intertemporal Substitution</a><span class="authors">2015 · spoluautoři: Roman Horvath, Marek Rusnak a Zuzana Irsova</span><span class="journal"><i lang="en">Journal of International Economics</i> 96(1), 100–118.</span></li>
+<li><a class="paper-title" href="https://meta-analysis.cz/spillovers/spillovers2.pdf" lang="en">Estimating Vertical Spillovers from FDI: Why Results Vary and What the True Effect Is</a><span class="authors">2011 · spoluautorka: Zuzana Irsova</span><span class="journal"><i lang="en">Journal of International Economics</i> 85(2), 234–244.</span></li>
+</ol>
+</section>
+<section class="field" aria-labelledby="field-3">
+<h3 id="field-3">Makroekonomie</h3>
+<ol class="papers reference-list" role="list">
+<li><a class="paper-title" href="https://meta-analysis.cz/house_prices2.pdf" lang="en">When Does Monetary Policy Sway House Prices? A Meta-Analysis</a><span class="authors">2023 · spoluautoři: Dominika Ehrenbergerova a Josef Bajzik</span><span class="journal"><i lang="en">IMF Economic Review</i> 71, 538–573.</span></li>
+<li><a class="paper-title" href="https://meta-analysis.cz/excess_sensitivity_2.pdf" lang="en">Do Consumers Really Follow a Rule of Thumb? Three Thousand Estimates from 144 Studies Say &quot;Probably Not&quot;</a><span class="authors">2020 · spoluautorka: Anna Sokolova</span><span class="journal"><i lang="en">Review of Economic Dynamics</i> 35(1), 97–122.</span></li>
+<li><a class="paper-title" href="https://meta-analysis.cz/habits2.pdf" lang="en">Habit Formation in Consumption: A Meta-Analysis</a><span class="authors">2017 · spoluautoři: Marek Rusnak a Anna Sokolova</span><span class="journal"><i lang="en">European Economic Review</i> 95(1), 142–167.</span></li>
+<li><a class="paper-title" href="https://meta-analysis.cz/eis2.pdf" lang="en">Measuring Intertemporal Substitution: The Importance of Method Choices and Selective Reporting</a><span class="authors">2015</span><span class="journal"><i lang="en">Journal of the European Economic Association</i> 13(6), 1180–1204.</span></li>
+<li><a class="paper-title" href="https://meta-analysis.cz/price_puzzle/price_puzzle2.pdf" lang="en">How to Solve the Price Puzzle? A Meta-Analysis</a><span class="authors">2013 · spoluautoři: Roman Horvath a Marek Rusnak</span><span class="journal"><i lang="en">Journal of Money, Credit and Banking</i> 45(1), 37–70.</span></li>
+</ol>
+</section>
+<section class="field" aria-labelledby="field-4">
+<h3 id="field-4">Experimentální a&nbsp;finanční ekonomie</h3>
+<ol class="papers reference-list" role="list">
+<li><a class="paper-title" href="https://meta-analysis.cz/incentives/incentives.pdf" lang="en">Financial Incentives and Performance: A Meta-Analysis of Experiments in Economics</a><span class="authors">2026 · spoluautoři: Petr Cala, Zuzana Irsova, Martina Luskova, Jindrich Matousek a Jiri Novak</span><span class="journal"><i lang="en">Journal of Political Economy Microeconomics</i>, v&nbsp;tisku.</span></li>
+<li><a class="paper-title" href="https://meta-analysis.cz/discrate2.pdf" lang="en">Individual Discount Rates: A Meta-Analysis of Experimental Evidence</a><span class="authors">2022 · spoluautoři: Jindrich Matousek a Zuzana Irsova</span><span class="journal"><i lang="en">Experimental Economics</i> 25(1), 318–358.</span></li>
+<li><a class="paper-title" href="https://meta-analysis.cz/forward/forward2.pdf" lang="en">How Puzzling Is the Forward Premium Puzzle? A Meta-Analysis</a><span class="authors">2021 · spoluautoři: Diana Zigraiova, Zuzana Irsova a Jiri Novak</span><span class="journal"><i lang="en">European Economic Review</i> 134, 103714.</span></li>
+</ol>
+</section>
+<section class="field" aria-labelledby="field-5">
+<h3 id="field-5">Metavýzkum</h3>
+<ol class="papers reference-list" role="list">
+<li><a class="paper-title" href="https://meta-analysis.cz/reproducibility/" lang="en">Reproducibility and Robustness of Economics and Political Science Research</a><span class="authors">2026 · spoluautoři: Abel Brodeur a další (jeden z 347 autorů)</span><span class="journal"><i lang="en">Nature</i> 652, 151–156.</span></li>
+<li><a class="paper-title" href="https://meta-analysis.cz/maive/maive.pdf" lang="en">Spurious Precision in Meta-Analysis of Observational Research</a><span class="authors">2025 · spoluautoři: Pedro Bom, Zuzana Irsova a Heiko Rachinger</span><span class="journal"><i lang="en">Nature Communications</i> 16, 8454.</span></li>
+<li><a class="paper-title" href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/BDFE8B7111DB22CCCE8E14B4B93D24EA/S175928792400005Xa.pdf/reducing-the-biases-of-the-conventional-meta-analysis-of-correlations.pdf" lang="en">Reducing the biases of the conventional meta-analysis of correlations</a><span class="authors">2025 · spoluautoři: Tom Stanley a Chris Doucouliagos</span><span class="journal"><i lang="en">Research Synthesis Methods</i> 16, 42–59.</span></li>
+</ol>
+</section>
+<p class="profile-links"><a href="https://scholar.google.cz/citations?user=BF0BvBkAAAAJ&amp;hl=en">Google Scholar</a><a href="https://www.scopus.com/authid/detail.uri?authorId=24453189000">Scopus</a></p>
+</section>
+</main>
+<footer>
+<p>Institut ekonomických studií<br>Opletalova 26, 110&nbsp;00 Praha, Česká republika</p>
+<div class="profiles" aria-label="Odborné profily"><a href="https://scholar.google.cz/citations?user=BF0BvBkAAAAJ&amp;hl=en">Google Scholar</a><a href="https://orcid.org/0000-0002-3158-2539">ORCID</a><a href="https://ideas.repec.org/f/pha418.html">RePEc</a><a href="https://github.com/tjhavranek">GitHub</a><a href="https://meta-analysis.cz/komentare/">Komentáře</a></div>
+</footer>
+</div>
+</body>
+</html>
