@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head><base href="/tomashavranek.cz/"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Page not found. Stránka nenalezena." name="description"/>
+<title>Page not found — Tomas Havranek</title>
+<style>
+:root { --ink:#171717; --grey:#686868; }
+* { box-sizing:border-box; }
+html { scroll-behavior:auto; }
+body { margin:0; background:#fff; color:var(--ink); font-family:'Source Serif 4'; font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased; }
+a { color:inherit; text-decoration-thickness:1px; text-underline-offset:4px; }
+a:hover { text-decoration:underline; }
+a:focus-visible { outline:2px solid var(--ink); outline-offset:5px; }
+.skip { position:absolute; top:-70px; left:20px; background:#fff; padding:10px; }
+.skip:focus { top:10px; }
+.page { max-width:1040px; margin:auto; padding:0 30px; }
+header { display:flex; align-items:flex-start; justify-content:space-between; padding-top:54px; gap:32px; }
+.identity { display:flex; align-items:center; gap:22px; }
+.portrait { width:99px; height:99px; object-fit:cover; flex:none; }
+h1 { font-family:'Source Serif 4'; font-size:32px; line-height:1.1; font-weight:400; letter-spacing:-1.1px; margin:0 0 9px; }
+.role { font-size:14px; line-height:1.5; margin:0; color:var(--grey); }
+.email { display:inline-block; font-size:13px; margin-top:6px; text-decoration:none; }
+nav { padding-inline-end:32px; display:flex; gap:25px; font-size:14px; padding-top:7px; white-space:nowrap; }
+nav a { text-decoration:none; }
+nav [aria-current] { text-decoration:underline; }
+main { margin-top:73px; }
+.premise { display:grid; grid-template-columns:1.28fr 1fr; gap:62px; align-items:start; }
+.premise > div:first-child { grid-column:1 / -1; max-width:960px; }
+.premise { row-gap:46px; }
+.statement { font-family:'Source Serif 4'; font-size:32px; line-height:1.35; letter-spacing:-.55px; margin:0; font-weight:400; }
+.explanation { font-size:15px; line-height:1.7; max-width:460px; margin:24px 0 0; }
+figure { margin:5px 0 0; }
+figure svg { display:block; width:100%; height:auto; overflow:visible; }
+figcaption { font-family:'Source Serif 4'; font-size:12px; line-height:1.6; color:var(--grey); margin:17px 0 0; }
+figcaption a { text-underline-offset:2px; }
+.research { margin-top:64px; border-top:1px solid var(--grey); padding-top:27px; }
+.section-head { display:flex; align-items:baseline; justify-content:space-between; gap:24px; }
+h2 { font-family:'Source Serif 4'; font-weight:400; font-size:25px; line-height:1.3; margin:0; letter-spacing:-.3px; }
+.section-head>a { font-size:13px; text-decoration:none; }
+.reading { font-family:'Source Serif 4'; font-size:17px; margin:16px 0 29px; }
+.papers { list-style:none; padding:0; margin:0; max-width:870px; }
+.papers li { margin-bottom:26px; padding-left:24px; text-indent:-24px; }
+.paper-title { font-family:'Source Serif 4'; font-size:20px; line-height:1.4; text-decoration:none; }
+.paper-title:hover { text-decoration:underline; }
+.authors { display:block; color:var(--grey); font-size:13px; line-height:1.6; margin-top:4px; text-indent:0; }
+.journal { display:block; font-family:'Source Serif 4'; font-size:16px; line-height:1.6; text-indent:0; }
+.hub { margin:30px 0 0; font-size:15px; }
+.nowrap { white-space:nowrap; }
+.about { border-top:1px solid var(--grey); margin-top:50px; padding-top:28px; display:grid; grid-template-columns:210px 1fr; gap:35px; }
+.about p { font-family:'Source Serif 4'; font-size:18px; line-height:1.6; margin:0 0 14px; max-width:700px; }
+footer { font-family:'Source Serif 4'; border-top:1px solid var(--grey); padding:25px 0 38px; margin-top:36px; display:flex; justify-content:space-between; align-items:flex-start; gap:30px; color:var(--grey); font-size:12px; }
+footer p { margin:0; }
+.profiles { display:flex; flex-wrap:wrap; gap:6px 20px; max-width:330px; }
+.profiles a { text-decoration:none; }
+@media (max-width:760px) {
+.page { padding:0 24px; }
+header { flex-direction:column-reverse; padding-top:24px; gap:32px; }
+nav { gap:6px 24px; padding:0; font-size:13px; flex-wrap:wrap; }
+.identity { gap:16px; }
+.portrait { width:83px; height:83px; }
+h1 { font-size:27px; letter-spacing:-.8px; margin-bottom:7px; }
+.role { font-size:12px; }
+.email { font-size:12px; margin-top:8px; }
+main { margin-top:37px; }
+.premise { grid-template-columns:1fr; gap:32px; }
+.statement { font-size:27px; line-height:1.35; letter-spacing:-.45px; }
+.explanation { font-size:14px; line-height:1.6; margin-top:20px; }
+figure { max-width:420px; margin:0 auto; width:100%; }
+figcaption { font-size:12px; margin-top:15px; }
+.research { margin-top:40px; padding-top:23px; }
+.section-head { gap:10px; }
+h2 { font-size:23px; }
+.section-head>a { font-size:12px; }
+.reading { font-size:16px; line-height:1.6; margin-bottom:26px; }
+.papers li { padding-left:17px; text-indent:-17px; margin-bottom:25px; }
+.paper-title { font-size:18px; line-height:1.45; }
+.authors { font-size:12px; }
+.journal { font-size:15px; }
+.hub { font-size:14px; }
+.about { grid-template-columns:1fr; gap:17px; margin-top:35px; }
+.about p { font-size:17px; }
+footer { flex-direction:column; gap:20px; padding-bottom:30px; }
+}
+@media print { .page { max-width:none; } nav,.skip { display:none; } header { padding-top:0; } main { margin-top:35px; } .papers li,figure { break-inside:avoid; } a { text-decoration:none; } }
+/* Revision chart: full-width horizontal and vertical layouts. */
+.chart-heading { margin:0 0 22px; font-size:15px; font-weight:400; line-height:1.4; }
+.ma-chart {
+  --ma-ink: #171717; --ma-grey: #686868; --ma-shrank: #795a52;
+  --ma-grew: #476e70; --ma-neutral: #777777; --ma-rule: #c9c5c2;
+  width: 100%; max-width: none; min-width: 0; margin: 0;
+  grid-column: 1 / -1;
+  color: var(--ma-ink); font-family: 'Source Serif 4', Georgia, serif;
+  font-weight: 400; font-style: normal; line-height: 1.3;
+  container-type: inline-size;
+}
+.ma-chart svg { display: block; width: 100%; height: auto; overflow: hidden; font: inherit; }
+.ma-chart .ma-phone { display: none; max-width: 400px; margin-inline: auto; }
+.ma-chart text { font-family: inherit; font-weight: 400; font-variant-numeric: lining-nums tabular-nums; }
+.ma-chart .ma-tick { fill: var(--ma-grey); font-size: 15px; }
+.ma-chart .ma-axis-title { fill: var(--ma-grey); font-size: 14px; }
+.ma-chart .ma-legend { font-size: 15px; }
+.ma-chart .ma-shrank { --ma-color: var(--ma-shrank); }
+.ma-chart .ma-grew { --ma-color: var(--ma-grew); }
+.ma-chart .ma-unchanged { --ma-color: var(--ma-neutral); }
+.ma-chart .ma-legend circle { fill: var(--ma-color); }
+.ma-chart .ma-legend text { fill: var(--ma-grey); }
+.ma-chart .ma-guide { stroke: var(--ma-neutral); stroke-width: 1; }
+.ma-chart .ma-median { stroke: var(--ma-shrank); stroke-width: 1; stroke-dasharray: 3 4; }
+.ma-chart .ma-reference-label { fill: var(--ma-grey); font-size: 15px; }
+.ma-chart .ma-median-label { fill: var(--ma-shrank); font-size: 15px; }
+.ma-chart .ma-axis { stroke: var(--ma-rule); stroke-width: 1; fill: none; }
+.ma-chart .ma-label { fill: var(--ma-ink); font-size: 17px; }
+.ma-chart .ma-value { fill: var(--ma-color); font-size: 18px; }
+.ma-chart .ma-leader { stroke: var(--ma-color); stroke-width: .85; fill: none; pointer-events: none; }
+.ma-chart .ma-point { cursor: pointer; outline: none; text-decoration: none; }
+.ma-chart .ma-hit { fill: transparent; pointer-events: all; }
+.ma-chart .ma-dot { fill: var(--ma-color); }
+.ma-chart .ma-focus { fill: none; stroke: var(--ma-ink); stroke-width: 1.8; opacity: 0; }
+.ma-chart .ma-chevron { fill: none; stroke: var(--ma-color); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.ma-chart .ma-point :is(.ma-dot, .ma-focus, .ma-chevron, text) { pointer-events: none; }
+.ma-chart .ma-point .ma-off-value { pointer-events: all; }
+.ma-chart .ma-point:is(:hover, :focus) .ma-dot { r: 9; }
+.ma-chart .ma-point:is(:hover, :focus) .ma-focus { opacity: 1; }
+.ma-chart .ma-off-value { fill: var(--ma-grew); font-size: 17px; }
+.ma-chart .ma-phone .ma-tick { font-size: 14px; }
+.ma-chart .ma-phone .ma-label { font-size: 15px; }
+.ma-chart .ma-phone .ma-value { font-size: 17px; }
+.ma-chart .ma-phone .ma-reference-label, .ma-chart .ma-phone .ma-median-label { font-size: 14px; }
+.ma-chart .ma-phone .ma-legend { font-size: 14px; }
+@media (max-width: 639px) {
+  .ma-chart .ma-desktop { display: none; }
+  .ma-chart .ma-phone { display: block; }
+}
+@container (max-width: 639px) {
+  .ma-chart .ma-desktop { display: none; }
+  .ma-chart .ma-phone { display: block; }
+}
+@media (forced-colors: active) {
+  .ma-chart .ma-point:is(:hover, :focus) .ma-focus { stroke: Highlight; }
+}
+@media (max-width:639px) {
+p.statement { font-size:23px; }
+.papers .authors { font-size:13px; color:#555; }
+.section-head>a { display:inline-flex; align-items:center; min-height:44px; padding-inline:8px; margin-inline-end:-8px; }
+}
+
+@media (max-width:639px){ nav a{ display:inline-block; padding-top:11px; padding-bottom:11px; } }
+</style>
+<link href="fonts/fonts.css" rel="stylesheet"/><link href="favicon.svg" rel="icon" type="image/svg+xml"/><link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/><style>
+/* On white: #171717 = 17.9:1, #686868 = 5.6:1 (WCAG AA). */
+body,h1,h2,figcaption,.reading,.paper-title,.journal,.about p,footer {
+  font-family:'Source Serif 4',Georgia,'Times New Roman',serif;
+}
+.machine-link { flex-basis:100%; font-size:12px; }
+footer { flex-wrap:wrap; row-gap:16px; }
+:focus-visible { outline:2px solid var(--ink); outline-offset:5px; }
+.skip:focus { z-index:10; }
+@media print { body { color:#000; } .machine-link { display:none; } }
+</style><link href="https://tjhavranek.github.io/tomashavranek.cz/404.html" rel="canonical"/><meta content="Page not found — Tomas Havranek" property="og:title"/><meta content="Page not found. Stránka nenalezena." property="og:description"/><meta content="https://tjhavranek.github.io/tomashavranek.cz/404.html" property="og:url"/><meta content="https://tjhavranek.github.io/tomashavranek.cz/photo.jpg" property="og:image"/><meta content="Tomas Havranek" property="og:image:alt"/><meta content="960" property="og:image:width"/><meta content="960" property="og:image:height"/><meta content="en_GB" property="og:locale"/><meta content="cs_CZ" property="og:locale:alternate"/><meta content="website" property="og:type"/><meta content="Tomas Havranek" property="og:site_name"/><meta content="#ffffff" name="theme-color"/><meta content="noindex" name="robots"/><style>.identity-name{font-size:32px;line-height:1.1;margin:0 0 9px;letter-spacing:-1.1px} @media(max-width:760px){.identity-name{font-size:27px}}</style></head>
+<body>
+<a class="skip" href="404.html#main">Skip to content</a>
+<div class="page">
+<header>
+<div class="identity">
+<img alt="Tomas Havranek" class="portrait" decoding="async" height="99" sizes="(max-width:760px) 83px, 99px" src="photo-480.jpg" srcset="photo-480.jpg 480w, photo.jpg 960w" width="99"/>
+<div><p class="identity-name">Tomas Havranek</p><p class="role">Professor of economics<br/><a href="https://ies.fsv.cuni.cz/en/contacts/people/78067720">Charles University</a>, Prague</p><a class="email" href="mailto:tomas.havranek@fsv.cuni.cz">tomas.havranek@fsv.cuni.cz</a></div>
+</div>
+<nav aria-label="Main navigation"><a href="./">Home</a><a href="research/">Research</a><a href="impact/">Impact</a><a href="https://meta-analysis.cz/">meta-analysis.cz</a><a href="cs/" lang="cs">Česky</a></nav>
+</header>
+<main id="main"><h1 class="statement">Page not found</h1><p>The address may have changed. <a href="./">Home</a> · <a href="research/">Research</a></p><p lang="cs">Stránka nenalezena. Adresa se mohla změnit. <a href="cs/">Úvod</a> · <a href="cs/research/">Výzkum</a></p></main>
+<footer id="contact">
+<p>Institute of Economic Studies<br/>Opletalova 26, 110 00 Prague, Czech Republic</p>
+<div aria-label="Academic profiles" class="profiles"><a href="https://scholar.google.cz/citations?user=BF0BvBkAAAAJ&amp;hl=en">Google Scholar</a><a href="https://orcid.org/0000-0002-3158-2539">ORCID</a><a href="https://ideas.repec.org/f/pha418.html">RePEc</a><a href="https://github.com/tjhavranek">GitHub</a><a href="https://meta-analysis.cz/komentare/">Commentary in Czech</a></div>
+</footer>
+</div>
+</body>
+</html>
+

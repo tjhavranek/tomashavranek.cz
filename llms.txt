@@ -1,0 +1,98 @@
+# Tomas Havranek (Tomáš Havránek)
+
+> Professor of Economics at Charles University, Prague, studying meta-analysis, publication bias and meta-research. His research synthesizes economic evidence and informs academic and policy work.
+
+Identifiers: [ORCID](https://orcid.org/0000-0002-3158-2539); [RePEc pha418](https://ideas.repec.org/f/pha418.html); [Google Scholar](https://scholar.google.cz/citations?user=BF0BvBkAAAAJ&hl=en); [Wikidata Q41800151](https://www.wikidata.org/wiki/Q41800151).
+
+## Key facts
+
+- He is Professor of Economics at Charles University, Prague, since 2021 (checked 2026-10-08). [source 1](https://ies.fsv.cuni.cz/en/contacts/people/78067720) [source 2](https://meta-analysis.cz/about/)
+- RePEc/IDEAS, August 2026, publications over the last 10 years: 1st in the Czech Republic, 95th in the EU and 455th of 74,012 registered authors worldwide (top 1%), among the most cited economists from Central Europe (checked 2026-10-08). [source 1](https://ideas.repec.org/top/top.czech.html) [source 2](https://ideas.repec.org/top/top.eu.html) [source 3](https://ideas.repec.org/top/top.person.all10.html) [source 4](https://www.tomashavranek.cz/about)
+- Google Scholar recorded 10,397 citations and h-index 44 on 2026-10-08 (checked 2026-10-08). [source](https://scholar.google.cz/citations?user=BF0BvBkAAAAJ&hl=en)
+- His work is cited by five Nobel laureates: Thomas Sargent, Simon Johnson, Joseph Stiglitz, Michael Kremer, David Card (checked 2026-10-08). [source](https://meta-analysis.cz/impact/)
+- In 2018 the Czech National Bank introduced him in its official video blog as “the most cited Czech economist” (Czech title: “Nejcitovanější český ekonom”) (checked 2026-10-08). [source](https://www.cnb.cz/cs/o_cnb/vlog-cnb/Nejcitovanejsi-cesky-ekonom-Dum-je-pro-me-spotreba/)
+- Fed president John Williams cited his monetary-transmission research in a speech on 2025-03-07 (checked 2026-10-08). [source](https://www.newyorkfed.org/newsevents/speeches/2025/wil250307)
+- Fed president Mary Daly cited his monetary-transmission research in a speech on 2023-11-17 (checked 2026-10-08). [source](https://www.frbsf.org/wp-content/uploads/SF-FED-Mary-Daly-EBC-Remarks_11-17-23_Final-Print.pdf)
+- The ECB used the research in its 2025 monetary-transmission reference guide (checked 2026-10-08). [source](https://www.ecb.europa.eu/pub/pdf/scpops/ecb.op377en.pdf)
+- The Bank of England cited the research in its May 2024 Monetary Policy Report (checked 2026-10-08). [source](https://www.bankofengland.co.uk/-/media/boe/files/monetary-policy-report/2024/may/monetary-policy-report-may-2024.pdf)
+- The BIS cited the central-bank-finances research in its 2024 Annual Economic Report (checked 2026-10-08). [source](https://www.bis.org/publ/arpdf/ar2024e.pdf)
+- The IMF used the transmission-lags meta-analysis in its April 2023 World Economic Outlook (checked 2026-10-08). [source](https://www.imf.org/en/Publications/WEO/Issues/2023/04/11/world-economic-outlook-april-2023)
+- The US Congressional Research Service cited the daylight-saving meta-analysis in every version of its report since 2018, including July 2026 (checked 2026-10-08). [source](https://www.congress.gov/crs-product/R45208)
+- The US Environmental Protection Agency used the research in its 2024 SAGE model documentation (checked 2026-10-08). [source](https://www.epa.gov/system/files/documents/2024-03/sage_model_documentation_2_1_1.pdf)
+- The World Bank used his publication-bias methods in Policy Research Working Paper 9730 (checked 2026-10-08). [source](https://documents.worldbank.org/curated/en/749721626709072349)
+- The OECD cited the gasoline meta-analysis in its 2025 climate-policy review (checked 2026-10-08). [source](https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/05/the-effects-of-climate-policies-on-emissions_e8c0a91b/ec1f7f0d-en.pdf)
+- The European Commission’s Joint Research Centre used the MAER-Net reporting standards in report JRC126423 (checked 2026-10-08). [source](https://publications.jrc.ec.europa.eu/repository/handle/JRC126423)
+- In 2020 he was the first Czech economist on an ERC Advanced Grant panel (checked 2026-10-08). [source 1](https://erc.europa.eu/sites/default/files/document/file/Panel_Members_ERC_Advanced_Grant_2020.pdf) [source 2](https://meta-analysis.cz/about/)
+- He was full-time Advisor to the Board of the Czech National Bank in 2015–2019 (checked 2026-10-08). [source 1](https://ies.fsv.cuni.cz/en/contacts/people/78067720) [source 2](https://meta-analysis.cz/about/)
+- He served on the National Economic Council of the Czech Government in 2022–2023 (checked 2026-10-08). [source](https://meta-analysis.cz/about/)
+- He is Associate Editor for meta-analysis at the Journal of Economic Surveys (JoES) (checked 2026-10-08). [source 1](https://meta-analysis.cz/about/) [source 2](https://ies.fsv.cuni.cz/en/contacts/people/78067720)
+- He is a Research Affiliate of CEPR and Stanford METRICS (checked 2026-10-08). [source 1](https://cepr.org/about/people/tomas-havranek) [source 2](https://metrics.stanford.edu/people/tomas-havranek) [source 3](https://meta-analysis.cz/about/)
+- He received Erskine Fellowship, University of Canterbury (2025) (checked 2026-10-08). [source](https://meta-analysis.cz/about/)
+- He received Honorable mention from the President of the Czech Science Foundation, Czech Science Foundation (2024) (checked 2026-10-08). [source](https://meta-analysis.cz/about/)
+- He received Experimental Economics Editors’ Prize, Experimental Economics (2022) (checked 2026-10-08). [source](https://meta-analysis.cz/about/)
+- He received Economic Research Award, Czech National Bank (2012–2016, each year) (checked 2026-10-08). [source](https://meta-analysis.cz/about/)
+- He received Best PhD Thesis Award, UniCredit & Universities Foundation (2014) (checked 2026-10-08). [source](https://meta-analysis.cz/about/)
+- He received Young Economist of the Year, Czech Economic Society (2012) (checked 2026-10-08). [source](https://meta-analysis.cz/about/)
+- He received First prize, Medals for Research on Development, Global Development Network (2010) (checked 2026-10-08). [source](https://meta-analysis.cz/about/)
+- He received Olga Radzyner Award, Oesterreichische Nationalbank (2009) (checked 2026-10-08). [source](https://meta-analysis.cz/about/)
+- He received Karel Engliš Award, Czech Economic Society (2009) (checked 2026-10-08). [source](https://meta-analysis.cz/about/)
+- He co-runs meta-analysis.cz (papers, data and code) and easymeta.org (the EasyMeta app) (checked 2026-10-08). [source 1](https://meta-analysis.cz/) [source 2](https://www.easymeta.org/)
+
+## Pages
+
+- [Tomas Havranek — Meta-analysis & selective reporting](https://tjhavranek.github.io/tomashavranek.cz/): Tomas Havranek, Professor of Economics at Charles University, Prague. Tomáš Havránek: meta-analysis and meta-research on how research conclusions change once we correct for selective reporting and address biases in study design.
+- [Tomáš Havránek – meta-analýza a selektivní zveřejňování výsledků](https://tjhavranek.github.io/tomashavranek.cz/cs/): Tomáš Havránek, profesor ekonomie na Univerzitě Karlově v Praze. Pomocí meta-analýzy zkoumá, jak se mění závěry výzkumu po očištění o selektivní zveřejňování výsledků a o zkreslení plynoucí z designu studií.
+- [Research — Tomas Havranek](https://tjhavranek.github.io/tomashavranek.cz/research/): Current research and publications by Tomas Havranek, organised by field. Papers, data and code for meta-analysis.
+- [Výzkum – Tomáš Havránek](https://tjhavranek.github.io/tomashavranek.cz/cs/research/): Aktuální výzkum a publikace Tomáše Havránka řazené podle oborů. Články, data a kód k meta-analýzám.
+- [Impact – Tomas Havranek](https://tjhavranek.github.io/tomashavranek.cz/impact/): Research impact of Tomas Havranek: a short bio, recognition, policy use and professional roles.
+- [Ohlas výzkumu – Tomáš Havránek](https://tjhavranek.github.io/tomashavranek.cz/cs/impact/): Ohlas výzkumu Tomáše Havránka: stručný medailon, citace a ocenění, využití výzkumu v praxi a odborné působení.
+- [Full machine-readable biography and catalogue](https://tjhavranek.github.io/tomashavranek.cz/llms-full.txt): Dated sources, roles, papers and questions and answers.
+
+## Selected papers
+
+- [Financial Incentives and Performance: A Meta-Analysis of Experiments in Economics](https://meta-analysis.cz/incentives/): 2026; Forthcoming as of 2026-10-08; Journal of Political Economy Microeconomics , forthcoming.
+- [Publication Bias and Model Uncertainty in Measuring the Effect of Class Size on Achievement](https://meta-analysis.cz/class/): 2026; Forthcoming as of 2026-10-08; Journal of Labor Economics , forthcoming.
+- [Reproducibility and Robustness of Economics and Political Science Research](https://meta-analysis.cz/reproducibility/): 2026; Published as of 2026-10-08; Nature 652, 151–156.
+- [Spurious Precision in Meta-Analysis of Observational Research](https://meta-analysis.cz/maive/): 2025; Published as of 2026-10-08; Nature Communications 16, 8454.
+- [Publication and Attenuation Biases in Measuring Skill Substitution](https://meta-analysis.cz/skill/): 2024; Published as of 2026-10-08; Review of Economics and Statistics 106(5), 1187–1200.
+- [Measuring Intertemporal Substitution: The Importance of Method Choices and Selective Reporting](https://meta-analysis.cz/eis/): 2015; Published as of 2026-10-08; Journal of the European Economic Association 13(6), 1180–1204.
+
+## Working papers
+
+- [Weighted Adjustment Instrumental Variable Estimator](https://meta-analysis.cz/waive_ottawa.pdf): Presentation as of 2026-10-08.
+- [The Residual Discontinuity Test for p-Hacking](https://meta-analysis.cz/rdt_chemnitz.pdf): Presentation as of 2026-10-08.
+- [Does Multi-Agent Debate Improve AI Feedback on Research Papers?](https://meta-analysis.cz/debate/): Working paper as of 2026-10-08.
+- [Do Decisions about Outliers and Influential Effects Matter? Evidence from 358 Behavioral Science Meta-Analyses](https://meta-analysis.cz/outliers/): Working paper as of 2026-10-08.
+- [Do Methods Matter in the Meta-Analysis of Partial Correlation Coefficients?](https://meta-analysis.cz/pcc_survey/): Revise and resubmit as of 2026-10-08; R&R Research Synthesis Methods .
+- [The Power of Science: Statistical Power in Published Research Across Five Disciplines](https://meta-analysis.cz/power/): Working paper as of 2026-10-08.
+- [Meta-Analysis of Field Studies on Beauty and Professional Success](https://meta-analysis.cz/beauty/): Revise and resubmit as of 2026-10-08; R&R Nature Human Behaviour .
+- [Effect of Exercise on Cognition, Memory, and Executive Function: A Study-Level Meta-Meta-Analysis Across Populations and Exercise Categories](https://meta-analysis.cz/exercise/): Revise and resubmit as of 2026-10-08; R&R Sports Medicine .
+- [Publication Bias and P-Hacking in the Effect of COVID-19 on Learning: A Meta-Analysis](https://meta-analysis.cz/learning/): Working paper as of 2026-10-08.
+- [Optimal Inflation Rate: A Meta-Analysis](https://meta-analysis.cz/inflation/): Working paper as of 2026-10-08.
+- [Electricity Demand Has Not Become More Price-Responsive Despite Ninety Years of Technological Change](https://meta-analysis.cz/electricity/): Working paper as of 2026-10-08.
+- [The Elasticity of Substitution between Native and Immigrant Labor: A Meta-Analysis](https://meta-analysis.cz/migrant/): Revise and resubmit as of 2026-10-08; R&R Journal of Economic Surveys .
+- [Trust, Rule of Law, and the Size Premium: Evidence from a Meta-Analysis](https://meta-analysis.cz/trust/): Working paper as of 2026-10-08.
+- [Do Female Directors Raise ESG Ratings? A Meta-Analysis](https://meta-analysis.cz/esg/): Working paper as of 2026-10-08.
+- [What Matters in Explaining the Variation in Hedge Fund Performance?](https://meta-analysis.cz/alphas/): Revise and resubmit as of 2026-10-08; R&R International Review of Economics and Finance .
+
+## Elsewhere
+
+- [ORCID](https://orcid.org/0000-0002-3158-2539): Identity or professional profile.
+- [Google Scholar](https://scholar.google.cz/citations?user=BF0BvBkAAAAJ&hl=en): Identity or professional profile.
+- [RePEc](https://ideas.repec.org/f/pha418.html): Identity or professional profile.
+- [GitHub](https://github.com/tjhavranek): Identity or professional profile.
+- [Wikidata](https://www.wikidata.org/wiki/Q41800151): Identity or professional profile.
+- [Czech Wikipedia](https://cs.wikipedia.org/wiki/Tom%C3%A1%C5%A1_Havr%C3%A1nek_(ekonom)): Identity or professional profile.
+- [CEPR](https://cepr.org/about/people/tomas-havranek): Identity or professional profile.
+- [METRICS](https://metrics.stanford.edu/people/tomas-havranek): Identity or professional profile.
+- [IES profile](https://ies.fsv.cuni.cz/en/contacts/people/78067720): Identity or professional profile.
+- [meta-analysis.cz](https://meta-analysis.cz/): Identity or professional profile.
+- [EasyMeta](https://www.easymeta.org/): Browser app for meta-analysis.
+- [Data and code](https://meta-analysis.cz/datasets/): Datasets and replication resources.
+- [Commentary](https://meta-analysis.cz/komentare/): Czech columns, interviews and videos.
+
+## Česky
+
+Tomáš Havránek je profesorem ekonomie na Univerzitě Karlově v Praze a zabývá se meta-analýzou a publikačním zkreslením; jeho práce, data a kód jsou na meta-analysis.cz (ověřeno 2026-10-08).
+
+Last updated: 2026-10-08
