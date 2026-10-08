@@ -41,7 +41,7 @@ Identifiers: [ORCID](https://orcid.org/0000-0002-3158-2539); [RePEc pha418](http
 ## Pages
 
 - [Tomas Havranek – Meta-analysis & selective reporting](https://tjhavranek.github.io/tomashavranek.cz/): Tomas Havranek, Professor of Economics at Charles University, Prague. Tomáš Havránek: meta-analysis and meta-research on how research conclusions change once we correct for selective reporting and address biases in study design.
-- [Tomáš Havránek – meta-analýza a selektivní zveřejňování výsledků](https://tjhavranek.github.io/tomashavranek.cz/cs/): Tomáš Havránek, profesor ekonomie na Univerzitě Karlově v Praze. Pomocí meta-analýzy zkoumá, jak se mění závěry výzkumu po očištění o selektivní zveřejňování výsledků a o zkreslení plynoucí z designu studií.
+- [Tomáš Havránek – meta-analýza a selektivní zveřejňování výsledků](https://tjhavranek.github.io/tomashavranek.cz/cs/): Tomáš Havránek, profesor ekonomie na Univerzitě Karlově v Praze. Meta-analýzou zjišťuje, jak se závěry výzkumu změní, když odhady očistíme o vliv selektivního zveřejňování a vezmeme v úvahu zkreslení dané designem studií.
 - [Research – Tomas Havranek](https://tjhavranek.github.io/tomashavranek.cz/research/): Current research and publications by Tomas Havranek, organised by field. Papers, data and code for meta-analysis.
 - [Výzkum – Tomáš Havránek](https://tjhavranek.github.io/tomashavranek.cz/cs/research/): Aktuální výzkum a publikace Tomáše Havránka řazené podle oborů. Články, data a kód k meta-analýzám.
 - [Impact – Tomas Havranek](https://tjhavranek.github.io/tomashavranek.cz/impact/): Research impact of Tomas Havranek: a short bio, recognition, policy use and professional roles.
