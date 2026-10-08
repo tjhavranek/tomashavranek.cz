@@ -63,7 +63,7 @@ footer p { margin:0; }
 .profiles a { text-decoration:none; }
 @media (max-width:760px) {
 .page { padding:0 24px; }
-header { flex-direction:column-reverse; padding-top:24px; gap:32px; }
+header { flex-direction:column; padding-top:24px; gap:32px; }
 nav { gap:6px 24px; padding:0; font-size:13px; flex-wrap:wrap; }
 .identity { gap:16px; }
 .portrait { width:83px; height:83px; }
@@ -92,7 +92,19 @@ footer { flex-direction:column; gap:20px; padding-bottom:30px; }
 }
 @media print { .page { max-width:none; } nav,.skip { display:none; } header { padding-top:0; } main { margin-top:35px; } .papers li,figure { break-inside:avoid; } a { text-decoration:none; } }
 
-@media (max-width:639px){ nav a{ display:inline-block; padding-top:11px; padding-bottom:11px; } }
+@media (max-width:639px) {
+nav { flex-wrap:nowrap; column-gap:12px; row-gap:0; font-size:clamp(12px, 3.3333vw, 13px); }
+nav a { display:inline-block; position:relative; padding:4px 0; }
+nav a::after { content:""; position:absolute; inset:-9px -6px; }
+header .email, footer a { position:relative; display:inline-block; }
+header .email::after { content:""; position:absolute; inset:-8px -6px -14px; }
+footer a::after { content:""; position:absolute; inset:-11px -6px; }
+.profiles { row-gap:22px; }
+.papers .authors { font-size:13px; color:#555; }
+}
+
+.home-link { color:inherit; text-decoration:none; }
+.home-link:hover, .home-link:focus-visible { text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px; }
 </style>
 <style>
 .identity-name { font-size:32px; line-height:1.1; font-weight:400; letter-spacing:-1.1px; margin:0 0 9px; }
@@ -120,15 +132,15 @@ h3 { font-size:19px; margin-bottom:23px; }
 /* Impact uses the shared Research stylesheet above. */
 .impact-section { margin-top:36px; padding-top:25px; }
 .impact-section > div { min-width:0; }
-.impact-section p { font-size:15px; line-height:1.7; margin:0 0 12px; }
+.impact-section p { font-size:16px; line-height:1.7; margin:0 0 12px; }
 .impact-section .section-note,.checked { color:var(--grey); font-size:13px; line-height:1.6; }
 .section-note { margin-top:10px !important; }
 .checked { margin:13px 0 0; }
 .impact-section .bio { font-size:17px; line-height:1.7; }
 .impact-section .metrics { font-size:18px; line-height:1.6; }
-.compact-list { list-style:none; padding:0; margin:0; font-size:15px; line-height:1.65; }
+.compact-list { list-style:none; padding:0; margin:0; font-size:16px; line-height:1.65; }
 .compact-list li + li { margin-top:8px; }
-.awards { display:grid; grid-template-columns:85px 1fr; gap:6px 16px; margin:22px 0 0; font-size:15px; line-height:1.6; }
+.awards { display:grid; grid-template-columns:85px 1fr; gap:6px 16px; margin:22px 0 0; font-size:16px; line-height:1.6; }
 .awards dt { color:var(--grey); }
 .awards dd { margin:0; }
 .impact-section .bio-links { display:flex; flex-wrap:wrap; gap:8px 22px; font-size:13px; margin:17px 0 0; }
@@ -137,7 +149,7 @@ h3 { font-size:19px; margin-bottom:23px; }
 @media (max-width:760px) {
 .impact-section { margin-top:30px; padding-top:23px; gap:15px; }
 .impact-section .bio { font-size:16px; line-height:1.65; }
-.impact-section p,.compact-list,.awards { font-size:14px; }
+.impact-section p,.compact-list,.awards { font-size:16px; }
 .impact-section .metrics { font-size:17px; }
 .awards { grid-template-columns:74px 1fr; gap:8px 12px; margin-top:20px; }
 .section-note { margin-top:6px !important; }
@@ -167,7 +179,8 @@ footer { flex-wrap:wrap; row-gap:16px; }
   },
   "about": {
     "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
-  }
+  },
+  "dateModified": "2026-10-08"
 }</script></head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -175,9 +188,9 @@ footer { flex-wrap:wrap; row-gap:16px; }
 <header>
 <div class="identity">
 <img alt="Tomas Havranek" class="portrait" decoding="async" height="99" sizes="(max-width:760px) 64px, 76px" src="../photo-480.jpg" srcset="../photo-480.jpg 480w, ../photo.jpg 960w" width="99"/>
-<div><p class="identity-name">Tomas Havranek</p><p class="role">Professor of economics<br/>Charles University, Prague</p><a class="email" href="mailto:tomas.havranek@fsv.cuni.cz">tomas.havranek@fsv.cuni.cz</a></div>
+<div><p class="identity-name"><a class="home-link" href="../">Tomas Havranek</a></p><p class="role">Professor of economics<br/><a href="https://ies.fsv.cuni.cz/en/contacts/people/78067720">Charles University</a>, Prague</p><a class="email" href="mailto:tomas.havranek@fsv.cuni.cz">tomas.havranek@fsv.cuni.cz</a></div>
 </div>
-<nav aria-label="Main navigation"><a href="../">Home</a><a href="../research/">Research</a><a aria-current="page" href="./">Impact</a><a href="https://meta-analysis.cz/">meta-analysis.cz</a><a href="../cs/impact/" lang="cs">Česky</a></nav>
+<nav aria-label="Main navigation"><a href="../">Home</a><a href="../research/">Research</a><a aria-current="page" href="./">Impact</a><a href="https://meta-analysis.cz/">meta-analysis.cz</a><a href="../cs/impact/" lang="cs">Cesky</a></nav>
 </header>
 <main id="main">
 <h1 class="statement">Impact</h1>
@@ -185,21 +198,21 @@ footer { flex-wrap:wrap; row-gap:16px; }
 <section aria-labelledby="short-bio" class="about impact-section">
 <div><h2 id="short-bio">Short bio</h2></div>
 <div>
-<p class="bio">Tomáš Havránek is Professor of Economics at the Institute of Economic Studies, Charles University, Prague. He studies meta-analysis, correcting published evidence for selective reporting and biases in study design. With Zuzana Irsova, he maintains meta-analysis.cz. He is a CEPR and Stanford METRICS Research Affiliate and Associate Editor for meta-analysis at the Journal of Economic Surveys. Formerly Advisor to the Board of the Czech National Bank, he became the first Czech economist on an ERC Advanced Grant panel in 2020. He lives in Litomyšl, chairs the local school board and helps run its floorball club.</p>
-<p class="bio-links"><a href="https://tjhavranek.github.io/media/photos/">Press photos</a> <a href="https://meta-analysis.cz/about/">Profile</a></p>
+<p class="bio">Tomas Havranek is Professor of Economics at the Institute of Economic Studies, Charles University, Prague. He studies meta-analysis, correcting published evidence for selective reporting and biases in study design. With Zuzana Irsova, he maintains meta-analysis.cz. He is a CEPR and Stanford METRICS Research Affiliate and Associate Editor for meta-analysis at the Journal of Economic Surveys. Formerly Advisor to the Board of the Czech National Bank, he became the first Czech economist on an ERC Advanced Grant panel in 2020. He lives in Litomysl, chairs the local school board and helps run the town's floorball club.</p>
+<p class="bio-links"><a href="https://meta-analysis.cz/about/photos/">Press photos</a> <a href="https://meta-analysis.cz/about/">Profile</a></p>
 </div>
 </section><section aria-labelledby="recognition" class="about impact-section">
 <div><h2 id="recognition">Recognition</h2><p class="section-note"><a href="https://meta-analysis.cz/about/">Awards source</a></p></div>
 <div>
-<p class="metrics"><a href="https://scholar.google.cz/citations?user=BF0BvBkAAAAJ&amp;hl=en">Google Scholar</a>: 10,397 citations, h-index 44 (8 October 2026).</p><p>RePEc/IDEAS, August 2026, last 10 years: <a href="https://ideas.repec.org/top/top.czech.html">first in the Czech Republic</a>, <a href="https://ideas.repec.org/top/top.eu.html">95th in the European Union</a> and <a href="https://ideas.repec.org/top/top.person.all10.html">455th of 74,012 worldwide (top 1%)</a>, among the most cited economists from Central Europe.</p><p>In 2018 the Czech National Bank introduced him in <a href="https://www.cnb.cz/cs/o_cnb/vlog-cnb/Nejcitovanejsi-cesky-ekonom-Dum-je-pro-me-spotreba/">its video blog</a> as “the most cited Czech economist”.</p><dl class="awards">
+<p class="metrics"><a href="https://scholar.google.cz/citations?user=BF0BvBkAAAAJ&amp;hl=en">Google Scholar</a>: 10,397 citations, h-index 44 (8 October 2026).</p><p>RePEc/IDEAS, August 2026, last 10 years: <a href="https://ideas.repec.org/top/top.czech.html">first in the Czech Republic</a>, <a href="https://ideas.repec.org/top/top.eu.html">95th in the European Union</a> and <a href="https://ideas.repec.org/top/top.person.all10.html">455th of 74,012 registered authors worldwide (top 1%)</a>, among the most cited economists from Central Europe.</p><p>In 2018 the Czech National Bank introduced him in <a href="https://www.cnb.cz/cs/o_cnb/vlog-cnb/Nejcitovanejsi-cesky-ekonom-Dum-je-pro-me-spotreba/">its video blog</a> as “the most cited Czech economist”.</p><dl class="awards">
 <dt>2025</dt><dd>Erskine Fellowship, University of Canterbury</dd>
 <dt>2024</dt><dd>Honorable mention from the President of the Czech Science Foundation</dd>
-<dt>2022</dt><dd>Experimental Economics Editors’ Prize (with Jindřich Matoušek and Zuzana Irsova)</dd>
+<dt>2022</dt><dd>Experimental Economics Editors’ Prize (with Jindrich Matousek and Zuzana Irsova)</dd>
 <dt>2012–2016</dt><dd>Czech National Bank Economic Research Award, each year</dd>
 <dt>2014</dt><dd>Best PhD Thesis Award, UniCredit &amp; Universities Foundation</dd>
-<dt>2012</dt><dd>Young Economist of the Year, Czech Economic Society (with Marek Rusnák)</dd>
+<dt>2012</dt><dd>Young Economist of the Year, Czech Economic Society (with Marek Rusnak)</dd>
 <dt>2010</dt><dd>First prize, GDN Medals for Research on Development (with Zuzana Irsova)</dd>
-<dt>2009</dt><dd>Olga Radzyner Award, Austrian central bank; Karel Engliš Award, Czech Economic Society</dd>
+<dt>2009</dt><dd>Olga Radzyner Award, Austrian central bank; Karel Englis Award, Czech Economic Society</dd>
 </dl>
 </div>
 </section><section aria-labelledby="research-use" class="about impact-section">
@@ -207,38 +220,38 @@ footer { flex-wrap:wrap; row-gap:16px; }
 <div>
 <p>Five Nobel laureates cite his work: <a href="https://dp.quantecon.org/">Thomas Sargent</a>, <a href="https://doi.org/10.1257/aer.20250064">Simon Johnson</a>, <a href="https://doi.org/10.1093/oxrep/graf026">Joseph Stiglitz</a>, <a href="https://doi.org/10.1016/bs.hesbe.2018.12.002">Michael Kremer</a>, <a href="https://doi.org/10.1093/jeea/jvx028">David Card</a>.</p>
 <ul class="compact-list" role="list">
-<li>Federal Reserve Bank presidents <a href="https://www.newyorkfed.org/newsevents/speeches/2025/wil250307">John Williams (2025)</a> and <a href="https://www.frbsf.org/wp-content/uploads/SF-FED-Mary-Daly-EBC-Remarks_11-17-23_Final-Print.pdf">Mary Daly (2023)</a>, in speeches on monetary transmission.</li>
+<li>Federal Reserve Bank presidents <a href="https://www.newyorkfed.org/newsevents/speeches/2025/wil250307">John Williams (2025)</a> and <a href="https://www.frbsf.org/wp-content/uploads/SF-FED-Mary-Daly-EBC-Remarks_11-17-23_Final-Print.pdf">Mary Daly (2023)</a> cited it in speeches on monetary transmission.</li>
 <li><a href="https://www.ecb.europa.eu/pub/pdf/scpops/ecb.op377en.pdf">ECB</a>: monetary transmission, 2025.</li>
 <li><a href="https://www.bankofengland.co.uk/-/media/boe/files/monetary-policy-report/2024/may/monetary-policy-report-may-2024.pdf">Bank of England</a>: Monetary Policy Report, May 2024.</li>
-<li><a href="https://www.bis.org/publ/arpdf/ar2024e.pdf">BIS</a>: central bank finances and inflation, 2024.</li>
+<li><a href="https://www.bis.org/publ/arpdf/ar2024e.pdf">Bank for International Settlements (BIS)</a>: central bank finances and inflation, 2024.</li>
 <li><a href="https://www.imf.org/en/Publications/WEO/Issues/2023/04/11/world-economic-outlook-april-2023">IMF</a>: World Economic Outlook, April 2023.</li>
 <li>US <a href="https://www.congress.gov/crs-product/R45208">Congressional Research Service</a> (in every version of its daylight saving time report since 2018) and <a href="https://www.epa.gov/system/files/documents/2024-03/sage_model_documentation_2_1_1.pdf">Environmental Protection Agency</a> (SAGE model, 2024).</li>
 <li>Also cited in research by the <a href="https://documents.worldbank.org/curated/en/749721626709072349">World Bank</a>, <a href="https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/05/the-effects-of-climate-policies-on-emissions_e8c0a91b/ec1f7f0d-en.pdf">OECD</a> and <a href="https://publications.jrc.ec.europa.eu/repository/handle/JRC126423">European Commission</a>.</li>
 </ul>
 </div>
 </section><section aria-labelledby="roles" class="about impact-section">
-<div><h2 id="roles">Roles</h2><p class="section-note"><a href="https://meta-analysis.cz/about/">Professional roles</a> · <a href="https://www.tomashavranek.cz/activities">Refereeing</a></p></div>
+<div><h2 id="roles">Roles</h2><p class="section-note"><a href="https://meta-analysis.cz/about/">Professional roles</a> · <a href="https://meta-analysis.cz/about/">Refereeing</a></p></div>
 <div>
 <ul class="compact-list" role="list">
 <li>2020: <a href="https://erc.europa.eu/sites/default/files/document/file/Panel_Members_ERC_Advanced_Grant_2020.pdf">ERC Advanced Grant panel</a>, economics and finance.</li>
-<li>2009–2019: Czech National Bank: economist, then Advisor to the Board (2015–2019).</li>
+<li>2009–2019: Czech National Bank, economist, then Advisor to the Board (2015–2019).</li>
 <li>2022–2023: National Economic Council, the Czech government’s economic advisory body.</li>
 <li>Chairs the social sciences section of Charles University’s Grant Agency.</li>
 <li>Associate Editor for meta-analysis, Journal of Economic Surveys.</li>
 <li>Research Affiliate, <a href="https://cepr.org/about/people/tomas-havranek">CEPR</a> and <a href="https://metrics.stanford.edu/people/tomas-havranek">Stanford METRICS</a>; co-leads MAER-Net.</li>
 </ul>
-<p style="margin-top:16px">Over 250 referee reports as of 8 October 2026, including for Science, Nature, American Economic Review, Journal of Political Economy and Journal of Clinical Epidemiology.</p>
+<p style="margin-top:16px">Has refereed more than 250 manuscripts, including for Science, Nature, American Economic Review, Journal of Political Economy and Journal of Clinical Epidemiology.</p>
 </div>
 </section><section aria-labelledby="commentary" class="about impact-section">
 <div><h2 id="commentary">Commentary</h2></div>
 <div>
 <p>Czech columns, interviews and videos are in the <a href="https://meta-analysis.cz/komentare/">commentary archive</a>.</p>
 </div>
-</section><p class="record-link">The full, curated record: <a href="https://meta-analysis.cz/impact/">meta-analysis.cz/impact</a>.</p>
+</section><p class="record-link">All sources and details: <a class="nowrap" href="https://meta-analysis.cz/impact/">meta-analysis.cz/impact</a>.</p>
 </main>
 <footer>
 <p>Institute of Economic Studies<br/>Opletalova 26, 110 00 Prague, Czech Republic</p>
-<div aria-label="Academic profiles" class="profiles"><a href="https://scholar.google.cz/citations?user=BF0BvBkAAAAJ&amp;hl=en">Google Scholar</a><a href="https://orcid.org/0000-0002-3158-2539">ORCID</a><a href="https://ideas.repec.org/f/pha418.html">RePEc</a><a href="https://github.com/tjhavranek">GitHub</a><a href="https://meta-analysis.cz/komentare/">Commentary in Czech</a></div>
+<div aria-label="Academic profiles" class="profiles" role="group"><a href="https://scholar.google.cz/citations?user=BF0BvBkAAAAJ&amp;hl=en">Google Scholar</a><a href="https://orcid.org/0000-0002-3158-2539">ORCID</a><a href="https://ideas.repec.org/f/pha418.html">RePEc</a><a href="https://github.com/tjhavranek">GitHub</a><a href="https://meta-analysis.cz/komentare/">Commentary in Czech</a></div>
 </footer>
 </div>
 </body>

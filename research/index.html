@@ -5,7 +5,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="Current research and publications by Tomas Havranek, organised by field. Papers, data and code for meta-analysis." name="description"/>
-<title>Research — Tomas Havranek</title>
+<title>Research – Tomas Havranek</title>
 
 
 
@@ -63,7 +63,7 @@ footer p { margin:0; }
 .profiles a { text-decoration:none; }
 @media (max-width:760px) {
 .page { padding:0 24px; }
-header { flex-direction:column-reverse; padding-top:24px; gap:32px; }
+header { flex-direction:column; padding-top:24px; gap:32px; }
 nav { gap:6px 24px; padding:0; font-size:13px; flex-wrap:wrap; }
 .identity { gap:16px; }
 .portrait { width:83px; height:83px; }
@@ -92,11 +92,24 @@ footer { flex-direction:column; gap:20px; padding-bottom:30px; }
 }
 @media print { .page { max-width:none; } nav,.skip { display:none; } header { padding-top:0; } main { margin-top:35px; } .papers li,figure { break-inside:avoid; } a { text-decoration:none; } }
 
-@media (max-width:639px){ nav a{ display:inline-block; padding-top:11px; padding-bottom:11px; } }
+@media (max-width:639px) {
+nav { flex-wrap:nowrap; column-gap:12px; row-gap:0; font-size:clamp(12px, 3.3333vw, 13px); }
+nav a { display:inline-block; position:relative; padding:4px 0; }
+nav a::after { content:""; position:absolute; inset:-9px -6px; }
+header .email, footer a { position:relative; display:inline-block; }
+header .email::after { content:""; position:absolute; inset:-8px -6px -14px; }
+footer a::after { content:""; position:absolute; inset:-11px -6px; }
+.profiles { row-gap:22px; }
+.papers .authors { font-size:13px; color:#555; }
+}
+
+.home-link { color:inherit; text-decoration:none; }
+.home-link:hover, .home-link:focus-visible { text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px; }
 </style>
 <style>
 .identity-name { font-size:32px; line-height:1.1; font-weight:400; letter-spacing:-1.1px; margin:0 0 9px; }
 .research-intro { margin-top:16px; }
+.research-jump { font-size:13px; line-height:1.6; margin:12px 0 0; }
 .current-papers { margin-top:28px; }
 .project-detail { display:block; font-size:13px; line-height:1.6; text-indent:0; margin-top:3px; }
 .research-closing { max-width:870px; margin:30px 0 0; font-size:15px; line-height:1.7; }
@@ -126,2520 +139,2524 @@ footer { flex-wrap:wrap; row-gap:16px; }
 :focus-visible { outline:2px solid var(--ink); outline-offset:5px; }
 .skip:focus { z-index:10; }
 @media print { body { color:#000; } .machine-link { display:none; } }
-</style><link href="https://tjhavranek.github.io/tomashavranek.cz/research/" rel="canonical"/><link href="https://tjhavranek.github.io/tomashavranek.cz/research/" hreflang="en" rel="alternate"/><link href="https://tjhavranek.github.io/tomashavranek.cz/cs/research/" hreflang="cs" rel="alternate"/><link href="https://tjhavranek.github.io/tomashavranek.cz/research/" hreflang="x-default" rel="alternate"/><meta content="Research — Tomas Havranek" property="og:title"/><meta content="Current research and publications by Tomas Havranek, organised by field. Papers, data and code for meta-analysis." property="og:description"/><meta content="https://tjhavranek.github.io/tomashavranek.cz/research/" property="og:url"/><meta content="https://tjhavranek.github.io/tomashavranek.cz/photo.jpg" property="og:image"/><meta content="Tomas Havranek" property="og:image:alt"/><meta content="960" property="og:image:width"/><meta content="960" property="og:image:height"/><meta content="en_GB" property="og:locale"/><meta content="cs_CZ" property="og:locale:alternate"/><meta content="website" property="og:type"/><meta content="Tomas Havranek" property="og:site_name"/><meta content="#ffffff" name="theme-color"/><script type="application/ld+json">{
+</style><link href="https://tjhavranek.github.io/tomashavranek.cz/research/" rel="canonical"/><link href="https://tjhavranek.github.io/tomashavranek.cz/research/" hreflang="en" rel="alternate"/><link href="https://tjhavranek.github.io/tomashavranek.cz/cs/research/" hreflang="cs" rel="alternate"/><link href="https://tjhavranek.github.io/tomashavranek.cz/research/" hreflang="x-default" rel="alternate"/><meta content="Research – Tomas Havranek" property="og:title"/><meta content="Current research and publications by Tomas Havranek, organised by field. Papers, data and code for meta-analysis." property="og:description"/><meta content="https://tjhavranek.github.io/tomashavranek.cz/research/" property="og:url"/><meta content="https://tjhavranek.github.io/tomashavranek.cz/photo.jpg" property="og:image"/><meta content="Tomas Havranek" property="og:image:alt"/><meta content="960" property="og:image:width"/><meta content="960" property="og:image:height"/><meta content="en_GB" property="og:locale"/><meta content="cs_CZ" property="og:locale:alternate"/><meta content="website" property="og:type"/><meta content="Tomas Havranek" property="og:site_name"/><meta content="#ffffff" name="theme-color"/><script type="application/ld+json">{
   "@context": "https://schema.org",
-  "@type": "ItemList",
+  "@type": "CollectionPage",
   "@id": "https://tjhavranek.github.io/tomashavranek.cz/research/#research",
-  "name": "Research — Tomas Havranek",
+  "name": "Research – Tomas Havranek",
   "url": "https://tjhavranek.github.io/tomashavranek.cz/research/",
   "inLanguage": "en",
   "about": {
     "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
   },
-  "numberOfItems": 34,
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "item": {
-        "@type": "CreativeWork",
-        "@id": "https://meta-analysis.cz/waive_ottawa.pdf#article",
-        "name": "Weighted Adjustment Instrumental Variable Estimator",
-        "author": [
-          {
-            "@type": "Person",
-            "name": "Tomas Havranek",
-            "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
+  "mainEntity": {
+    "@type": "ItemList",
+    "numberOfItems": 34,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://meta-analysis.cz/waive_ottawa.pdf#article",
+          "name": "Weighted Adjustment Instrumental Variable Estimator",
+          "author": [
+            {
+              "@type": "Person",
+              "name": "Tomas Havranek",
+              "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
+            },
+            {
+              "@type": "Person",
+              "name": "Pedro Bom"
+            },
+            {
+              "@type": "Person",
+              "name": "Petr Cala"
+            },
+            {
+              "@type": "Person",
+              "name": "Zuzana Irsova"
+            },
+            {
+              "@type": "Person",
+              "name": "Heiko Rachinger"
+            }
+          ],
+          "url": "https://meta-analysis.cz/waive_ottawa.pdf",
+          "creativeWorkStatus": "Presentation",
+          "description": "Research presentation; a paper is not yet available."
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://meta-analysis.cz/rdt_chemnitz.pdf#article",
+          "name": "The Residual Discontinuity Test for p-Hacking",
+          "author": [
+            {
+              "@type": "Person",
+              "name": "Tomas Havranek",
+              "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
+            },
+            {
+              "@type": "Person",
+              "name": "Zuzana Irsova"
+            },
+            {
+              "@type": "Person",
+              "name": "Pedro Bom"
+            },
+            {
+              "@type": "Person",
+              "name": "Heiko Rachinger"
+            }
+          ],
+          "url": "https://meta-analysis.cz/rdt_chemnitz.pdf",
+          "creativeWorkStatus": "Presentation",
+          "description": "Research presentation; a paper is not yet available."
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "ScholarlyArticle",
+          "@id": "https://meta-analysis.cz/debate/#article",
+          "name": "Does Multi-Agent Debate Improve AI Feedback on Research Papers?",
+          "author": [
+            {
+              "@type": "Person",
+              "name": "Tomas Havranek",
+              "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
+            },
+            {
+              "@type": "Person",
+              "name": "Zuzana Irsova"
+            }
+          ],
+          "url": "https://meta-analysis.cz/debate/",
+          "creativeWorkStatus": "Working paper"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "ScholarlyArticle",
+          "@id": "https://meta-analysis.cz/outliers/#article",
+          "name": "Do Decisions about Outliers and Influential Effects Matter? Evidence from 358 Behavioral Science Meta-Analyses",
+          "author": [
+            {
+              "@type": "Person",
+              "name": "Tomas Havranek",
+              "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
+            },
+            {
+              "@type": "Person",
+              "name": "Zuzana Irsova"
+            },
+            {
+              "@type": "Person",
+              "name": "Martina Luskova"
+            },
+            {
+              "@type": "Person",
+              "name": "T. D. Stanley"
+            }
+          ],
+          "url": "https://meta-analysis.cz/outliers/",
+          "creativeWorkStatus": "Working paper"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "ScholarlyArticle",
+          "@id": "https://meta-analysis.cz/pcc_survey/#article",
+          "name": "Do Methods Matter in the Meta-Analysis of Partial Correlation Coefficients?",
+          "author": [
+            {
+              "@type": "Person",
+              "name": "T. D. Stanley"
+            },
+            {
+              "@type": "Person",
+              "name": "Petr Cala"
+            },
+            {
+              "@type": "Person",
+              "name": "Hristos Doucouliagos"
+            },
+            {
+              "@type": "Person",
+              "name": "Zuzana Irsova"
+            },
+            {
+              "@type": "Person",
+              "name": "Tomas Havranek",
+              "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
+            }
+          ],
+          "url": "https://meta-analysis.cz/pcc_survey/",
+          "isPartOf": {
+            "@type": "Periodical",
+            "name": "Research Synthesis Methods"
           },
-          {
-            "@type": "Person",
-            "name": "Pedro Bom"
+          "creativeWorkStatus": "Revise and resubmit"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "item": {
+          "@type": "ScholarlyArticle",
+          "@id": "https://meta-analysis.cz/power/#article",
+          "name": "The Power of Science: Statistical Power in Published Research Across Five Disciplines",
+          "author": [
+            {
+              "@type": "Person",
+              "name": "Yue Wang"
+            },
+            {
+              "@type": "Person",
+              "name": "Frantisek Bartos"
+            },
+            {
+              "@type": "Person",
+              "name": "Tom Coupe"
+            },
+            {
+              "@type": "Person",
+              "name": "Tomas Havranek",
+              "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
+            },
+            {
+              "@type": "Person",
+              "name": "Sanghyun Hong"
+            },
+            {
+              "@type": "Person",
+              "name": "Zuzana Irsova"
+            },
+            {
+              "@type": "Person",
+              "name": "W. Robert Reed"
+            }
+          ],
+          "url": "https://meta-analysis.cz/power/",
+          "creativeWorkStatus": "Working paper"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "item": {
+          "@type": "ScholarlyArticle",
+          "@id": "https://meta-analysis.cz/beauty/#article",
+          "name": "Meta-Analysis of Field Studies on Beauty and Professional Success",
+          "author": [
+            {
+              "@type": "Person",
+              "name": "Zuzana Irsova"
+            },
+            {
+              "@type": "Person",
+              "name": "Tomas Havranek",
+              "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
+            },
+            {
+              "@type": "Person",
+              "name": "Kseniya Bortnikova"
+            },
+            {
+              "@type": "Person",
+              "name": "Frantisek Bartos"
+            }
+          ],
+          "url": "https://meta-analysis.cz/beauty/",
+          "isPartOf": {
+            "@type": "Periodical",
+            "name": "Nature Human Behaviour"
           },
-          {
-            "@type": "Person",
-            "name": "Petr Cala"
+          "creativeWorkStatus": "Revise and resubmit"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "item": {
+          "@type": "ScholarlyArticle",
+          "@id": "https://meta-analysis.cz/exercise/#article",
+          "name": "Effect of Exercise on Cognition, Memory, and Executive Function: A Study-Level Meta-Meta-Analysis Across Populations and Exercise Categories",
+          "author": [
+            {
+              "@type": "Person",
+              "name": "Frantisek Bartos"
+            },
+            {
+              "@type": "Person",
+              "name": "Martina Luskova"
+            },
+            {
+              "@type": "Person",
+              "name": "Kseniya Bortnikova"
+            },
+            {
+              "@type": "Person",
+              "name": "Karolina Hozova"
+            },
+            {
+              "@type": "Person",
+              "name": "Klara Kantova"
+            },
+            {
+              "@type": "Person",
+              "name": "Zuzana Irsova"
+            },
+            {
+              "@type": "Person",
+              "name": "Tomas Havranek",
+              "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
+            }
+          ],
+          "url": "https://meta-analysis.cz/exercise/",
+          "isPartOf": {
+            "@type": "Periodical",
+            "name": "Sports Medicine"
           },
-          {
-            "@type": "Person",
-            "name": "Zuzana Irsova"
+          "creativeWorkStatus": "Revise and resubmit"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "item": {
+          "@type": "ScholarlyArticle",
+          "@id": "https://meta-analysis.cz/learning/#article",
+          "name": "Publication Bias and P-Hacking in the Effect of COVID-19 on Learning: A Meta-Analysis",
+          "author": [
+            {
+              "@type": "Person",
+              "name": "Martina Luskova"
+            },
+            {
+              "@type": "Person",
+              "name": "Nino Buliskeria"
+            },
+            {
+              "@type": "Person",
+              "name": "Ali Elminejad"
+            },
+            {
+              "@type": "Person",
+              "name": "Tomas Havranek",
+              "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
+            },
+            {
+              "@type": "Person",
+              "name": "Zuzana Irsova"
+            },
+            {
+              "@type": "Person",
+              "name": "Stepan Jurajda"
+            },
+            {
+              "@type": "Person",
+              "name": "Marek Kapicka"
+            }
+          ],
+          "url": "https://meta-analysis.cz/learning/",
+          "creativeWorkStatus": "Working paper"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 10,
+        "item": {
+          "@type": "ScholarlyArticle",
+          "@id": "https://meta-analysis.cz/inflation/#article",
+          "name": "Optimal Inflation Rate: A Meta-Analysis",
+          "author": [
+            {
+              "@type": "Person",
+              "name": "Matej Opatrny"
+            },
+            {
+              "@type": "Person",
+              "name": "Martin Opatrny"
+            },
+            {
+              "@type": "Person",
+              "name": "Tomas Havranek",
+              "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
+            },
+            {
+              "@type": "Person",
+              "name": "Zuzana Irsova"
+            },
+            {
+              "@type": "Person",
+              "name": "Mojmir Hampl"
+            }
+          ],
+          "url": "https://meta-analysis.cz/inflation/",
+          "creativeWorkStatus": "Working paper"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 11,
+        "item": {
+          "@type": "ScholarlyArticle",
+          "@id": "https://meta-analysis.cz/electricity/#article",
+          "name": "Electricity Demand Has Not Become More Price-Responsive Despite Ninety Years of Technological Change",
+          "author": [
+            {
+              "@type": "Person",
+              "name": "Peter Kudela"
+            },
+            {
+              "@type": "Person",
+              "name": "Tomas Havranek",
+              "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
+            },
+            {
+              "@type": "Person",
+              "name": "Zuzana Irsova"
+            },
+            {
+              "@type": "Person",
+              "name": "Anna Kudelova"
+            },
+            {
+              "@type": "Person",
+              "name": "Vojtech Sikl"
+            }
+          ],
+          "url": "https://meta-analysis.cz/electricity/",
+          "creativeWorkStatus": "Working paper"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 12,
+        "item": {
+          "@type": "ScholarlyArticle",
+          "@id": "https://meta-analysis.cz/migrant/#article",
+          "name": "The Elasticity of Substitution between Native and Immigrant Labor: A Meta-Analysis",
+          "author": [
+            {
+              "@type": "Person",
+              "name": "Klara Kantova"
+            },
+            {
+              "@type": "Person",
+              "name": "Tomas Havranek",
+              "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
+            },
+            {
+              "@type": "Person",
+              "name": "Zuzana Irsova"
+            },
+            {
+              "@type": "Person",
+              "name": "Jiri Schwarz"
+            }
+          ],
+          "url": "https://meta-analysis.cz/migrant/",
+          "isPartOf": {
+            "@type": "Periodical",
+            "name": "Journal of Economic Surveys"
           },
-          {
-            "@type": "Person",
-            "name": "Heiko Rachinger"
-          }
-        ],
-        "url": "https://meta-analysis.cz/waive_ottawa.pdf",
-        "creativeWorkStatus": "Presentation",
-        "description": "Research presentation; a paper is not yet available."
+          "creativeWorkStatus": "Revise and resubmit"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 13,
+        "item": {
+          "@type": "ScholarlyArticle",
+          "@id": "https://meta-analysis.cz/trust/#article",
+          "name": "Trust, Rule of Law, and the Size Premium: Evidence from a Meta-Analysis",
+          "author": [
+            {
+              "@type": "Person",
+              "name": "Jiri Schwarz"
+            },
+            {
+              "@type": "Person",
+              "name": "Tomas Havranek",
+              "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
+            },
+            {
+              "@type": "Person",
+              "name": "Zuzana Irsova"
+            },
+            {
+              "@type": "Person",
+              "name": "Jiri Novak"
+            }
+          ],
+          "url": "https://meta-analysis.cz/trust/",
+          "creativeWorkStatus": "Working paper"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 14,
+        "item": {
+          "@type": "ScholarlyArticle",
+          "@id": "https://meta-analysis.cz/esg/#article",
+          "name": "Do Female Directors Raise ESG Ratings? A Meta-Analysis",
+          "author": [
+            {
+              "@type": "Person",
+              "name": "Karolina Hozova"
+            },
+            {
+              "@type": "Person",
+              "name": "Tomas Havranek",
+              "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
+            },
+            {
+              "@type": "Person",
+              "name": "Zuzana Irsova"
+            }
+          ],
+          "url": "https://meta-analysis.cz/esg/",
+          "creativeWorkStatus": "Working paper"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 15,
+        "item": {
+          "@type": "ScholarlyArticle",
+          "@id": "https://meta-analysis.cz/alphas/#article",
+          "name": "What Matters in Explaining the Variation in Hedge Fund Performance?",
+          "author": [
+            {
+              "@type": "Person",
+              "name": "Fan Yang"
+            },
+            {
+              "@type": "Person",
+              "name": "Tomas Havranek",
+              "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
+            },
+            {
+              "@type": "Person",
+              "name": "Zuzana Irsova"
+            },
+            {
+              "@type": "Person",
+              "name": "Jiri Novak"
+            }
+          ],
+          "url": "https://meta-analysis.cz/alphas/",
+          "isPartOf": {
+            "@type": "Periodical",
+            "name": "International Review of Economics and Finance"
+          },
+          "creativeWorkStatus": "Revise and resubmit"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 16,
+        "item": {
+          "@type": "ScholarlyArticle",
+          "@id": "https://meta-analysis.cz/class/#article",
+          "name": "Publication Bias and Model Uncertainty in Measuring the Effect of Class Size on Achievement",
+          "author": [
+            {
+              "@type": "Person",
+              "name": "Matej Opatrny"
+            },
+            {
+              "@type": "Person",
+              "name": "Tomas Havranek",
+              "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
+            },
+            {
+              "@type": "Person",
+              "name": "Zuzana Irsova"
+            },
+            {
+              "@type": "Person",
+              "name": "Milan Scasny"
+            }
+          ],
+          "url": "https://meta-analysis.cz/class/",
+          "datePublished": "2026",
+          "isPartOf": {
+            "@type": "Periodical",
+            "name": "Journal of Labor Economics"
+          },
+          "creativeWorkStatus": "Forthcoming"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 17,
+        "item": {
+          "@type": "ScholarlyArticle",
+          "@id": "https://meta-analysis.cz/skill/#article",
+          "name": "Publication and Attenuation Biases in Measuring Skill Substitution",
+          "author": [
+            {
+              "@type": "Person",
+              "name": "Tomas Havranek",
+              "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
+            },
+            {
+              "@type": "Person",
+              "name": "Zuzana Irsova"
+            },
+            {
+              "@type": "Person",
+              "name": "Lubica Laslopova"
+            },
+            {
+              "@type": "Person",
+              "name": "Olesia Zeynalova"
+            }
+          ],
+          "url": "https://meta-analysis.cz/skill/",
+          "datePublished": "2024",
+          "isPartOf": {
+            "@type": "Periodical",
+            "name": "Review of Economics and Statistics"
+          },
+          "creativeWorkStatus": "Published"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 18,
+        "item": {
+          "@type": "ScholarlyArticle",
+          "@id": "https://meta-analysis.cz/frisch/#article",
+          "name": "Intertemporal Substitution in Labor Supply: A Meta-Analysis",
+          "author": [
+            {
+              "@type": "Person",
+              "name": "Ali Elminejad"
+            },
+            {
+              "@type": "Person",
+              "name": "Tomas Havranek",
+              "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
+            },
+            {
+              "@type": "Person",
+              "name": "Roman Horvath"
+            },
+            {
+              "@type": "Person",
+              "name": "Zuzana Irsova"
+            }
+          ],
+          "url": "https://meta-analysis.cz/frisch/",
+          "datePublished": "2023",
+          "isPartOf": {
+            "@type": "Periodical",
+            "name": "Review of Economic Dynamics"
+          },
+          "creativeWorkStatus": "Published"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 19,
+        "item": {
+          "@type": "ScholarlyArticle",
+          "@id": "https://meta-analysis.cz/sigma/#article",
+          "name": "Measuring Capital-Labor Substitution: The Importance of Method Choices and Publication Bias",
+          "author": [
+            {
+              "@type": "Person",
+              "name": "Sebastian Gechert"
+            },
+            {
+              "@type": "Person",
+              "name": "Tomas Havranek",
+              "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
+            },
+            {
+              "@type": "Person",
+              "name": "Zuzana Irsova"
+            },
+            {
+              "@type": "Person",
+              "name": "Dominika Kolcunova"
+            }
+          ],
+          "url": "https://meta-analysis.cz/sigma/",
+          "datePublished": "2022",
+          "isPartOf": {
+            "@type": "Periodical",
+            "name": "Review of Economic Dynamics"
+          },
+          "creativeWorkStatus": "Published"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 20,
+        "item": {
+          "@type": "ScholarlyArticle",
+          "@id": "https://meta-analysis.cz/armington/#article",
+          "name": "Estimating the Armington Elasticity: The Importance of Study Design and Publication Bias",
+          "author": [
+            {
+              "@type": "Person",
+              "name": "Josef Bajzik"
+            },
+            {
+              "@type": "Person",
+              "name": "Tomas Havranek",
+              "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
+            },
+            {
+              "@type": "Person",
+              "name": "Zuzana Irsova"
+            },
+            {
+              "@type": "Person",
+              "name": "Jiri Schwarz"
+            }
+          ],
+          "url": "https://meta-analysis.cz/armington/",
+          "datePublished": "2020",
+          "isPartOf": {
+            "@type": "Periodical",
+            "name": "Journal of International Economics"
+          },
+          "creativeWorkStatus": "Published"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 21,
+        "item": {
+          "@type": "ScholarlyArticle",
+          "@id": "https://meta-analysis.cz/border/#article",
+          "name": "Do Borders Really Slash Trade? A Meta-Analysis",
+          "author": [
+            {
+              "@type": "Person",
+              "name": "Tomas Havranek",
+              "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
+            },
+            {
+              "@type": "Person",
+              "name": "Zuzana Irsova"
+            }
+          ],
+          "url": "https://meta-analysis.cz/border/",
+          "datePublished": "2017",
+          "isPartOf": {
+            "@type": "Periodical",
+            "name": "IMF Economic Review"
+          },
+          "creativeWorkStatus": "Published"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 22,
+        "item": {
+          "@type": "ScholarlyArticle",
+          "@id": "https://meta-analysis.cz/substitution/#article",
+          "name": "Cross-Country Heterogeneity in Intertemporal Substitution",
+          "author": [
+            {
+              "@type": "Person",
+              "name": "Tomas Havranek",
+              "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
+            },
+            {
+              "@type": "Person",
+              "name": "Roman Horvath"
+            },
+            {
+              "@type": "Person",
+              "name": "Zuzana Irsova"
+            },
+            {
+              "@type": "Person",
+              "name": "Marek Rusnak"
+            }
+          ],
+          "url": "https://meta-analysis.cz/substitution/",
+          "datePublished": "2015",
+          "isPartOf": {
+            "@type": "Periodical",
+            "name": "Journal of International Economics"
+          },
+          "creativeWorkStatus": "Published"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 23,
+        "item": {
+          "@type": "ScholarlyArticle",
+          "@id": "https://meta-analysis.cz/spillovers/#article",
+          "name": "Estimating Vertical Spillovers from FDI: Why Results Vary and What the True Effect Is",
+          "author": [
+            {
+              "@type": "Person",
+              "name": "Tomas Havranek",
+              "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
+            },
+            {
+              "@type": "Person",
+              "name": "Zuzana Irsova"
+            }
+          ],
+          "url": "https://meta-analysis.cz/spillovers/",
+          "datePublished": "2011",
+          "isPartOf": {
+            "@type": "Periodical",
+            "name": "Journal of International Economics"
+          },
+          "creativeWorkStatus": "Published"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 24,
+        "item": {
+          "@type": "ScholarlyArticle",
+          "@id": "https://meta-analysis.cz/house_prices/#article",
+          "name": "When Does Monetary Policy Sway House Prices? A Meta-Analysis",
+          "author": [
+            {
+              "@type": "Person",
+              "name": "Dominika Ehrenbergerova"
+            },
+            {
+              "@type": "Person",
+              "name": "Josef Bajzik"
+            },
+            {
+              "@type": "Person",
+              "name": "Tomas Havranek",
+              "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
+            }
+          ],
+          "url": "https://meta-analysis.cz/house_prices/",
+          "datePublished": "2023",
+          "isPartOf": {
+            "@type": "Periodical",
+            "name": "IMF Economic Review"
+          },
+          "creativeWorkStatus": "Published"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 25,
+        "item": {
+          "@type": "ScholarlyArticle",
+          "@id": "https://meta-analysis.cz/excess_sensitivity/#article",
+          "name": "Do Consumers Really Follow a Rule of Thumb? Three Thousand Estimates from 144 Studies Say \"Probably Not\"",
+          "author": [
+            {
+              "@type": "Person",
+              "name": "Tomas Havranek",
+              "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
+            },
+            {
+              "@type": "Person",
+              "name": "Anna Sokolova"
+            }
+          ],
+          "url": "https://meta-analysis.cz/excess_sensitivity/",
+          "datePublished": "2020",
+          "isPartOf": {
+            "@type": "Periodical",
+            "name": "Review of Economic Dynamics"
+          },
+          "creativeWorkStatus": "Published"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 26,
+        "item": {
+          "@type": "ScholarlyArticle",
+          "@id": "https://meta-analysis.cz/habits/#article",
+          "name": "Habit Formation in Consumption: A Meta-Analysis",
+          "author": [
+            {
+              "@type": "Person",
+              "name": "Tomas Havranek",
+              "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
+            },
+            {
+              "@type": "Person",
+              "name": "Marek Rusnak"
+            },
+            {
+              "@type": "Person",
+              "name": "Anna Sokolova"
+            }
+          ],
+          "url": "https://meta-analysis.cz/habits/",
+          "datePublished": "2017",
+          "isPartOf": {
+            "@type": "Periodical",
+            "name": "European Economic Review"
+          },
+          "creativeWorkStatus": "Published"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 27,
+        "item": {
+          "@type": "ScholarlyArticle",
+          "@id": "https://meta-analysis.cz/eis/#article",
+          "name": "Measuring Intertemporal Substitution: The Importance of Method Choices and Selective Reporting",
+          "author": [
+            {
+              "@type": "Person",
+              "name": "Tomas Havranek",
+              "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
+            }
+          ],
+          "url": "https://meta-analysis.cz/eis/",
+          "datePublished": "2015",
+          "isPartOf": {
+            "@type": "Periodical",
+            "name": "Journal of the European Economic Association"
+          },
+          "creativeWorkStatus": "Published"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 28,
+        "item": {
+          "@type": "ScholarlyArticle",
+          "@id": "https://meta-analysis.cz/price_puzzle/#article",
+          "name": "How to Solve the Price Puzzle? A Meta-Analysis",
+          "author": [
+            {
+              "@type": "Person",
+              "name": "Marek Rusnak"
+            },
+            {
+              "@type": "Person",
+              "name": "Tomas Havranek",
+              "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
+            },
+            {
+              "@type": "Person",
+              "name": "Roman Horvath"
+            }
+          ],
+          "url": "https://meta-analysis.cz/price_puzzle/",
+          "datePublished": "2013",
+          "isPartOf": {
+            "@type": "Periodical",
+            "name": "Journal of Money, Credit and Banking"
+          },
+          "creativeWorkStatus": "Published"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 29,
+        "item": {
+          "@type": "ScholarlyArticle",
+          "@id": "https://meta-analysis.cz/incentives/#article",
+          "name": "Financial Incentives and Performance: A Meta-Analysis of Experiments in Economics",
+          "author": [
+            {
+              "@type": "Person",
+              "name": "Petr Cala"
+            },
+            {
+              "@type": "Person",
+              "name": "Tomas Havranek",
+              "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
+            },
+            {
+              "@type": "Person",
+              "name": "Zuzana Irsova"
+            },
+            {
+              "@type": "Person",
+              "name": "Martina Luskova"
+            },
+            {
+              "@type": "Person",
+              "name": "Jindrich Matousek"
+            },
+            {
+              "@type": "Person",
+              "name": "Jiri Novak"
+            }
+          ],
+          "url": "https://meta-analysis.cz/incentives/",
+          "datePublished": "2026",
+          "isPartOf": {
+            "@type": "Periodical",
+            "name": "Journal of Political Economy Microeconomics"
+          },
+          "creativeWorkStatus": "Forthcoming"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 30,
+        "item": {
+          "@type": "ScholarlyArticle",
+          "@id": "https://meta-analysis.cz/discrate/#article",
+          "name": "Individual Discount Rates: A Meta-Analysis of Experimental Evidence",
+          "author": [
+            {
+              "@type": "Person",
+              "name": "Jindrich Matousek"
+            },
+            {
+              "@type": "Person",
+              "name": "Tomas Havranek",
+              "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
+            },
+            {
+              "@type": "Person",
+              "name": "Zuzana Irsova"
+            }
+          ],
+          "url": "https://meta-analysis.cz/discrate/",
+          "datePublished": "2022",
+          "isPartOf": {
+            "@type": "Periodical",
+            "name": "Experimental Economics"
+          },
+          "creativeWorkStatus": "Published"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 31,
+        "item": {
+          "@type": "ScholarlyArticle",
+          "@id": "https://meta-analysis.cz/forward/#article",
+          "name": "How Puzzling Is the Forward Premium Puzzle? A Meta-Analysis",
+          "author": [
+            {
+              "@type": "Person",
+              "name": "Diana Zigraiova"
+            },
+            {
+              "@type": "Person",
+              "name": "Tomas Havranek",
+              "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
+            },
+            {
+              "@type": "Person",
+              "name": "Zuzana Irsova"
+            },
+            {
+              "@type": "Person",
+              "name": "Jiri Novak"
+            }
+          ],
+          "url": "https://meta-analysis.cz/forward/",
+          "datePublished": "2021",
+          "isPartOf": {
+            "@type": "Periodical",
+            "name": "European Economic Review"
+          },
+          "creativeWorkStatus": "Published"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 32,
+        "item": {
+          "@type": "ScholarlyArticle",
+          "@id": "https://meta-analysis.cz/reproducibility/#article",
+          "name": "Reproducibility and Robustness of Economics and Political Science Research",
+          "author": [
+            {
+              "@type": "Person",
+              "name": "Abel Brodeur"
+            },
+            {
+              "@type": "Person",
+              "name": "Derek Mikola"
+            },
+            {
+              "@type": "Person",
+              "name": "Nikolai Cook"
+            },
+            {
+              "@type": "Person",
+              "name": "Lenka Fiala"
+            },
+            {
+              "@type": "Person",
+              "name": "Thomas Brailey"
+            },
+            {
+              "@type": "Person",
+              "name": "Ryan Briggs"
+            },
+            {
+              "@type": "Person",
+              "name": "Alexandra de Gendre"
+            },
+            {
+              "@type": "Person",
+              "name": "Yannick Dupraz"
+            },
+            {
+              "@type": "Person",
+              "name": "Jacopo Gabani"
+            },
+            {
+              "@type": "Person",
+              "name": "Romain Gauriot"
+            },
+            {
+              "@type": "Person",
+              "name": "Joanne Haddad"
+            },
+            {
+              "@type": "Person",
+              "name": "Goncalo Lima"
+            },
+            {
+              "@type": "Person",
+              "name": "Jorg Ankel-Peters"
+            },
+            {
+              "@type": "Person",
+              "name": "Anna Dreber"
+            },
+            {
+              "@type": "Person",
+              "name": "Douglas Campbell"
+            },
+            {
+              "@type": "Person",
+              "name": "Lamis Kattan"
+            },
+            {
+              "@type": "Person",
+              "name": "Diego Marino Fages"
+            },
+            {
+              "@type": "Person",
+              "name": "Fabian Mierisch"
+            },
+            {
+              "@type": "Person",
+              "name": "Pu Sun"
+            },
+            {
+              "@type": "Person",
+              "name": "Taylor Wright"
+            },
+            {
+              "@type": "Person",
+              "name": "Marie Connolly"
+            },
+            {
+              "@type": "Person",
+              "name": "Fernando Hoces de la Guardia"
+            },
+            {
+              "@type": "Person",
+              "name": "Magnus Johannesson"
+            },
+            {
+              "@type": "Person",
+              "name": "Edward Miguel"
+            },
+            {
+              "@type": "Person",
+              "name": "Lars Vilhuber"
+            },
+            {
+              "@type": "Person",
+              "name": "Alejandro Abarca"
+            },
+            {
+              "@type": "Person",
+              "name": "Mahesh Acharya"
+            },
+            {
+              "@type": "Person",
+              "name": "Sossou Simplice Adjisse"
+            },
+            {
+              "@type": "Person",
+              "name": "Ahwaz Akhtar"
+            },
+            {
+              "@type": "Person",
+              "name": "Eduardo Alberto Ramirez Lizardi"
+            },
+            {
+              "@type": "Person",
+              "name": "Sabina Albrecht"
+            },
+            {
+              "@type": "Person",
+              "name": "Synøve Nygaard Andersen"
+            },
+            {
+              "@type": "Person",
+              "name": "Zubaria Andlib"
+            },
+            {
+              "@type": "Person",
+              "name": "Falak Arrora"
+            },
+            {
+              "@type": "Person",
+              "name": "Thomas Ash"
+            },
+            {
+              "@type": "Person",
+              "name": "Etienne Bacher"
+            },
+            {
+              "@type": "Person",
+              "name": "Sebastian Bachler"
+            },
+            {
+              "@type": "Person",
+              "name": "Felix Bacon"
+            },
+            {
+              "@type": "Person",
+              "name": "Manuel Bagues"
+            },
+            {
+              "@type": "Person",
+              "name": "Timea Balogh"
+            },
+            {
+              "@type": "Person",
+              "name": "Alisher Batmanov"
+            },
+            {
+              "@type": "Person",
+              "name": "Mara Barschkett"
+            },
+            {
+              "@type": "Person",
+              "name": "Barıs Kaan Basdil"
+            },
+            {
+              "@type": "Person",
+              "name": "Jaromir Baxa"
+            },
+            {
+              "@type": "Person",
+              "name": "Sascha O. Becker"
+            },
+            {
+              "@type": "Person",
+              "name": "Monica Beeder"
+            },
+            {
+              "@type": "Person",
+              "name": "Louis-Philippe Beland"
+            },
+            {
+              "@type": "Person",
+              "name": "Abdel-Hamid Bello"
+            },
+            {
+              "@type": "Person",
+              "name": "Daniel Benenson Markovits"
+            },
+            {
+              "@type": "Person",
+              "name": "Grant Benjamin"
+            },
+            {
+              "@type": "Person",
+              "name": "Thomas Bergeron"
+            },
+            {
+              "@type": "Person",
+              "name": "Moussa P. Blimpo"
+            },
+            {
+              "@type": "Person",
+              "name": "Marco Binetti"
+            },
+            {
+              "@type": "Person",
+              "name": "Carl Bonander"
+            },
+            {
+              "@type": "Person",
+              "name": "Joseph Bonneau"
+            },
+            {
+              "@type": "Person",
+              "name": "Endre Borbath"
+            },
+            {
+              "@type": "Person",
+              "name": "Nicolai Borgen"
+            },
+            {
+              "@type": "Person",
+              "name": "Solveig Topstad Borgen"
+            },
+            {
+              "@type": "Person",
+              "name": "Jonathan Borowsky"
+            },
+            {
+              "@type": "Person",
+              "name": "Elisa Brini"
+            },
+            {
+              "@type": "Person",
+              "name": "Myriam Brown"
+            },
+            {
+              "@type": "Person",
+              "name": "Martin Brun"
+            },
+            {
+              "@type": "Person",
+              "name": "Stephan Bruns"
+            },
+            {
+              "@type": "Person",
+              "name": "Nino Buliskeria"
+            },
+            {
+              "@type": "Person",
+              "name": "Andrea Calef"
+            },
+            {
+              "@type": "Person",
+              "name": "Alistair Cameron"
+            },
+            {
+              "@type": "Person",
+              "name": "Pamela Campa"
+            },
+            {
+              "@type": "Person",
+              "name": "Santiago Campos-Rodriguez"
+            },
+            {
+              "@type": "Person",
+              "name": "Giulio Giacomo Cantone"
+            },
+            {
+              "@type": "Person",
+              "name": "Fenella Carpena"
+            },
+            {
+              "@type": "Person",
+              "name": "Perry Jess Carter"
+            },
+            {
+              "@type": "Person",
+              "name": "Paul Castaneda Dower"
+            },
+            {
+              "@type": "Person",
+              "name": "Ondrej Castek"
+            },
+            {
+              "@type": "Person",
+              "name": "Jill Caviglia-Harris"
+            },
+            {
+              "@type": "Person",
+              "name": "Gabriella Chauca Strand"
+            },
+            {
+              "@type": "Person",
+              "name": "Shi Chen"
+            },
+            {
+              "@type": "Person",
+              "name": "Sya In Chzhen"
+            },
+            {
+              "@type": "Person",
+              "name": "Jong Chung"
+            },
+            {
+              "@type": "Person",
+              "name": "Jason Collins"
+            },
+            {
+              "@type": "Person",
+              "name": "Alexander Coppock"
+            },
+            {
+              "@type": "Person",
+              "name": "Hugo Cordeau"
+            },
+            {
+              "@type": "Person",
+              "name": "Ben Couillard"
+            },
+            {
+              "@type": "Person",
+              "name": "Jonathan Crechet"
+            },
+            {
+              "@type": "Person",
+              "name": "Lorenzo Crippa"
+            },
+            {
+              "@type": "Person",
+              "name": "Jing Cui"
+            },
+            {
+              "@type": "Person",
+              "name": "Christian Czymara"
+            },
+            {
+              "@type": "Person",
+              "name": "Haley Daarstad"
+            },
+            {
+              "@type": "Person",
+              "name": "Danh Chi Dao"
+            },
+            {
+              "@type": "Person",
+              "name": "Daniel Dao"
+            },
+            {
+              "@type": "Person",
+              "name": "Marco David Schmandt"
+            },
+            {
+              "@type": "Person",
+              "name": "Astrid de Linde"
+            },
+            {
+              "@type": "Person",
+              "name": "Lucas De Melo"
+            },
+            {
+              "@type": "Person",
+              "name": "Lachlan Deer"
+            },
+            {
+              "@type": "Person",
+              "name": "Micole De Vera"
+            },
+            {
+              "@type": "Person",
+              "name": "Velichka Dimitrova"
+            },
+            {
+              "@type": "Person",
+              "name": "Jan Fabian Dollbaum"
+            },
+            {
+              "@type": "Person",
+              "name": "Jan Matti Dollbaum"
+            },
+            {
+              "@type": "Person",
+              "name": "Michael Donnelly"
+            },
+            {
+              "@type": "Person",
+              "name": "Luu Duc Toan Huynh"
+            },
+            {
+              "@type": "Person",
+              "name": "Tsvetomira Dumbalska"
+            },
+            {
+              "@type": "Person",
+              "name": "Jamie Duncan"
+            },
+            {
+              "@type": "Person",
+              "name": "Kiet Tuan Duong"
+            },
+            {
+              "@type": "Person",
+              "name": "Thibaut Duprey"
+            },
+            {
+              "@type": "Person",
+              "name": "Christoph Dworschak"
+            },
+            {
+              "@type": "Person",
+              "name": "Sigmund Ellingsrud"
+            },
+            {
+              "@type": "Person",
+              "name": "Ali Elminejad"
+            },
+            {
+              "@type": "Person",
+              "name": "Yasmine Eissa"
+            },
+            {
+              "@type": "Person",
+              "name": "Andrea Erhart"
+            },
+            {
+              "@type": "Person",
+              "name": "Giulian Etingin-Frati"
+            },
+            {
+              "@type": "Person",
+              "name": "Elaheh Fatemipour"
+            },
+            {
+              "@type": "Person",
+              "name": "Alexa Federice"
+            },
+            {
+              "@type": "Person",
+              "name": "Jan Feld"
+            },
+            {
+              "@type": "Person",
+              "name": "Guidon Fenig"
+            },
+            {
+              "@type": "Person",
+              "name": "Mojtaba Firouzjaeiangalougah"
+            },
+            {
+              "@type": "Person",
+              "name": "Erlend Fleisje"
+            },
+            {
+              "@type": "Person",
+              "name": "Alexandre Fortier-Chouinard"
+            },
+            {
+              "@type": "Person",
+              "name": "Julia Francesca Engel"
+            },
+            {
+              "@type": "Person",
+              "name": "Nadjim Frechet"
+            },
+            {
+              "@type": "Person",
+              "name": "Reid Fortier"
+            },
+            {
+              "@type": "Person",
+              "name": "Tilman Fries"
+            },
+            {
+              "@type": "Person",
+              "name": "Michael James Frith"
+            },
+            {
+              "@type": "Person",
+              "name": "Thomas Galipeau"
+            },
+            {
+              "@type": "Person",
+              "name": "Sebastian Gallegos"
+            },
+            {
+              "@type": "Person",
+              "name": "Areez Gangji"
+            },
+            {
+              "@type": "Person",
+              "name": "Xiaoying Gao"
+            },
+            {
+              "@type": "Person",
+              "name": "Cloe Garnache"
+            },
+            {
+              "@type": "Person",
+              "name": "Attila Gaspar"
+            },
+            {
+              "@type": "Person",
+              "name": "Evelina Gavrilova"
+            },
+            {
+              "@type": "Person",
+              "name": "Arijit Ghosh"
+            },
+            {
+              "@type": "Person",
+              "name": "Garreth Gibney"
+            },
+            {
+              "@type": "Person",
+              "name": "Grant Gibson"
+            },
+            {
+              "@type": "Person",
+              "name": "Geir Godager"
+            },
+            {
+              "@type": "Person",
+              "name": "Leonard Goff"
+            },
+            {
+              "@type": "Person",
+              "name": "Da Gong"
+            },
+            {
+              "@type": "Person",
+              "name": "Javier Gonzalez"
+            },
+            {
+              "@type": "Person",
+              "name": "Jeremy D. Gretton"
+            },
+            {
+              "@type": "Person",
+              "name": "Cristina Griffa"
+            },
+            {
+              "@type": "Person",
+              "name": "Idaliya Grigoryeva"
+            },
+            {
+              "@type": "Person",
+              "name": "Maja Grøtting"
+            },
+            {
+              "@type": "Person",
+              "name": "Eric Guntermann"
+            },
+            {
+              "@type": "Person",
+              "name": "Jiaqi Guo"
+            },
+            {
+              "@type": "Person",
+              "name": "Alexi Gugushvili"
+            },
+            {
+              "@type": "Person",
+              "name": "Hooman Habibnia"
+            },
+            {
+              "@type": "Person",
+              "name": "Sonja Haffner"
+            },
+            {
+              "@type": "Person",
+              "name": "Jonathan D. Hall"
+            },
+            {
+              "@type": "Person",
+              "name": "Olle Hammar"
+            },
+            {
+              "@type": "Person",
+              "name": "Amund Hanson Kordt"
+            },
+            {
+              "@type": "Person",
+              "name": "Barry Hashimoto"
+            },
+            {
+              "@type": "Person",
+              "name": "Jonathan S. Hartley"
+            },
+            {
+              "@type": "Person",
+              "name": "Carina I. Hausladen"
+            },
+            {
+              "@type": "Person",
+              "name": "Tomas Havranek",
+              "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
+            },
+            {
+              "@type": "Person",
+              "name": "Harry He"
+            },
+            {
+              "@type": "Person",
+              "name": "Matthew Hepplewhite"
+            },
+            {
+              "@type": "Person",
+              "name": "Mario Herrera-Rodriguez"
+            },
+            {
+              "@type": "Person",
+              "name": "Felix Heuer"
+            },
+            {
+              "@type": "Person",
+              "name": "Anthony Heyes"
+            },
+            {
+              "@type": "Person",
+              "name": "Anson T. Y. Ho"
+            },
+            {
+              "@type": "Person",
+              "name": "Jonathan Holmes"
+            },
+            {
+              "@type": "Person",
+              "name": "Armando Holzknecht"
+            },
+            {
+              "@type": "Person",
+              "name": "Yu-Hsiang Dexter Hsu"
+            },
+            {
+              "@type": "Person",
+              "name": "Shiang-Hung Hu"
+            },
+            {
+              "@type": "Person",
+              "name": "Yu-Shiuan Huang"
+            },
+            {
+              "@type": "Person",
+              "name": "Mathias Huebener"
+            },
+            {
+              "@type": "Person",
+              "name": "Christoph Huber"
+            },
+            {
+              "@type": "Person",
+              "name": "Kim P. Huynh"
+            },
+            {
+              "@type": "Person",
+              "name": "Zuzana Irsova"
+            },
+            {
+              "@type": "Person",
+              "name": "Ozan Isler"
+            },
+            {
+              "@type": "Person",
+              "name": "Niklas Jakobsson"
+            },
+            {
+              "@type": "Person",
+              "name": "Raphael Jananji"
+            },
+            {
+              "@type": "Person",
+              "name": "Tharaka A. Jayalath"
+            },
+            {
+              "@type": "Person",
+              "name": "Michael Jetter"
+            },
+            {
+              "@type": "Person",
+              "name": "Jenny John"
+            },
+            {
+              "@type": "Person",
+              "name": "Rachel Joy Forshaw"
+            },
+            {
+              "@type": "Person",
+              "name": "Felipe Juan"
+            },
+            {
+              "@type": "Person",
+              "name": "Valon Kadriu"
+            },
+            {
+              "@type": "Person",
+              "name": "Sunny Karim"
+            },
+            {
+              "@type": "Person",
+              "name": "Edmund Kelly"
+            },
+            {
+              "@type": "Person",
+              "name": "Duy Khanh Hoang Dang"
+            },
+            {
+              "@type": "Person",
+              "name": "Tazia Khushboo"
+            },
+            {
+              "@type": "Person",
+              "name": "Jin Kim"
+            },
+            {
+              "@type": "Person",
+              "name": "Gustav Kjellsson"
+            },
+            {
+              "@type": "Person",
+              "name": "Anders Kjelsrud"
+            },
+            {
+              "@type": "Person",
+              "name": "Andreas Kotsadam"
+            },
+            {
+              "@type": "Person",
+              "name": "Jori Korpershoek"
+            },
+            {
+              "@type": "Person",
+              "name": "Lewis Krashinsky"
+            },
+            {
+              "@type": "Person",
+              "name": "Suranjana Kundu"
+            },
+            {
+              "@type": "Person",
+              "name": "Alexander Kustov"
+            },
+            {
+              "@type": "Person",
+              "name": "Nurlan Lalayev"
+            },
+            {
+              "@type": "Person",
+              "name": "Audree Langlois"
+            },
+            {
+              "@type": "Person",
+              "name": "Jill Laufer"
+            },
+            {
+              "@type": "Person",
+              "name": "Blake Lee-Whiting"
+            },
+            {
+              "@type": "Person",
+              "name": "Andreas Leibing"
+            },
+            {
+              "@type": "Person",
+              "name": "Gabriel Lenz"
+            },
+            {
+              "@type": "Person",
+              "name": "Joel Levin"
+            },
+            {
+              "@type": "Person",
+              "name": "Peng Li"
+            },
+            {
+              "@type": "Person",
+              "name": "Tongzhe Li"
+            },
+            {
+              "@type": "Person",
+              "name": "Yuchen Lin"
+            },
+            {
+              "@type": "Person",
+              "name": "Ariel Listo"
+            },
+            {
+              "@type": "Person",
+              "name": "Dan Liu"
+            },
+            {
+              "@type": "Person",
+              "name": "Xuewen Lu"
+            },
+            {
+              "@type": "Person",
+              "name": "Elvina Lukmanova"
+            },
+            {
+              "@type": "Person",
+              "name": "Alex Luscombe"
+            },
+            {
+              "@type": "Person",
+              "name": "Lester R. Lusher"
+            },
+            {
+              "@type": "Person",
+              "name": "Ke Lyu"
+            },
+            {
+              "@type": "Person",
+              "name": "Hai Ma"
+            },
+            {
+              "@type": "Person",
+              "name": "Nicolas Mader"
+            },
+            {
+              "@type": "Person",
+              "name": "Clifton Makate"
+            },
+            {
+              "@type": "Person",
+              "name": "Alice Malmberg"
+            },
+            {
+              "@type": "Person",
+              "name": "Adit Maitra"
+            },
+            {
+              "@type": "Person",
+              "name": "Marco Mandas"
+            },
+            {
+              "@type": "Person",
+              "name": "Jan Marcus"
+            },
+            {
+              "@type": "Person",
+              "name": "Shushanik Margaryan"
+            },
+            {
+              "@type": "Person",
+              "name": "Lili Mark"
+            },
+            {
+              "@type": "Person",
+              "name": "Andres Martignano"
+            },
+            {
+              "@type": "Person",
+              "name": "Abigail Marsh"
+            },
+            {
+              "@type": "Person",
+              "name": "Isabella Masetto"
+            },
+            {
+              "@type": "Person",
+              "name": "Anthony McCanny"
+            },
+            {
+              "@type": "Person",
+              "name": "Emma McManus"
+            },
+            {
+              "@type": "Person",
+              "name": "Ryan McWay"
+            },
+            {
+              "@type": "Person",
+              "name": "Lennard Metson"
+            },
+            {
+              "@type": "Person",
+              "name": "Jonas Minet Kinge"
+            },
+            {
+              "@type": "Person",
+              "name": "Sumit Mishra"
+            },
+            {
+              "@type": "Person",
+              "name": "Myra Mohnen"
+            },
+            {
+              "@type": "Person",
+              "name": "Jakob Moeller"
+            },
+            {
+              "@type": "Person",
+              "name": "Rosalie Montambeault"
+            },
+            {
+              "@type": "Person",
+              "name": "Sebastien Montpetit"
+            },
+            {
+              "@type": "Person",
+              "name": "Louis-Philippe Morin"
+            },
+            {
+              "@type": "Person",
+              "name": "Todd Morris"
+            },
+            {
+              "@type": "Person",
+              "name": "Scott Moser"
+            },
+            {
+              "@type": "Person",
+              "name": "Fabio Yoshio Suguri Motoki"
+            },
+            {
+              "@type": "Person",
+              "name": "Lucija Muehlenbachs"
+            },
+            {
+              "@type": "Person",
+              "name": "Andreea Musulan"
+            },
+            {
+              "@type": "Person",
+              "name": "Marco Musumeci"
+            },
+            {
+              "@type": "Person",
+              "name": "Munirul Nabin"
+            },
+            {
+              "@type": "Person",
+              "name": "Karim Nchare"
+            },
+            {
+              "@type": "Person",
+              "name": "Florian Neubauer"
+            },
+            {
+              "@type": "Person",
+              "name": "Quan M. P. Nguyen"
+            },
+            {
+              "@type": "Person",
+              "name": "Tuan Nguyen"
+            },
+            {
+              "@type": "Person",
+              "name": "Viet Nguyen-Tien"
+            },
+            {
+              "@type": "Person",
+              "name": "Ali Niazi"
+            },
+            {
+              "@type": "Person",
+              "name": "Giorgi Nikolaishvili"
+            },
+            {
+              "@type": "Person",
+              "name": "Ardyn Nordstrom"
+            },
+            {
+              "@type": "Person",
+              "name": "Patrick Nuß"
+            },
+            {
+              "@type": "Person",
+              "name": "Angela Odermatt"
+            },
+            {
+              "@type": "Person",
+              "name": "Matt Olson"
+            },
+            {
+              "@type": "Person",
+              "name": "Henning Øien"
+            },
+            {
+              "@type": "Person",
+              "name": "Tim Olkers"
+            },
+            {
+              "@type": "Person",
+              "name": "Miquel Oliver i Vert"
+            },
+            {
+              "@type": "Person",
+              "name": "Emre Oral"
+            },
+            {
+              "@type": "Person",
+              "name": "Christian Oswald"
+            },
+            {
+              "@type": "Person",
+              "name": "Ali Ousman"
+            },
+            {
+              "@type": "Person",
+              "name": "Omer Ozak"
+            },
+            {
+              "@type": "Person",
+              "name": "Shubham Pandey"
+            },
+            {
+              "@type": "Person",
+              "name": "Alexandre Pavlov"
+            },
+            {
+              "@type": "Person",
+              "name": "Martino Pelli"
+            },
+            {
+              "@type": "Person",
+              "name": "Romeo Penheiro"
+            },
+            {
+              "@type": "Person",
+              "name": "RyuGyung Park"
+            },
+            {
+              "@type": "Person",
+              "name": "Eva Perez Martel"
+            },
+            {
+              "@type": "Person",
+              "name": "Tereza Petrovicova"
+            },
+            {
+              "@type": "Person",
+              "name": "Linh Phan"
+            },
+            {
+              "@type": "Person",
+              "name": "Alexa Prettyman"
+            },
+            {
+              "@type": "Person",
+              "name": "Jakub Prochazka"
+            },
+            {
+              "@type": "Person",
+              "name": "Aqila Putri"
+            },
+            {
+              "@type": "Person",
+              "name": "Julian Quandt"
+            },
+            {
+              "@type": "Person",
+              "name": "Kangyu Qiu"
+            },
+            {
+              "@type": "Person",
+              "name": "Loan Quynh Thi Nguyen"
+            },
+            {
+              "@type": "Person",
+              "name": "Andaleeb Rahman"
+            },
+            {
+              "@type": "Person",
+              "name": "Carson H. Rea"
+            },
+            {
+              "@type": "Person",
+              "name": "Adam Reiremo"
+            },
+            {
+              "@type": "Person",
+              "name": "Laetitia Renee"
+            },
+            {
+              "@type": "Person",
+              "name": "Joseph Richardson"
+            },
+            {
+              "@type": "Person",
+              "name": "Nicholas Rivers"
+            },
+            {
+              "@type": "Person",
+              "name": "Bruno Rodrigues"
+            },
+            {
+              "@type": "Person",
+              "name": "William Roelofs"
+            },
+            {
+              "@type": "Person",
+              "name": "Tobias Roemer"
+            },
+            {
+              "@type": "Person",
+              "name": "Ole Rogeberg"
+            },
+            {
+              "@type": "Person",
+              "name": "Julian Rose"
+            },
+            {
+              "@type": "Person",
+              "name": "Andrew Roskos-Ewoldsen"
+            },
+            {
+              "@type": "Person",
+              "name": "Paul Rosmer"
+            },
+            {
+              "@type": "Person",
+              "name": "Barbara Sabada"
+            },
+            {
+              "@type": "Person",
+              "name": "Soodeh Saberian"
+            },
+            {
+              "@type": "Person",
+              "name": "Nicolas Salamanca"
+            },
+            {
+              "@type": "Person",
+              "name": "Georg Sator"
+            },
+            {
+              "@type": "Person",
+              "name": "Daniel Scates"
+            },
+            {
+              "@type": "Person",
+              "name": "Elmar Schluter"
+            },
+            {
+              "@type": "Person",
+              "name": "Cameron Sells"
+            },
+            {
+              "@type": "Person",
+              "name": "Sharmi Sen"
+            },
+            {
+              "@type": "Person",
+              "name": "Ritika Sethi"
+            },
+            {
+              "@type": "Person",
+              "name": "Anna Shcherbiak"
+            },
+            {
+              "@type": "Person",
+              "name": "Moyosore Sogaolu"
+            },
+            {
+              "@type": "Person",
+              "name": "Matt Soosalu"
+            },
+            {
+              "@type": "Person",
+              "name": "Erik Ø. Sørensen"
+            },
+            {
+              "@type": "Person",
+              "name": "Manali Sovani"
+            },
+            {
+              "@type": "Person",
+              "name": "Noah Spencer"
+            },
+            {
+              "@type": "Person",
+              "name": "Stefan Staubli"
+            },
+            {
+              "@type": "Person",
+              "name": "Renske Stans"
+            },
+            {
+              "@type": "Person",
+              "name": "Anya Stewart"
+            },
+            {
+              "@type": "Person",
+              "name": "Felix Stips"
+            },
+            {
+              "@type": "Person",
+              "name": "Kieran Stockley"
+            },
+            {
+              "@type": "Person",
+              "name": "Stephenson Strobel"
+            },
+            {
+              "@type": "Person",
+              "name": "Ethan Struby"
+            },
+            {
+              "@type": "Person",
+              "name": "John P. Tang"
+            },
+            {
+              "@type": "Person",
+              "name": "Idil Tanrisever"
+            },
+            {
+              "@type": "Person",
+              "name": "Thomas Tao Yang"
+            },
+            {
+              "@type": "Person",
+              "name": "Ipek Tastan"
+            },
+            {
+              "@type": "Person",
+              "name": "Dejan Tatic"
+            },
+            {
+              "@type": "Person",
+              "name": "Benjamin Tatlow"
+            },
+            {
+              "@type": "Person",
+              "name": "Feraud Tchuisseu Seuyong"
+            },
+            {
+              "@type": "Person",
+              "name": "Remi Theriault"
+            },
+            {
+              "@type": "Person",
+              "name": "Vincent Thivierge"
+            },
+            {
+              "@type": "Person",
+              "name": "Wenjie Tian"
+            },
+            {
+              "@type": "Person",
+              "name": "Filip-Mihai Toma"
+            },
+            {
+              "@type": "Person",
+              "name": "Maddalena Totarelli"
+            },
+            {
+              "@type": "Person",
+              "name": "Van-Anh Tran"
+            },
+            {
+              "@type": "Person",
+              "name": "Hung Truong"
+            },
+            {
+              "@type": "Person",
+              "name": "Nikita Tsoy"
+            },
+            {
+              "@type": "Person",
+              "name": "Kerem Tuzcuoglu"
+            },
+            {
+              "@type": "Person",
+              "name": "Diego Ubfal"
+            },
+            {
+              "@type": "Person",
+              "name": "Laura Villalobos"
+            },
+            {
+              "@type": "Person",
+              "name": "Julian Walterskirchen"
+            },
+            {
+              "@type": "Person",
+              "name": "Joseph Tao-yi Wang"
+            },
+            {
+              "@type": "Person",
+              "name": "Vasudha Wattal"
+            },
+            {
+              "@type": "Person",
+              "name": "Matthew D. Webb"
+            },
+            {
+              "@type": "Person",
+              "name": "Bryan S. Weber"
+            },
+            {
+              "@type": "Person",
+              "name": "Reinhard Weisser"
+            },
+            {
+              "@type": "Person",
+              "name": "Wei-Chien Weng"
+            },
+            {
+              "@type": "Person",
+              "name": "Christian Westheide"
+            },
+            {
+              "@type": "Person",
+              "name": "Kimberly White"
+            },
+            {
+              "@type": "Person",
+              "name": "Jacob Winter"
+            },
+            {
+              "@type": "Person",
+              "name": "Timo Wochner"
+            },
+            {
+              "@type": "Person",
+              "name": "Matt Woerman"
+            },
+            {
+              "@type": "Person",
+              "name": "Jared Wong"
+            },
+            {
+              "@type": "Person",
+              "name": "Ritchie Woodard"
+            },
+            {
+              "@type": "Person",
+              "name": "Marcin Wronski"
+            },
+            {
+              "@type": "Person",
+              "name": "Myra Yazbeck"
+            },
+            {
+              "@type": "Person",
+              "name": "Gustav Chung Yang"
+            },
+            {
+              "@type": "Person",
+              "name": "Luther Yap"
+            },
+            {
+              "@type": "Person",
+              "name": "Kareman Yassin"
+            },
+            {
+              "@type": "Person",
+              "name": "Hao Ye"
+            },
+            {
+              "@type": "Person",
+              "name": "Jin Young Yoon"
+            },
+            {
+              "@type": "Person",
+              "name": "Chris Yurris"
+            },
+            {
+              "@type": "Person",
+              "name": "Tahreen Zahra"
+            },
+            {
+              "@type": "Person",
+              "name": "Mirela Zaneva"
+            },
+            {
+              "@type": "Person",
+              "name": "Aline Zayat"
+            },
+            {
+              "@type": "Person",
+              "name": "Jonathan Zhang"
+            },
+            {
+              "@type": "Person",
+              "name": "Ziwei Zhao"
+            },
+            {
+              "@type": "Person",
+              "name": "Yaolang Zhong"
+            }
+          ],
+          "url": "https://meta-analysis.cz/reproducibility/",
+          "datePublished": "2026",
+          "isPartOf": {
+            "@type": "Periodical",
+            "name": "Nature"
+          },
+          "creativeWorkStatus": "Published"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 33,
+        "item": {
+          "@type": "ScholarlyArticle",
+          "@id": "https://meta-analysis.cz/maive/#article",
+          "name": "Spurious Precision in Meta-Analysis of Observational Research",
+          "author": [
+            {
+              "@type": "Person",
+              "name": "Zuzana Irsova"
+            },
+            {
+              "@type": "Person",
+              "name": "Pedro Bom"
+            },
+            {
+              "@type": "Person",
+              "name": "Tomas Havranek",
+              "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
+            },
+            {
+              "@type": "Person",
+              "name": "Heiko Rachinger"
+            }
+          ],
+          "url": "https://meta-analysis.cz/maive/",
+          "datePublished": "2025",
+          "isPartOf": {
+            "@type": "Periodical",
+            "name": "Nature Communications"
+          },
+          "creativeWorkStatus": "Published"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 34,
+        "item": {
+          "@type": "ScholarlyArticle",
+          "@id": "https://meta-analysis.cz/correlations/#article",
+          "name": "Reducing the biases of the conventional meta-analysis of correlations",
+          "author": [
+            {
+              "@type": "Person",
+              "name": "T. D. Stanley"
+            },
+            {
+              "@type": "Person",
+              "name": "Hristos Doucouliagos"
+            },
+            {
+              "@type": "Person",
+              "name": "Tomas Havranek",
+              "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
+            }
+          ],
+          "url": "https://meta-analysis.cz/correlations/",
+          "datePublished": "2025",
+          "isPartOf": {
+            "@type": "Periodical",
+            "name": "Research Synthesis Methods"
+          },
+          "creativeWorkStatus": "Published"
+        }
       }
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "item": {
-        "@type": "CreativeWork",
-        "@id": "https://meta-analysis.cz/rdt_chemnitz.pdf#article",
-        "name": "The Residual Discontinuity Test for p-Hacking",
-        "author": [
-          {
-            "@type": "Person",
-            "name": "Tomas Havranek",
-            "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
-          },
-          {
-            "@type": "Person",
-            "name": "Zuzana Irsova"
-          },
-          {
-            "@type": "Person",
-            "name": "Pedro Bom"
-          },
-          {
-            "@type": "Person",
-            "name": "Heiko Rachinger"
-          }
-        ],
-        "url": "https://meta-analysis.cz/rdt_chemnitz.pdf",
-        "creativeWorkStatus": "Presentation",
-        "description": "Research presentation; a paper is not yet available."
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "item": {
-        "@type": "ScholarlyArticle",
-        "@id": "https://meta-analysis.cz/debate/#article",
-        "name": "Does Multi-Agent Debate Improve AI Feedback on Research Papers?",
-        "author": [
-          {
-            "@type": "Person",
-            "name": "Tomas Havranek",
-            "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
-          },
-          {
-            "@type": "Person",
-            "name": "Zuzana Irsova"
-          }
-        ],
-        "url": "https://meta-analysis.cz/debate/",
-        "creativeWorkStatus": "Working paper"
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 4,
-      "item": {
-        "@type": "ScholarlyArticle",
-        "@id": "https://meta-analysis.cz/outliers/#article",
-        "name": "Do Decisions about Outliers and Influential Effects Matter? Evidence from 358 Behavioral Science Meta-Analyses",
-        "author": [
-          {
-            "@type": "Person",
-            "name": "Tomas Havranek",
-            "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
-          },
-          {
-            "@type": "Person",
-            "name": "Zuzana Irsova"
-          },
-          {
-            "@type": "Person",
-            "name": "Martina Luskova"
-          },
-          {
-            "@type": "Person",
-            "name": "T. D. Stanley"
-          }
-        ],
-        "url": "https://meta-analysis.cz/outliers/",
-        "creativeWorkStatus": "Working paper"
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 5,
-      "item": {
-        "@type": "ScholarlyArticle",
-        "@id": "https://meta-analysis.cz/pcc_survey/#article",
-        "name": "Do Methods Matter in the Meta-Analysis of Partial Correlation Coefficients?",
-        "author": [
-          {
-            "@type": "Person",
-            "name": "T. D. Stanley"
-          },
-          {
-            "@type": "Person",
-            "name": "Petr Cala"
-          },
-          {
-            "@type": "Person",
-            "name": "Hristos Doucouliagos"
-          },
-          {
-            "@type": "Person",
-            "name": "Zuzana Irsova"
-          },
-          {
-            "@type": "Person",
-            "name": "Tomas Havranek",
-            "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
-          }
-        ],
-        "url": "https://meta-analysis.cz/pcc_survey/",
-        "isPartOf": {
-          "@type": "Periodical",
-          "name": "Research Synthesis Methods"
-        },
-        "creativeWorkStatus": "Revise and resubmit"
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 6,
-      "item": {
-        "@type": "ScholarlyArticle",
-        "@id": "https://meta-analysis.cz/power/#article",
-        "name": "The Power of Science: Statistical Power in Published Research Across Five Disciplines",
-        "author": [
-          {
-            "@type": "Person",
-            "name": "Yue Wang"
-          },
-          {
-            "@type": "Person",
-            "name": "Frantisek Bartos"
-          },
-          {
-            "@type": "Person",
-            "name": "Tom Coupe"
-          },
-          {
-            "@type": "Person",
-            "name": "Tomas Havranek",
-            "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
-          },
-          {
-            "@type": "Person",
-            "name": "Sanghyun Hong"
-          },
-          {
-            "@type": "Person",
-            "name": "Zuzana Irsova"
-          },
-          {
-            "@type": "Person",
-            "name": "W. Robert Reed"
-          }
-        ],
-        "url": "https://meta-analysis.cz/power/",
-        "creativeWorkStatus": "Working paper"
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 7,
-      "item": {
-        "@type": "ScholarlyArticle",
-        "@id": "https://meta-analysis.cz/beauty/#article",
-        "name": "Meta-Analysis of Field Studies on Beauty and Professional Success",
-        "author": [
-          {
-            "@type": "Person",
-            "name": "Zuzana Irsova"
-          },
-          {
-            "@type": "Person",
-            "name": "Tomas Havranek",
-            "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
-          },
-          {
-            "@type": "Person",
-            "name": "Kseniya Bortnikova"
-          },
-          {
-            "@type": "Person",
-            "name": "Frantisek Bartos"
-          }
-        ],
-        "url": "https://meta-analysis.cz/beauty/",
-        "isPartOf": {
-          "@type": "Periodical",
-          "name": "Nature Human Behaviour"
-        },
-        "creativeWorkStatus": "Revise and resubmit"
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 8,
-      "item": {
-        "@type": "ScholarlyArticle",
-        "@id": "https://meta-analysis.cz/exercise/#article",
-        "name": "Effect of Exercise on Cognition, Memory, and Executive Function: A Study-Level Meta-Meta-Analysis Across Populations and Exercise Categories",
-        "author": [
-          {
-            "@type": "Person",
-            "name": "Frantisek Bartos"
-          },
-          {
-            "@type": "Person",
-            "name": "Martina Luskova"
-          },
-          {
-            "@type": "Person",
-            "name": "Kseniya Bortnikova"
-          },
-          {
-            "@type": "Person",
-            "name": "Karolina Hozova"
-          },
-          {
-            "@type": "Person",
-            "name": "Klara Kantova"
-          },
-          {
-            "@type": "Person",
-            "name": "Zuzana Irsova"
-          },
-          {
-            "@type": "Person",
-            "name": "Tomas Havranek",
-            "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
-          }
-        ],
-        "url": "https://meta-analysis.cz/exercise/",
-        "isPartOf": {
-          "@type": "Periodical",
-          "name": "Sports Medicine"
-        },
-        "creativeWorkStatus": "Revise and resubmit"
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 9,
-      "item": {
-        "@type": "ScholarlyArticle",
-        "@id": "https://meta-analysis.cz/learning/#article",
-        "name": "Publication Bias and P-Hacking in the Effect of COVID-19 on Learning: A Meta-Analysis",
-        "author": [
-          {
-            "@type": "Person",
-            "name": "Martina Luskova"
-          },
-          {
-            "@type": "Person",
-            "name": "Nino Buliskeria"
-          },
-          {
-            "@type": "Person",
-            "name": "Ali Elminejad"
-          },
-          {
-            "@type": "Person",
-            "name": "Tomas Havranek",
-            "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
-          },
-          {
-            "@type": "Person",
-            "name": "Zuzana Irsova"
-          },
-          {
-            "@type": "Person",
-            "name": "Stepan Jurajda"
-          },
-          {
-            "@type": "Person",
-            "name": "Marek Kapicka"
-          }
-        ],
-        "url": "https://meta-analysis.cz/learning/",
-        "creativeWorkStatus": "Working paper"
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 10,
-      "item": {
-        "@type": "ScholarlyArticle",
-        "@id": "https://meta-analysis.cz/inflation/#article",
-        "name": "Optimal Inflation Rate: A Meta-Analysis",
-        "author": [
-          {
-            "@type": "Person",
-            "name": "Matej Opatrny"
-          },
-          {
-            "@type": "Person",
-            "name": "Martin Opatrny"
-          },
-          {
-            "@type": "Person",
-            "name": "Tomas Havranek",
-            "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
-          },
-          {
-            "@type": "Person",
-            "name": "Zuzana Irsova"
-          },
-          {
-            "@type": "Person",
-            "name": "Mojmir Hampl"
-          }
-        ],
-        "url": "https://meta-analysis.cz/inflation/",
-        "creativeWorkStatus": "Working paper"
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 11,
-      "item": {
-        "@type": "ScholarlyArticle",
-        "@id": "https://meta-analysis.cz/electricity/#article",
-        "name": "Electricity Demand Has Not Become More Price-Responsive Despite Ninety Years of Technological Change",
-        "author": [
-          {
-            "@type": "Person",
-            "name": "Peter Kudela"
-          },
-          {
-            "@type": "Person",
-            "name": "Tomas Havranek",
-            "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
-          },
-          {
-            "@type": "Person",
-            "name": "Zuzana Irsova"
-          },
-          {
-            "@type": "Person",
-            "name": "Anna Kudelova"
-          },
-          {
-            "@type": "Person",
-            "name": "Vojtech Sikl"
-          }
-        ],
-        "url": "https://meta-analysis.cz/electricity/",
-        "creativeWorkStatus": "Working paper"
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 12,
-      "item": {
-        "@type": "ScholarlyArticle",
-        "@id": "https://meta-analysis.cz/migrant/#article",
-        "name": "The Elasticity of Substitution between Native and Immigrant Labor: A Meta-Analysis",
-        "author": [
-          {
-            "@type": "Person",
-            "name": "Klara Kantova"
-          },
-          {
-            "@type": "Person",
-            "name": "Tomas Havranek",
-            "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
-          },
-          {
-            "@type": "Person",
-            "name": "Zuzana Irsova"
-          },
-          {
-            "@type": "Person",
-            "name": "Jiri Schwarz"
-          }
-        ],
-        "url": "https://meta-analysis.cz/migrant/",
-        "isPartOf": {
-          "@type": "Periodical",
-          "name": "Journal of Economic Surveys"
-        },
-        "creativeWorkStatus": "Revise and resubmit"
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 13,
-      "item": {
-        "@type": "ScholarlyArticle",
-        "@id": "https://meta-analysis.cz/trust/#article",
-        "name": "Trust, Rule of Law, and the Size Premium: Evidence from a Meta-Analysis",
-        "author": [
-          {
-            "@type": "Person",
-            "name": "Jiri Schwarz"
-          },
-          {
-            "@type": "Person",
-            "name": "Tomas Havranek",
-            "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
-          },
-          {
-            "@type": "Person",
-            "name": "Zuzana Irsova"
-          },
-          {
-            "@type": "Person",
-            "name": "Jiri Novak"
-          }
-        ],
-        "url": "https://meta-analysis.cz/trust/",
-        "creativeWorkStatus": "Working paper"
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 14,
-      "item": {
-        "@type": "ScholarlyArticle",
-        "@id": "https://meta-analysis.cz/esg/#article",
-        "name": "Do Female Directors Raise ESG Ratings? A Meta-Analysis",
-        "author": [
-          {
-            "@type": "Person",
-            "name": "Karolina Hozova"
-          },
-          {
-            "@type": "Person",
-            "name": "Tomas Havranek",
-            "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
-          },
-          {
-            "@type": "Person",
-            "name": "Zuzana Irsova"
-          }
-        ],
-        "url": "https://meta-analysis.cz/esg/",
-        "creativeWorkStatus": "Working paper"
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 15,
-      "item": {
-        "@type": "ScholarlyArticle",
-        "@id": "https://meta-analysis.cz/alphas/#article",
-        "name": "What Matters in Explaining the Variation in Hedge Fund Performance?",
-        "author": [
-          {
-            "@type": "Person",
-            "name": "Fan Yang"
-          },
-          {
-            "@type": "Person",
-            "name": "Tomas Havranek",
-            "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
-          },
-          {
-            "@type": "Person",
-            "name": "Zuzana Irsova"
-          },
-          {
-            "@type": "Person",
-            "name": "Jiri Novak"
-          }
-        ],
-        "url": "https://meta-analysis.cz/alphas/",
-        "isPartOf": {
-          "@type": "Periodical",
-          "name": "International Review of Economics and Finance"
-        },
-        "creativeWorkStatus": "Revise and resubmit"
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 16,
-      "item": {
-        "@type": "ScholarlyArticle",
-        "@id": "https://meta-analysis.cz/class/#article",
-        "name": "Publication Bias and Model Uncertainty in Measuring the Effect of Class Size on Achievement",
-        "author": [
-          {
-            "@type": "Person",
-            "name": "Matej Opatrny"
-          },
-          {
-            "@type": "Person",
-            "name": "Tomas Havranek",
-            "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
-          },
-          {
-            "@type": "Person",
-            "name": "Zuzana Irsova"
-          },
-          {
-            "@type": "Person",
-            "name": "Milan Scasny"
-          }
-        ],
-        "url": "https://meta-analysis.cz/class/",
-        "datePublished": "2026",
-        "isPartOf": {
-          "@type": "Periodical",
-          "name": "Journal of Labor Economics"
-        },
-        "creativeWorkStatus": "Forthcoming"
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 17,
-      "item": {
-        "@type": "ScholarlyArticle",
-        "@id": "https://meta-analysis.cz/skill/#article",
-        "name": "Publication and Attenuation Biases in Measuring Skill Substitution",
-        "author": [
-          {
-            "@type": "Person",
-            "name": "Tomas Havranek",
-            "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
-          },
-          {
-            "@type": "Person",
-            "name": "Zuzana Irsova"
-          },
-          {
-            "@type": "Person",
-            "name": "Lubica Laslopova"
-          },
-          {
-            "@type": "Person",
-            "name": "Olesia Zeynalova"
-          }
-        ],
-        "url": "https://meta-analysis.cz/skill/",
-        "datePublished": "2024",
-        "isPartOf": {
-          "@type": "Periodical",
-          "name": "Review of Economics and Statistics"
-        },
-        "creativeWorkStatus": "Published"
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 18,
-      "item": {
-        "@type": "ScholarlyArticle",
-        "@id": "https://meta-analysis.cz/frisch/#article",
-        "name": "Intertemporal Substitution in Labor Supply: A Meta-Analysis",
-        "author": [
-          {
-            "@type": "Person",
-            "name": "Ali Elminejad"
-          },
-          {
-            "@type": "Person",
-            "name": "Tomas Havranek",
-            "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
-          },
-          {
-            "@type": "Person",
-            "name": "Roman Horvath"
-          },
-          {
-            "@type": "Person",
-            "name": "Zuzana Irsova"
-          }
-        ],
-        "url": "https://meta-analysis.cz/frisch/",
-        "datePublished": "2023",
-        "isPartOf": {
-          "@type": "Periodical",
-          "name": "Review of Economic Dynamics"
-        },
-        "creativeWorkStatus": "Published"
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 19,
-      "item": {
-        "@type": "ScholarlyArticle",
-        "@id": "https://meta-analysis.cz/sigma/#article",
-        "name": "Measuring Capital-Labor Substitution: The Importance of Method Choices and Publication Bias",
-        "author": [
-          {
-            "@type": "Person",
-            "name": "Sebastian Gechert"
-          },
-          {
-            "@type": "Person",
-            "name": "Tomas Havranek",
-            "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
-          },
-          {
-            "@type": "Person",
-            "name": "Zuzana Irsova"
-          },
-          {
-            "@type": "Person",
-            "name": "Dominika Kolcunova"
-          }
-        ],
-        "url": "https://meta-analysis.cz/sigma/",
-        "datePublished": "2022",
-        "isPartOf": {
-          "@type": "Periodical",
-          "name": "Review of Economic Dynamics"
-        },
-        "creativeWorkStatus": "Published"
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 20,
-      "item": {
-        "@type": "ScholarlyArticle",
-        "@id": "https://meta-analysis.cz/armington/#article",
-        "name": "Estimating the Armington Elasticity: The Importance of Study Design and Publication Bias",
-        "author": [
-          {
-            "@type": "Person",
-            "name": "Josef Bajzik"
-          },
-          {
-            "@type": "Person",
-            "name": "Tomas Havranek",
-            "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
-          },
-          {
-            "@type": "Person",
-            "name": "Zuzana Irsova"
-          },
-          {
-            "@type": "Person",
-            "name": "Jiri Schwarz"
-          }
-        ],
-        "url": "https://meta-analysis.cz/armington/",
-        "datePublished": "2020",
-        "isPartOf": {
-          "@type": "Periodical",
-          "name": "Journal of International Economics"
-        },
-        "creativeWorkStatus": "Published"
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 21,
-      "item": {
-        "@type": "ScholarlyArticle",
-        "@id": "https://meta-analysis.cz/border/#article",
-        "name": "Do Borders Really Slash Trade? A Meta-Analysis",
-        "author": [
-          {
-            "@type": "Person",
-            "name": "Tomas Havranek",
-            "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
-          },
-          {
-            "@type": "Person",
-            "name": "Zuzana Irsova"
-          }
-        ],
-        "url": "https://meta-analysis.cz/border/",
-        "datePublished": "2017",
-        "isPartOf": {
-          "@type": "Periodical",
-          "name": "IMF Economic Review"
-        },
-        "creativeWorkStatus": "Published"
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 22,
-      "item": {
-        "@type": "ScholarlyArticle",
-        "@id": "https://meta-analysis.cz/substitution/#article",
-        "name": "Cross-Country Heterogeneity in Intertemporal Substitution",
-        "author": [
-          {
-            "@type": "Person",
-            "name": "Tomas Havranek",
-            "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
-          },
-          {
-            "@type": "Person",
-            "name": "Roman Horvath"
-          },
-          {
-            "@type": "Person",
-            "name": "Zuzana Irsova"
-          },
-          {
-            "@type": "Person",
-            "name": "Marek Rusnak"
-          }
-        ],
-        "url": "https://meta-analysis.cz/substitution/",
-        "datePublished": "2015",
-        "isPartOf": {
-          "@type": "Periodical",
-          "name": "Journal of International Economics"
-        },
-        "creativeWorkStatus": "Published"
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 23,
-      "item": {
-        "@type": "ScholarlyArticle",
-        "@id": "https://meta-analysis.cz/spillovers/#article",
-        "name": "Estimating Vertical Spillovers from FDI: Why Results Vary and What the True Effect Is",
-        "author": [
-          {
-            "@type": "Person",
-            "name": "Tomas Havranek",
-            "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
-          },
-          {
-            "@type": "Person",
-            "name": "Zuzana Irsova"
-          }
-        ],
-        "url": "https://meta-analysis.cz/spillovers/",
-        "datePublished": "2011",
-        "isPartOf": {
-          "@type": "Periodical",
-          "name": "Journal of International Economics"
-        },
-        "creativeWorkStatus": "Published"
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 24,
-      "item": {
-        "@type": "ScholarlyArticle",
-        "@id": "https://meta-analysis.cz/house_prices/#article",
-        "name": "When Does Monetary Policy Sway House Prices? A Meta-Analysis",
-        "author": [
-          {
-            "@type": "Person",
-            "name": "Dominika Ehrenbergerova"
-          },
-          {
-            "@type": "Person",
-            "name": "Josef Bajzik"
-          },
-          {
-            "@type": "Person",
-            "name": "Tomas Havranek",
-            "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
-          }
-        ],
-        "url": "https://meta-analysis.cz/house_prices/",
-        "datePublished": "2023",
-        "isPartOf": {
-          "@type": "Periodical",
-          "name": "IMF Economic Review"
-        },
-        "creativeWorkStatus": "Published"
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 25,
-      "item": {
-        "@type": "ScholarlyArticle",
-        "@id": "https://meta-analysis.cz/excess_sensitivity/#article",
-        "name": "Do Consumers Really Follow a Rule of Thumb? Three Thousand Estimates from 144 Studies Say \"Probably Not\"",
-        "author": [
-          {
-            "@type": "Person",
-            "name": "Tomas Havranek",
-            "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
-          },
-          {
-            "@type": "Person",
-            "name": "Anna Sokolova"
-          }
-        ],
-        "url": "https://meta-analysis.cz/excess_sensitivity/",
-        "datePublished": "2020",
-        "isPartOf": {
-          "@type": "Periodical",
-          "name": "Review of Economic Dynamics"
-        },
-        "creativeWorkStatus": "Published"
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 26,
-      "item": {
-        "@type": "ScholarlyArticle",
-        "@id": "https://meta-analysis.cz/habits/#article",
-        "name": "Habit Formation in Consumption: A Meta-Analysis",
-        "author": [
-          {
-            "@type": "Person",
-            "name": "Tomas Havranek",
-            "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
-          },
-          {
-            "@type": "Person",
-            "name": "Marek Rusnak"
-          },
-          {
-            "@type": "Person",
-            "name": "Anna Sokolova"
-          }
-        ],
-        "url": "https://meta-analysis.cz/habits/",
-        "datePublished": "2017",
-        "isPartOf": {
-          "@type": "Periodical",
-          "name": "European Economic Review"
-        },
-        "creativeWorkStatus": "Published"
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 27,
-      "item": {
-        "@type": "ScholarlyArticle",
-        "@id": "https://meta-analysis.cz/eis/#article",
-        "name": "Measuring Intertemporal Substitution: The Importance of Method Choices and Selective Reporting",
-        "author": [
-          {
-            "@type": "Person",
-            "name": "Tomas Havranek",
-            "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
-          }
-        ],
-        "url": "https://meta-analysis.cz/eis/",
-        "datePublished": "2015",
-        "isPartOf": {
-          "@type": "Periodical",
-          "name": "Journal of the European Economic Association"
-        },
-        "creativeWorkStatus": "Published"
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 28,
-      "item": {
-        "@type": "ScholarlyArticle",
-        "@id": "https://meta-analysis.cz/price_puzzle/#article",
-        "name": "How to Solve the Price Puzzle? A Meta-Analysis",
-        "author": [
-          {
-            "@type": "Person",
-            "name": "Marek Rusnak"
-          },
-          {
-            "@type": "Person",
-            "name": "Tomas Havranek",
-            "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
-          },
-          {
-            "@type": "Person",
-            "name": "Roman Horvath"
-          }
-        ],
-        "url": "https://meta-analysis.cz/price_puzzle/",
-        "datePublished": "2013",
-        "isPartOf": {
-          "@type": "Periodical",
-          "name": "Journal of Money, Credit and Banking"
-        },
-        "creativeWorkStatus": "Published"
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 29,
-      "item": {
-        "@type": "ScholarlyArticle",
-        "@id": "https://meta-analysis.cz/incentives/#article",
-        "name": "Financial Incentives and Performance: A Meta-Analysis of Experiments in Economics",
-        "author": [
-          {
-            "@type": "Person",
-            "name": "Petr Cala"
-          },
-          {
-            "@type": "Person",
-            "name": "Tomas Havranek",
-            "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
-          },
-          {
-            "@type": "Person",
-            "name": "Zuzana Irsova"
-          },
-          {
-            "@type": "Person",
-            "name": "Martina Luskova"
-          },
-          {
-            "@type": "Person",
-            "name": "Jindrich Matousek"
-          },
-          {
-            "@type": "Person",
-            "name": "Jiri Novak"
-          }
-        ],
-        "url": "https://meta-analysis.cz/incentives/",
-        "datePublished": "2026",
-        "isPartOf": {
-          "@type": "Periodical",
-          "name": "Journal of Political Economy Microeconomics"
-        },
-        "creativeWorkStatus": "Forthcoming"
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 30,
-      "item": {
-        "@type": "ScholarlyArticle",
-        "@id": "https://meta-analysis.cz/discrate/#article",
-        "name": "Individual Discount Rates: A Meta-Analysis of Experimental Evidence",
-        "author": [
-          {
-            "@type": "Person",
-            "name": "Jindrich Matousek"
-          },
-          {
-            "@type": "Person",
-            "name": "Tomas Havranek",
-            "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
-          },
-          {
-            "@type": "Person",
-            "name": "Zuzana Irsova"
-          }
-        ],
-        "url": "https://meta-analysis.cz/discrate/",
-        "datePublished": "2022",
-        "isPartOf": {
-          "@type": "Periodical",
-          "name": "Experimental Economics"
-        },
-        "creativeWorkStatus": "Published"
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 31,
-      "item": {
-        "@type": "ScholarlyArticle",
-        "@id": "https://meta-analysis.cz/forward/#article",
-        "name": "How Puzzling Is the Forward Premium Puzzle? A Meta-Analysis",
-        "author": [
-          {
-            "@type": "Person",
-            "name": "Diana Zigraiova"
-          },
-          {
-            "@type": "Person",
-            "name": "Tomas Havranek",
-            "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
-          },
-          {
-            "@type": "Person",
-            "name": "Zuzana Irsova"
-          },
-          {
-            "@type": "Person",
-            "name": "Jiri Novak"
-          }
-        ],
-        "url": "https://meta-analysis.cz/forward/",
-        "datePublished": "2021",
-        "isPartOf": {
-          "@type": "Periodical",
-          "name": "European Economic Review"
-        },
-        "creativeWorkStatus": "Published"
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 32,
-      "item": {
-        "@type": "ScholarlyArticle",
-        "@id": "https://meta-analysis.cz/reproducibility/#article",
-        "name": "Reproducibility and Robustness of Economics and Political Science Research",
-        "author": [
-          {
-            "@type": "Person",
-            "name": "Abel Brodeur"
-          },
-          {
-            "@type": "Person",
-            "name": "Derek Mikola"
-          },
-          {
-            "@type": "Person",
-            "name": "Nikolai Cook"
-          },
-          {
-            "@type": "Person",
-            "name": "Lenka Fiala"
-          },
-          {
-            "@type": "Person",
-            "name": "Thomas Brailey"
-          },
-          {
-            "@type": "Person",
-            "name": "Ryan Briggs"
-          },
-          {
-            "@type": "Person",
-            "name": "Alexandra de Gendre"
-          },
-          {
-            "@type": "Person",
-            "name": "Yannick Dupraz"
-          },
-          {
-            "@type": "Person",
-            "name": "Jacopo Gabani"
-          },
-          {
-            "@type": "Person",
-            "name": "Romain Gauriot"
-          },
-          {
-            "@type": "Person",
-            "name": "Joanne Haddad"
-          },
-          {
-            "@type": "Person",
-            "name": "Goncalo Lima"
-          },
-          {
-            "@type": "Person",
-            "name": "Jorg Ankel-Peters"
-          },
-          {
-            "@type": "Person",
-            "name": "Anna Dreber"
-          },
-          {
-            "@type": "Person",
-            "name": "Douglas Campbell"
-          },
-          {
-            "@type": "Person",
-            "name": "Lamis Kattan"
-          },
-          {
-            "@type": "Person",
-            "name": "Diego Marino Fages"
-          },
-          {
-            "@type": "Person",
-            "name": "Fabian Mierisch"
-          },
-          {
-            "@type": "Person",
-            "name": "Pu Sun"
-          },
-          {
-            "@type": "Person",
-            "name": "Taylor Wright"
-          },
-          {
-            "@type": "Person",
-            "name": "Marie Connolly"
-          },
-          {
-            "@type": "Person",
-            "name": "Fernando Hoces de la Guardia"
-          },
-          {
-            "@type": "Person",
-            "name": "Magnus Johannesson"
-          },
-          {
-            "@type": "Person",
-            "name": "Edward Miguel"
-          },
-          {
-            "@type": "Person",
-            "name": "Lars Vilhuber"
-          },
-          {
-            "@type": "Person",
-            "name": "Alejandro Abarca"
-          },
-          {
-            "@type": "Person",
-            "name": "Mahesh Acharya"
-          },
-          {
-            "@type": "Person",
-            "name": "Sossou Simplice Adjisse"
-          },
-          {
-            "@type": "Person",
-            "name": "Ahwaz Akhtar"
-          },
-          {
-            "@type": "Person",
-            "name": "Eduardo Alberto Ramirez Lizardi"
-          },
-          {
-            "@type": "Person",
-            "name": "Sabina Albrecht"
-          },
-          {
-            "@type": "Person",
-            "name": "Synøve Nygaard Andersen"
-          },
-          {
-            "@type": "Person",
-            "name": "Zubaria Andlib"
-          },
-          {
-            "@type": "Person",
-            "name": "Falak Arrora"
-          },
-          {
-            "@type": "Person",
-            "name": "Thomas Ash"
-          },
-          {
-            "@type": "Person",
-            "name": "Etienne Bacher"
-          },
-          {
-            "@type": "Person",
-            "name": "Sebastian Bachler"
-          },
-          {
-            "@type": "Person",
-            "name": "Felix Bacon"
-          },
-          {
-            "@type": "Person",
-            "name": "Manuel Bagues"
-          },
-          {
-            "@type": "Person",
-            "name": "Timea Balogh"
-          },
-          {
-            "@type": "Person",
-            "name": "Alisher Batmanov"
-          },
-          {
-            "@type": "Person",
-            "name": "Mara Barschkett"
-          },
-          {
-            "@type": "Person",
-            "name": "Barıs Kaan Basdil"
-          },
-          {
-            "@type": "Person",
-            "name": "Jaromir Baxa"
-          },
-          {
-            "@type": "Person",
-            "name": "Sascha O. Becker"
-          },
-          {
-            "@type": "Person",
-            "name": "Monica Beeder"
-          },
-          {
-            "@type": "Person",
-            "name": "Louis-Philippe Beland"
-          },
-          {
-            "@type": "Person",
-            "name": "Abdel-Hamid Bello"
-          },
-          {
-            "@type": "Person",
-            "name": "Daniel Benenson Markovits"
-          },
-          {
-            "@type": "Person",
-            "name": "Grant Benjamin"
-          },
-          {
-            "@type": "Person",
-            "name": "Thomas Bergeron"
-          },
-          {
-            "@type": "Person",
-            "name": "Moussa P. Blimpo"
-          },
-          {
-            "@type": "Person",
-            "name": "Marco Binetti"
-          },
-          {
-            "@type": "Person",
-            "name": "Carl Bonander"
-          },
-          {
-            "@type": "Person",
-            "name": "Joseph Bonneau"
-          },
-          {
-            "@type": "Person",
-            "name": "Endre Borbath"
-          },
-          {
-            "@type": "Person",
-            "name": "Nicolai Borgen"
-          },
-          {
-            "@type": "Person",
-            "name": "Solveig Topstad Borgen"
-          },
-          {
-            "@type": "Person",
-            "name": "Jonathan Borowsky"
-          },
-          {
-            "@type": "Person",
-            "name": "Elisa Brini"
-          },
-          {
-            "@type": "Person",
-            "name": "Myriam Brown"
-          },
-          {
-            "@type": "Person",
-            "name": "Martin Brun"
-          },
-          {
-            "@type": "Person",
-            "name": "Stephan Bruns"
-          },
-          {
-            "@type": "Person",
-            "name": "Nino Buliskeria"
-          },
-          {
-            "@type": "Person",
-            "name": "Andrea Calef"
-          },
-          {
-            "@type": "Person",
-            "name": "Alistair Cameron"
-          },
-          {
-            "@type": "Person",
-            "name": "Pamela Campa"
-          },
-          {
-            "@type": "Person",
-            "name": "Santiago Campos-Rodriguez"
-          },
-          {
-            "@type": "Person",
-            "name": "Giulio Giacomo Cantone"
-          },
-          {
-            "@type": "Person",
-            "name": "Fenella Carpena"
-          },
-          {
-            "@type": "Person",
-            "name": "Perry Jess Carter"
-          },
-          {
-            "@type": "Person",
-            "name": "Paul Castaneda Dower"
-          },
-          {
-            "@type": "Person",
-            "name": "Ondrej Castek"
-          },
-          {
-            "@type": "Person",
-            "name": "Jill Caviglia-Harris"
-          },
-          {
-            "@type": "Person",
-            "name": "Gabriella Chauca Strand"
-          },
-          {
-            "@type": "Person",
-            "name": "Shi Chen"
-          },
-          {
-            "@type": "Person",
-            "name": "Sya In Chzhen"
-          },
-          {
-            "@type": "Person",
-            "name": "Jong Chung"
-          },
-          {
-            "@type": "Person",
-            "name": "Jason Collins"
-          },
-          {
-            "@type": "Person",
-            "name": "Alexander Coppock"
-          },
-          {
-            "@type": "Person",
-            "name": "Hugo Cordeau"
-          },
-          {
-            "@type": "Person",
-            "name": "Ben Couillard"
-          },
-          {
-            "@type": "Person",
-            "name": "Jonathan Crechet"
-          },
-          {
-            "@type": "Person",
-            "name": "Lorenzo Crippa"
-          },
-          {
-            "@type": "Person",
-            "name": "Jing Cui"
-          },
-          {
-            "@type": "Person",
-            "name": "Christian Czymara"
-          },
-          {
-            "@type": "Person",
-            "name": "Haley Daarstad"
-          },
-          {
-            "@type": "Person",
-            "name": "Danh Chi Dao"
-          },
-          {
-            "@type": "Person",
-            "name": "Daniel Dao"
-          },
-          {
-            "@type": "Person",
-            "name": "Marco David Schmandt"
-          },
-          {
-            "@type": "Person",
-            "name": "Astrid de Linde"
-          },
-          {
-            "@type": "Person",
-            "name": "Lucas De Melo"
-          },
-          {
-            "@type": "Person",
-            "name": "Lachlan Deer"
-          },
-          {
-            "@type": "Person",
-            "name": "Micole De Vera"
-          },
-          {
-            "@type": "Person",
-            "name": "Velichka Dimitrova"
-          },
-          {
-            "@type": "Person",
-            "name": "Jan Fabian Dollbaum"
-          },
-          {
-            "@type": "Person",
-            "name": "Jan Matti Dollbaum"
-          },
-          {
-            "@type": "Person",
-            "name": "Michael Donnelly"
-          },
-          {
-            "@type": "Person",
-            "name": "Luu Duc Toan Huynh"
-          },
-          {
-            "@type": "Person",
-            "name": "Tsvetomira Dumbalska"
-          },
-          {
-            "@type": "Person",
-            "name": "Jamie Duncan"
-          },
-          {
-            "@type": "Person",
-            "name": "Kiet Tuan Duong"
-          },
-          {
-            "@type": "Person",
-            "name": "Thibaut Duprey"
-          },
-          {
-            "@type": "Person",
-            "name": "Christoph Dworschak"
-          },
-          {
-            "@type": "Person",
-            "name": "Sigmund Ellingsrud"
-          },
-          {
-            "@type": "Person",
-            "name": "Ali Elminejad"
-          },
-          {
-            "@type": "Person",
-            "name": "Yasmine Eissa"
-          },
-          {
-            "@type": "Person",
-            "name": "Andrea Erhart"
-          },
-          {
-            "@type": "Person",
-            "name": "Giulian Etingin-Frati"
-          },
-          {
-            "@type": "Person",
-            "name": "Elaheh Fatemipour"
-          },
-          {
-            "@type": "Person",
-            "name": "Alexa Federice"
-          },
-          {
-            "@type": "Person",
-            "name": "Jan Feld"
-          },
-          {
-            "@type": "Person",
-            "name": "Guidon Fenig"
-          },
-          {
-            "@type": "Person",
-            "name": "Mojtaba Firouzjaeiangalougah"
-          },
-          {
-            "@type": "Person",
-            "name": "Erlend Fleisje"
-          },
-          {
-            "@type": "Person",
-            "name": "Alexandre Fortier-Chouinard"
-          },
-          {
-            "@type": "Person",
-            "name": "Julia Francesca Engel"
-          },
-          {
-            "@type": "Person",
-            "name": "Nadjim Frechet"
-          },
-          {
-            "@type": "Person",
-            "name": "Reid Fortier"
-          },
-          {
-            "@type": "Person",
-            "name": "Tilman Fries"
-          },
-          {
-            "@type": "Person",
-            "name": "Michael James Frith"
-          },
-          {
-            "@type": "Person",
-            "name": "Thomas Galipeau"
-          },
-          {
-            "@type": "Person",
-            "name": "Sebastian Gallegos"
-          },
-          {
-            "@type": "Person",
-            "name": "Areez Gangji"
-          },
-          {
-            "@type": "Person",
-            "name": "Xiaoying Gao"
-          },
-          {
-            "@type": "Person",
-            "name": "Cloe Garnache"
-          },
-          {
-            "@type": "Person",
-            "name": "Attila Gaspar"
-          },
-          {
-            "@type": "Person",
-            "name": "Evelina Gavrilova"
-          },
-          {
-            "@type": "Person",
-            "name": "Arijit Ghosh"
-          },
-          {
-            "@type": "Person",
-            "name": "Garreth Gibney"
-          },
-          {
-            "@type": "Person",
-            "name": "Grant Gibson"
-          },
-          {
-            "@type": "Person",
-            "name": "Geir Godager"
-          },
-          {
-            "@type": "Person",
-            "name": "Leonard Goff"
-          },
-          {
-            "@type": "Person",
-            "name": "Da Gong"
-          },
-          {
-            "@type": "Person",
-            "name": "Javier Gonzalez"
-          },
-          {
-            "@type": "Person",
-            "name": "Jeremy D. Gretton"
-          },
-          {
-            "@type": "Person",
-            "name": "Cristina Griffa"
-          },
-          {
-            "@type": "Person",
-            "name": "Idaliya Grigoryeva"
-          },
-          {
-            "@type": "Person",
-            "name": "Maja Grøtting"
-          },
-          {
-            "@type": "Person",
-            "name": "Eric Guntermann"
-          },
-          {
-            "@type": "Person",
-            "name": "Jiaqi Guo"
-          },
-          {
-            "@type": "Person",
-            "name": "Alexi Gugushvili"
-          },
-          {
-            "@type": "Person",
-            "name": "Hooman Habibnia"
-          },
-          {
-            "@type": "Person",
-            "name": "Sonja Haffner"
-          },
-          {
-            "@type": "Person",
-            "name": "Jonathan D. Hall"
-          },
-          {
-            "@type": "Person",
-            "name": "Olle Hammar"
-          },
-          {
-            "@type": "Person",
-            "name": "Amund Hanson Kordt"
-          },
-          {
-            "@type": "Person",
-            "name": "Barry Hashimoto"
-          },
-          {
-            "@type": "Person",
-            "name": "Jonathan S. Hartley"
-          },
-          {
-            "@type": "Person",
-            "name": "Carina I. Hausladen"
-          },
-          {
-            "@type": "Person",
-            "name": "Tomas Havranek",
-            "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
-          },
-          {
-            "@type": "Person",
-            "name": "Harry He"
-          },
-          {
-            "@type": "Person",
-            "name": "Matthew Hepplewhite"
-          },
-          {
-            "@type": "Person",
-            "name": "Mario Herrera-Rodriguez"
-          },
-          {
-            "@type": "Person",
-            "name": "Felix Heuer"
-          },
-          {
-            "@type": "Person",
-            "name": "Anthony Heyes"
-          },
-          {
-            "@type": "Person",
-            "name": "Anson T. Y. Ho"
-          },
-          {
-            "@type": "Person",
-            "name": "Jonathan Holmes"
-          },
-          {
-            "@type": "Person",
-            "name": "Armando Holzknecht"
-          },
-          {
-            "@type": "Person",
-            "name": "Yu-Hsiang Dexter Hsu"
-          },
-          {
-            "@type": "Person",
-            "name": "Shiang-Hung Hu"
-          },
-          {
-            "@type": "Person",
-            "name": "Yu-Shiuan Huang"
-          },
-          {
-            "@type": "Person",
-            "name": "Mathias Huebener"
-          },
-          {
-            "@type": "Person",
-            "name": "Christoph Huber"
-          },
-          {
-            "@type": "Person",
-            "name": "Kim P. Huynh"
-          },
-          {
-            "@type": "Person",
-            "name": "Zuzana Irsova"
-          },
-          {
-            "@type": "Person",
-            "name": "Ozan Isler"
-          },
-          {
-            "@type": "Person",
-            "name": "Niklas Jakobsson"
-          },
-          {
-            "@type": "Person",
-            "name": "Raphael Jananji"
-          },
-          {
-            "@type": "Person",
-            "name": "Tharaka A. Jayalath"
-          },
-          {
-            "@type": "Person",
-            "name": "Michael Jetter"
-          },
-          {
-            "@type": "Person",
-            "name": "Jenny John"
-          },
-          {
-            "@type": "Person",
-            "name": "Rachel Joy Forshaw"
-          },
-          {
-            "@type": "Person",
-            "name": "Felipe Juan"
-          },
-          {
-            "@type": "Person",
-            "name": "Valon Kadriu"
-          },
-          {
-            "@type": "Person",
-            "name": "Sunny Karim"
-          },
-          {
-            "@type": "Person",
-            "name": "Edmund Kelly"
-          },
-          {
-            "@type": "Person",
-            "name": "Duy Khanh Hoang Dang"
-          },
-          {
-            "@type": "Person",
-            "name": "Tazia Khushboo"
-          },
-          {
-            "@type": "Person",
-            "name": "Jin Kim"
-          },
-          {
-            "@type": "Person",
-            "name": "Gustav Kjellsson"
-          },
-          {
-            "@type": "Person",
-            "name": "Anders Kjelsrud"
-          },
-          {
-            "@type": "Person",
-            "name": "Andreas Kotsadam"
-          },
-          {
-            "@type": "Person",
-            "name": "Jori Korpershoek"
-          },
-          {
-            "@type": "Person",
-            "name": "Lewis Krashinsky"
-          },
-          {
-            "@type": "Person",
-            "name": "Suranjana Kundu"
-          },
-          {
-            "@type": "Person",
-            "name": "Alexander Kustov"
-          },
-          {
-            "@type": "Person",
-            "name": "Nurlan Lalayev"
-          },
-          {
-            "@type": "Person",
-            "name": "Audree Langlois"
-          },
-          {
-            "@type": "Person",
-            "name": "Jill Laufer"
-          },
-          {
-            "@type": "Person",
-            "name": "Blake Lee-Whiting"
-          },
-          {
-            "@type": "Person",
-            "name": "Andreas Leibing"
-          },
-          {
-            "@type": "Person",
-            "name": "Gabriel Lenz"
-          },
-          {
-            "@type": "Person",
-            "name": "Joel Levin"
-          },
-          {
-            "@type": "Person",
-            "name": "Peng Li"
-          },
-          {
-            "@type": "Person",
-            "name": "Tongzhe Li"
-          },
-          {
-            "@type": "Person",
-            "name": "Yuchen Lin"
-          },
-          {
-            "@type": "Person",
-            "name": "Ariel Listo"
-          },
-          {
-            "@type": "Person",
-            "name": "Dan Liu"
-          },
-          {
-            "@type": "Person",
-            "name": "Xuewen Lu"
-          },
-          {
-            "@type": "Person",
-            "name": "Elvina Lukmanova"
-          },
-          {
-            "@type": "Person",
-            "name": "Alex Luscombe"
-          },
-          {
-            "@type": "Person",
-            "name": "Lester R. Lusher"
-          },
-          {
-            "@type": "Person",
-            "name": "Ke Lyu"
-          },
-          {
-            "@type": "Person",
-            "name": "Hai Ma"
-          },
-          {
-            "@type": "Person",
-            "name": "Nicolas Mader"
-          },
-          {
-            "@type": "Person",
-            "name": "Clifton Makate"
-          },
-          {
-            "@type": "Person",
-            "name": "Alice Malmberg"
-          },
-          {
-            "@type": "Person",
-            "name": "Adit Maitra"
-          },
-          {
-            "@type": "Person",
-            "name": "Marco Mandas"
-          },
-          {
-            "@type": "Person",
-            "name": "Jan Marcus"
-          },
-          {
-            "@type": "Person",
-            "name": "Shushanik Margaryan"
-          },
-          {
-            "@type": "Person",
-            "name": "Lili Mark"
-          },
-          {
-            "@type": "Person",
-            "name": "Andres Martignano"
-          },
-          {
-            "@type": "Person",
-            "name": "Abigail Marsh"
-          },
-          {
-            "@type": "Person",
-            "name": "Isabella Masetto"
-          },
-          {
-            "@type": "Person",
-            "name": "Anthony McCanny"
-          },
-          {
-            "@type": "Person",
-            "name": "Emma McManus"
-          },
-          {
-            "@type": "Person",
-            "name": "Ryan McWay"
-          },
-          {
-            "@type": "Person",
-            "name": "Lennard Metson"
-          },
-          {
-            "@type": "Person",
-            "name": "Jonas Minet Kinge"
-          },
-          {
-            "@type": "Person",
-            "name": "Sumit Mishra"
-          },
-          {
-            "@type": "Person",
-            "name": "Myra Mohnen"
-          },
-          {
-            "@type": "Person",
-            "name": "Jakob Moeller"
-          },
-          {
-            "@type": "Person",
-            "name": "Rosalie Montambeault"
-          },
-          {
-            "@type": "Person",
-            "name": "Sebastien Montpetit"
-          },
-          {
-            "@type": "Person",
-            "name": "Louis-Philippe Morin"
-          },
-          {
-            "@type": "Person",
-            "name": "Todd Morris"
-          },
-          {
-            "@type": "Person",
-            "name": "Scott Moser"
-          },
-          {
-            "@type": "Person",
-            "name": "Fabio Yoshio Suguri Motoki"
-          },
-          {
-            "@type": "Person",
-            "name": "Lucija Muehlenbachs"
-          },
-          {
-            "@type": "Person",
-            "name": "Andreea Musulan"
-          },
-          {
-            "@type": "Person",
-            "name": "Marco Musumeci"
-          },
-          {
-            "@type": "Person",
-            "name": "Munirul Nabin"
-          },
-          {
-            "@type": "Person",
-            "name": "Karim Nchare"
-          },
-          {
-            "@type": "Person",
-            "name": "Florian Neubauer"
-          },
-          {
-            "@type": "Person",
-            "name": "Quan M. P. Nguyen"
-          },
-          {
-            "@type": "Person",
-            "name": "Tuan Nguyen"
-          },
-          {
-            "@type": "Person",
-            "name": "Viet Nguyen-Tien"
-          },
-          {
-            "@type": "Person",
-            "name": "Ali Niazi"
-          },
-          {
-            "@type": "Person",
-            "name": "Giorgi Nikolaishvili"
-          },
-          {
-            "@type": "Person",
-            "name": "Ardyn Nordstrom"
-          },
-          {
-            "@type": "Person",
-            "name": "Patrick Nuß"
-          },
-          {
-            "@type": "Person",
-            "name": "Angela Odermatt"
-          },
-          {
-            "@type": "Person",
-            "name": "Matt Olson"
-          },
-          {
-            "@type": "Person",
-            "name": "Henning Øien"
-          },
-          {
-            "@type": "Person",
-            "name": "Tim Olkers"
-          },
-          {
-            "@type": "Person",
-            "name": "Miquel Oliver i Vert"
-          },
-          {
-            "@type": "Person",
-            "name": "Emre Oral"
-          },
-          {
-            "@type": "Person",
-            "name": "Christian Oswald"
-          },
-          {
-            "@type": "Person",
-            "name": "Ali Ousman"
-          },
-          {
-            "@type": "Person",
-            "name": "Omer Ozak"
-          },
-          {
-            "@type": "Person",
-            "name": "Shubham Pandey"
-          },
-          {
-            "@type": "Person",
-            "name": "Alexandre Pavlov"
-          },
-          {
-            "@type": "Person",
-            "name": "Martino Pelli"
-          },
-          {
-            "@type": "Person",
-            "name": "Romeo Penheiro"
-          },
-          {
-            "@type": "Person",
-            "name": "RyuGyung Park"
-          },
-          {
-            "@type": "Person",
-            "name": "Eva Perez Martel"
-          },
-          {
-            "@type": "Person",
-            "name": "Tereza Petrovicova"
-          },
-          {
-            "@type": "Person",
-            "name": "Linh Phan"
-          },
-          {
-            "@type": "Person",
-            "name": "Alexa Prettyman"
-          },
-          {
-            "@type": "Person",
-            "name": "Jakub Prochazka"
-          },
-          {
-            "@type": "Person",
-            "name": "Aqila Putri"
-          },
-          {
-            "@type": "Person",
-            "name": "Julian Quandt"
-          },
-          {
-            "@type": "Person",
-            "name": "Kangyu Qiu"
-          },
-          {
-            "@type": "Person",
-            "name": "Loan Quynh Thi Nguyen"
-          },
-          {
-            "@type": "Person",
-            "name": "Andaleeb Rahman"
-          },
-          {
-            "@type": "Person",
-            "name": "Carson H. Rea"
-          },
-          {
-            "@type": "Person",
-            "name": "Adam Reiremo"
-          },
-          {
-            "@type": "Person",
-            "name": "Laetitia Renee"
-          },
-          {
-            "@type": "Person",
-            "name": "Joseph Richardson"
-          },
-          {
-            "@type": "Person",
-            "name": "Nicholas Rivers"
-          },
-          {
-            "@type": "Person",
-            "name": "Bruno Rodrigues"
-          },
-          {
-            "@type": "Person",
-            "name": "William Roelofs"
-          },
-          {
-            "@type": "Person",
-            "name": "Tobias Roemer"
-          },
-          {
-            "@type": "Person",
-            "name": "Ole Rogeberg"
-          },
-          {
-            "@type": "Person",
-            "name": "Julian Rose"
-          },
-          {
-            "@type": "Person",
-            "name": "Andrew Roskos-Ewoldsen"
-          },
-          {
-            "@type": "Person",
-            "name": "Paul Rosmer"
-          },
-          {
-            "@type": "Person",
-            "name": "Barbara Sabada"
-          },
-          {
-            "@type": "Person",
-            "name": "Soodeh Saberian"
-          },
-          {
-            "@type": "Person",
-            "name": "Nicolas Salamanca"
-          },
-          {
-            "@type": "Person",
-            "name": "Georg Sator"
-          },
-          {
-            "@type": "Person",
-            "name": "Daniel Scates"
-          },
-          {
-            "@type": "Person",
-            "name": "Elmar Schluter"
-          },
-          {
-            "@type": "Person",
-            "name": "Cameron Sells"
-          },
-          {
-            "@type": "Person",
-            "name": "Sharmi Sen"
-          },
-          {
-            "@type": "Person",
-            "name": "Ritika Sethi"
-          },
-          {
-            "@type": "Person",
-            "name": "Anna Shcherbiak"
-          },
-          {
-            "@type": "Person",
-            "name": "Moyosore Sogaolu"
-          },
-          {
-            "@type": "Person",
-            "name": "Matt Soosalu"
-          },
-          {
-            "@type": "Person",
-            "name": "Erik Ø. Sørensen"
-          },
-          {
-            "@type": "Person",
-            "name": "Manali Sovani"
-          },
-          {
-            "@type": "Person",
-            "name": "Noah Spencer"
-          },
-          {
-            "@type": "Person",
-            "name": "Stefan Staubli"
-          },
-          {
-            "@type": "Person",
-            "name": "Renske Stans"
-          },
-          {
-            "@type": "Person",
-            "name": "Anya Stewart"
-          },
-          {
-            "@type": "Person",
-            "name": "Felix Stips"
-          },
-          {
-            "@type": "Person",
-            "name": "Kieran Stockley"
-          },
-          {
-            "@type": "Person",
-            "name": "Stephenson Strobel"
-          },
-          {
-            "@type": "Person",
-            "name": "Ethan Struby"
-          },
-          {
-            "@type": "Person",
-            "name": "John P. Tang"
-          },
-          {
-            "@type": "Person",
-            "name": "Idil Tanrisever"
-          },
-          {
-            "@type": "Person",
-            "name": "Thomas Tao Yang"
-          },
-          {
-            "@type": "Person",
-            "name": "Ipek Tastan"
-          },
-          {
-            "@type": "Person",
-            "name": "Dejan Tatic"
-          },
-          {
-            "@type": "Person",
-            "name": "Benjamin Tatlow"
-          },
-          {
-            "@type": "Person",
-            "name": "Feraud Tchuisseu Seuyong"
-          },
-          {
-            "@type": "Person",
-            "name": "Remi Theriault"
-          },
-          {
-            "@type": "Person",
-            "name": "Vincent Thivierge"
-          },
-          {
-            "@type": "Person",
-            "name": "Wenjie Tian"
-          },
-          {
-            "@type": "Person",
-            "name": "Filip-Mihai Toma"
-          },
-          {
-            "@type": "Person",
-            "name": "Maddalena Totarelli"
-          },
-          {
-            "@type": "Person",
-            "name": "Van-Anh Tran"
-          },
-          {
-            "@type": "Person",
-            "name": "Hung Truong"
-          },
-          {
-            "@type": "Person",
-            "name": "Nikita Tsoy"
-          },
-          {
-            "@type": "Person",
-            "name": "Kerem Tuzcuoglu"
-          },
-          {
-            "@type": "Person",
-            "name": "Diego Ubfal"
-          },
-          {
-            "@type": "Person",
-            "name": "Laura Villalobos"
-          },
-          {
-            "@type": "Person",
-            "name": "Julian Walterskirchen"
-          },
-          {
-            "@type": "Person",
-            "name": "Joseph Tao-yi Wang"
-          },
-          {
-            "@type": "Person",
-            "name": "Vasudha Wattal"
-          },
-          {
-            "@type": "Person",
-            "name": "Matthew D. Webb"
-          },
-          {
-            "@type": "Person",
-            "name": "Bryan S. Weber"
-          },
-          {
-            "@type": "Person",
-            "name": "Reinhard Weisser"
-          },
-          {
-            "@type": "Person",
-            "name": "Wei-Chien Weng"
-          },
-          {
-            "@type": "Person",
-            "name": "Christian Westheide"
-          },
-          {
-            "@type": "Person",
-            "name": "Kimberly White"
-          },
-          {
-            "@type": "Person",
-            "name": "Jacob Winter"
-          },
-          {
-            "@type": "Person",
-            "name": "Timo Wochner"
-          },
-          {
-            "@type": "Person",
-            "name": "Matt Woerman"
-          },
-          {
-            "@type": "Person",
-            "name": "Jared Wong"
-          },
-          {
-            "@type": "Person",
-            "name": "Ritchie Woodard"
-          },
-          {
-            "@type": "Person",
-            "name": "Marcin Wronski"
-          },
-          {
-            "@type": "Person",
-            "name": "Myra Yazbeck"
-          },
-          {
-            "@type": "Person",
-            "name": "Gustav Chung Yang"
-          },
-          {
-            "@type": "Person",
-            "name": "Luther Yap"
-          },
-          {
-            "@type": "Person",
-            "name": "Kareman Yassin"
-          },
-          {
-            "@type": "Person",
-            "name": "Hao Ye"
-          },
-          {
-            "@type": "Person",
-            "name": "Jin Young Yoon"
-          },
-          {
-            "@type": "Person",
-            "name": "Chris Yurris"
-          },
-          {
-            "@type": "Person",
-            "name": "Tahreen Zahra"
-          },
-          {
-            "@type": "Person",
-            "name": "Mirela Zaneva"
-          },
-          {
-            "@type": "Person",
-            "name": "Aline Zayat"
-          },
-          {
-            "@type": "Person",
-            "name": "Jonathan Zhang"
-          },
-          {
-            "@type": "Person",
-            "name": "Ziwei Zhao"
-          },
-          {
-            "@type": "Person",
-            "name": "Yaolang Zhong"
-          }
-        ],
-        "url": "https://meta-analysis.cz/reproducibility/",
-        "datePublished": "2026",
-        "isPartOf": {
-          "@type": "Periodical",
-          "name": "Nature"
-        },
-        "creativeWorkStatus": "Published"
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 33,
-      "item": {
-        "@type": "ScholarlyArticle",
-        "@id": "https://meta-analysis.cz/maive/#article",
-        "name": "Spurious Precision in Meta-Analysis of Observational Research",
-        "author": [
-          {
-            "@type": "Person",
-            "name": "Zuzana Irsova"
-          },
-          {
-            "@type": "Person",
-            "name": "Pedro Bom"
-          },
-          {
-            "@type": "Person",
-            "name": "Tomas Havranek",
-            "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
-          },
-          {
-            "@type": "Person",
-            "name": "Heiko Rachinger"
-          }
-        ],
-        "url": "https://meta-analysis.cz/maive/",
-        "datePublished": "2025",
-        "isPartOf": {
-          "@type": "Periodical",
-          "name": "Nature Communications"
-        },
-        "creativeWorkStatus": "Published"
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 34,
-      "item": {
-        "@type": "ScholarlyArticle",
-        "@id": "https://meta-analysis.cz/correlations/#article",
-        "name": "Reducing the biases of the conventional meta-analysis of correlations",
-        "author": [
-          {
-            "@type": "Person",
-            "name": "T. D. Stanley"
-          },
-          {
-            "@type": "Person",
-            "name": "Hristos Doucouliagos"
-          },
-          {
-            "@type": "Person",
-            "name": "Tomas Havranek",
-            "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
-          }
-        ],
-        "url": "https://meta-analysis.cz/correlations/",
-        "datePublished": "2025",
-        "isPartOf": {
-          "@type": "Periodical",
-          "name": "Research Synthesis Methods"
-        },
-        "creativeWorkStatus": "Published"
-      }
-    }
-  ]
+    ]
+  },
+  "dateModified": "2026-10-08"
 }</script></head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -2647,12 +2664,13 @@ footer { flex-wrap:wrap; row-gap:16px; }
 <header>
 <div class="identity">
 <img alt="Tomas Havranek" class="portrait" decoding="async" height="99" sizes="(max-width:760px) 64px, 76px" src="../photo-480.jpg" srcset="../photo-480.jpg 480w, ../photo.jpg 960w" width="99"/>
-<div><p class="identity-name">Tomas Havranek</p><p class="role">Professor of economics<br/>Charles University, Prague</p><a class="email" href="mailto:tomas.havranek@fsv.cuni.cz">tomas.havranek@fsv.cuni.cz</a></div>
+<div><p class="identity-name"><a class="home-link" href="../">Tomas Havranek</a></p><p class="role">Professor of economics<br/><a href="https://ies.fsv.cuni.cz/en/contacts/people/78067720">Charles University</a>, Prague</p><a class="email" href="mailto:tomas.havranek@fsv.cuni.cz">tomas.havranek@fsv.cuni.cz</a></div>
 </div>
-<nav aria-label="Main navigation"><a href="../">Home</a><a aria-current="page" href="./">Research</a><a href="../impact/">Impact</a><a href="https://meta-analysis.cz/">meta-analysis.cz</a><a href="../cs/research/" lang="cs">Česky</a></nav>
+<nav aria-label="Main navigation"><a href="../">Home</a><a aria-current="page" href="./">Research</a><a href="../impact/">Impact</a><a href="https://meta-analysis.cz/">meta-analysis.cz</a><a href="../cs/research/" lang="cs">Cesky</a></nav>
 </header>
 <main id="main">
 <h1 class="statement">Research</h1>
+<p class="research-jump"><a href="#current-research">Current research</a> · <a href="#publications">Selected publications</a></p>
 <p class="hub research-intro">Papers, data and code are at <a href="https://meta-analysis.cz/">meta-analysis.cz</a>; the data for each study are in the <a href="https://meta-analysis.cz/datasets/">datasets archive</a>.</p>
 <section aria-labelledby="current-research" class="research">
 <h2 id="current-research">Current research</h2>
@@ -2661,18 +2679,18 @@ footer { flex-wrap:wrap; row-gap:16px; }
 <li id="pub-c460e1e97f23"><a class="paper-title" href="https://meta-analysis.cz/rdt_chemnitz.pdf">The Residual Discontinuity Test for p-Hacking</a><span class="authors">with Zuzana Irsova, Pedro Bom, and Heiko Rachinger</span><span class="project-detail"><a href="https://meta-analysis.cz/rdt_chemnitz.pdf">Slides</a> · Also an experimental option at <a href="https://www.easymeta.org/">easymeta.org</a>.</span></li>
 <li id="pub-35c3fb3b3d9a"><a class="paper-title" href="https://meta-analysis.cz/debate/">Does Multi-Agent Debate Improve AI Feedback on Research Papers?</a><span class="authors">with Zuzana Irsova</span></li>
 <li id="pub-b52d167423c7"><a class="paper-title" href="https://meta-analysis.cz/outliers/">Do Decisions about Outliers and Influential Effects Matter? Evidence from 358 Behavioral Science Meta-Analyses</a><span class="authors">with Zuzana Irsova, Martina Luskova, and T. D. Stanley</span></li>
-<li id="pub-07d286b020fe"><a class="paper-title" href="https://meta-analysis.cz/pcc_survey/">Do Methods Matter in the Meta-Analysis of Partial Correlation Coefficients?</a><span class="authors">with T. D. Stanley, Petr Cala, Hristos Doucouliagos, and Zuzana Irsova</span><span class="journal">R&amp;R <i>Research Synthesis Methods</i>.</span></li>
-<li id="pub-d7b3624ab973"><a class="paper-title" href="https://meta-analysis.cz/power/">The Power of Science: Statistical Power in Published Research Across Five Disciplines</a><span class="authors">with Yue Wang, Frantisek Bartos, Tom Coupe, Sanghyun Hong, Zuzana Irsova, and W. Robert Reed</span></li><li id="pub-dc419b81b22c"><a class="paper-title" href="https://meta-analysis.cz/beauty/">Meta-Analysis of Field Studies on Beauty and Professional Success</a><span class="authors">with Zuzana Irsova, Kseniya Bortnikova, and Frantisek Bartos</span><span class="journal">R&amp;R <i>Nature Human Behaviour</i>.</span></li>
-<li id="pub-f2c16347decb"><a class="paper-title" href="https://meta-analysis.cz/exercise/">Effect of Exercise on Cognition, Memory, and Executive Function: A Study-Level Meta-Meta-Analysis Across Populations and Exercise Categories</a><span class="authors">with Frantisek Bartos, Martina Luskova, Kseniya Bortnikova, Karolina Hozova, Klara Kantova, and Zuzana Irsova</span><span class="journal">R&amp;R <i>Sports Medicine</i>.</span></li>
+<li id="pub-07d286b020fe"><a class="paper-title" href="https://meta-analysis.cz/pcc_survey/">Do Methods Matter in the Meta-Analysis of Partial Correlation Coefficients?</a><span class="authors">with T. D. Stanley, Petr Cala, Hristos Doucouliagos, and Zuzana Irsova</span><span class="journal"><abbr title="revise and resubmit">R&amp;R</abbr> <i>Research Synthesis Methods</i>.</span></li>
+<li id="pub-d7b3624ab973"><a class="paper-title" href="https://meta-analysis.cz/power/">The Power of Science: Statistical Power in Published Research Across Five Disciplines</a><span class="authors">with Yue Wang, Frantisek Bartos, Tom Coupe, Sanghyun Hong, Zuzana Irsova, and W. Robert Reed</span></li><li id="pub-dc419b81b22c"><a class="paper-title" href="https://meta-analysis.cz/beauty/">Meta-Analysis of Field Studies on Beauty and Professional Success</a><span class="authors">with Zuzana Irsova, Kseniya Bortnikova, and Frantisek Bartos</span><span class="journal"><abbr title="revise and resubmit">R&amp;R</abbr> <i>Nature Human Behaviour</i>.</span></li>
+<li id="pub-f2c16347decb"><a class="paper-title" href="https://meta-analysis.cz/exercise/">Effect of Exercise on Cognition, Memory, and Executive Function: A Study-Level Meta-Meta-Analysis Across Populations and Exercise Categories</a><span class="authors">with Frantisek Bartos, Martina Luskova, Kseniya Bortnikova, Karolina Hozova, Klara Kantova, and Zuzana Irsova</span><span class="journal"><abbr title="revise and resubmit">R&amp;R</abbr> <i>Sports Medicine</i>.</span></li>
 <li id="pub-f0c2dacea60e"><a class="paper-title" href="https://meta-analysis.cz/learning/">Publication Bias and P-Hacking in the Effect of COVID-19 on Learning: A Meta-Analysis</a><span class="authors">with Martina Luskova, Nino Buliskeria, Ali Elminejad, Zuzana Irsova, Stepan Jurajda, and Marek Kapicka</span></li>
 <li id="pub-59bb27082217"><a class="paper-title" href="https://meta-analysis.cz/inflation/">Optimal Inflation Rate: A Meta-Analysis</a><span class="authors">with Matej Opatrny, Martin Opatrny, Zuzana Irsova, and Mojmir Hampl</span></li>
 <li id="pub-129f9e0aa971"><a class="paper-title" href="https://meta-analysis.cz/electricity/">Electricity Demand Has Not Become More Price-Responsive Despite Ninety Years of Technological Change</a><span class="authors">with Peter Kudela, Zuzana Irsova, Anna Kudelova, and Vojtech Sikl</span></li>
-<li id="pub-e0e3419f60b1"><a class="paper-title" href="https://meta-analysis.cz/migrant/">The Elasticity of Substitution between Native and Immigrant Labor: A Meta-Analysis</a><span class="authors">with Klara Kantova, Zuzana Irsova, and Jiri Schwarz</span><span class="journal">R&amp;R <i>Journal of Economic Surveys</i>.</span></li>
+<li id="pub-e0e3419f60b1"><a class="paper-title" href="https://meta-analysis.cz/migrant/">The Elasticity of Substitution between Native and Immigrant Labor: A Meta-Analysis</a><span class="authors">with Klara Kantova, Zuzana Irsova, and Jiri Schwarz</span><span class="journal"><abbr title="revise and resubmit">R&amp;R</abbr> <i>Journal of Economic Surveys</i>.</span></li>
 <li id="pub-cce790cac69d"><a class="paper-title" href="https://meta-analysis.cz/trust/">Trust, Rule of Law, and the Size Premium: Evidence from a Meta-Analysis</a><span class="authors">with Jiri Schwarz, Zuzana Irsova, and Jiri Novak</span></li>
 <li id="pub-f5ca8dd94fa4"><a class="paper-title" href="https://meta-analysis.cz/esg/">Do Female Directors Raise ESG Ratings? A Meta-Analysis</a><span class="authors">with Karolina Hozova and Zuzana Irsova</span></li>
-<li id="pub-652175943072"><a class="paper-title" href="https://meta-analysis.cz/alphas/">What Matters in Explaining the Variation in Hedge Fund Performance?</a><span class="authors">with Fan Yang, Zuzana Irsova, and Jiri Novak</span><span class="journal">R&amp;R <i>International Review of Economics and Finance</i>.</span></li>
+<li id="pub-652175943072"><a class="paper-title" href="https://meta-analysis.cz/alphas/">What Matters in Explaining the Variation in Hedge Fund Performance?</a><span class="authors">with Fan Yang, Zuzana Irsova, and Jiri Novak</span><span class="journal"><abbr title="revise and resubmit">R&amp;R</abbr> <i>International Review of Economics and Finance</i>.</span></li>
 </ol>
-<p class="research-closing">Also in progress: attenuation versus publication bias (with John Ioannidis), p-hacking versus publication bias (with Nino Buliskeria), external validity tests for meta-analysis (with Chishio Furukawa), spurious precision across fields (with František Bartoš), and automatic replication of meta-analyses (with Petr Čala).</p>
+<p class="research-closing">Also in progress: attenuation versus publication bias (with John Ioannidis), p-hacking versus publication bias (with Nino Buliskeria), external validity tests for meta-analysis (with Chishio Furukawa), spurious precision across fields (with Frantisek Bartos), and automatic replication of meta-analyses (with Petr Cala).</p>
 </section>
 <section aria-labelledby="publications" class="research">
 <h2 id="publications">Selected publications</h2>
@@ -2681,17 +2699,17 @@ footer { flex-wrap:wrap; row-gap:16px; }
 <h3 id="field-1">Labor economics</h3>
 <ol class="papers reference-list" role="list">
 <li id="pub-e85d66da95e3"><a class="paper-title" href="https://meta-analysis.cz/class/">Publication Bias and Model Uncertainty in Measuring the Effect of Class Size on Achievement</a><span class="authors">2026 · with Matej Opatrny, Zuzana Irsova, and Milan Scasny</span><span class="journal"><i>Journal of Labor Economics</i>, forthcoming.</span></li>
-<li id="pub-a52161a16a81"><a class="paper-title" href="https://meta-analysis.cz/skill/">Publication and Attenuation Biases in Measuring Skill Substitution</a><span class="authors">2024 · with Lubica Laslopova, Olesia Zeynalova, and Zuzana Irsova</span><span class="journal"><i>Review of Economics and Statistics</i> 106(5), 1187–1200.</span></li>
+<li id="pub-a52161a16a81"><a class="paper-title" href="https://meta-analysis.cz/skill/">Publication and Attenuation Biases in Measuring Skill Substitution</a><span class="authors">2024 · with Zuzana Irsova, Lubica Laslopova, and Olesia Zeynalova</span><span class="journal"><i>Review of Economics and Statistics</i> 106(5), 1187–1200.</span></li>
 <li id="pub-6c78684e344f"><a class="paper-title" href="https://meta-analysis.cz/frisch/">Intertemporal Substitution in Labor Supply: A Meta-Analysis</a><span class="authors">2023 · with Ali Elminejad, Roman Horvath, and Zuzana Irsova</span><span class="journal"><i>Review of Economic Dynamics</i> 51, 1095–1113.</span></li>
-<li id="pub-9d21fa103216"><a class="paper-title" href="https://meta-analysis.cz/sigma/">Measuring Capital-Labor Substitution: The Importance of Method Choices and Publication Bias</a><span class="authors">2022 · with Sebastian Gechert, Dominika Kolcunova, and Zuzana Irsova</span><span class="journal"><i>Review of Economic Dynamics</i> 45, 55–82.</span></li>
+<li id="pub-9d21fa103216"><a class="paper-title" href="https://meta-analysis.cz/sigma/">Measuring Capital-Labor Substitution: The Importance of Method Choices and Publication Bias</a><span class="authors">2022 · with Sebastian Gechert, Zuzana Irsova, and Dominika Kolcunova</span><span class="journal"><i>Review of Economic Dynamics</i> 45, 55–82.</span></li>
 </ol>
 </section>
 <section aria-labelledby="field-2" class="field">
 <h3 id="field-2">International economics</h3>
 <ol class="papers reference-list" role="list">
-<li id="pub-54edef001a74"><a class="paper-title" href="https://meta-analysis.cz/armington/">Estimating the Armington Elasticity: The Importance of Study Design and Publication Bias</a><span class="authors">2020 · with Josef Bajzik, Jiri Schwarz, and Zuzana Irsova</span><span class="journal"><i>Journal of International Economics</i> 127, 103383.</span></li>
+<li id="pub-54edef001a74"><a class="paper-title" href="https://meta-analysis.cz/armington/">Estimating the Armington Elasticity: The Importance of Study Design and Publication Bias</a><span class="authors">2020 · with Josef Bajzik, Zuzana Irsova, and Jiri Schwarz</span><span class="journal"><i>Journal of International Economics</i> 127, 103383.</span></li>
 <li id="pub-a0cf2c6de752"><a class="paper-title" href="https://meta-analysis.cz/border/">Do Borders Really Slash Trade? A Meta-Analysis</a><span class="authors">2017 · with Zuzana Irsova</span><span class="journal"><i>IMF Economic Review</i> 65(2), 365–396.</span></li>
-<li id="pub-363e3d90e04b"><a class="paper-title" href="https://meta-analysis.cz/substitution/">Cross-Country Heterogeneity in Intertemporal Substitution</a><span class="authors">2015 · with Roman Horvath, Marek Rusnak, and Zuzana Irsova</span><span class="journal"><i>Journal of International Economics</i> 96(1), 100–118.</span></li>
+<li id="pub-363e3d90e04b"><a class="paper-title" href="https://meta-analysis.cz/substitution/">Cross-Country Heterogeneity in Intertemporal Substitution</a><span class="authors">2015 · with Roman Horvath, Zuzana Irsova, and Marek Rusnak</span><span class="journal"><i>Journal of International Economics</i> 96(1), 100–118.</span></li>
 <li id="pub-009f76fe4934"><a class="paper-title" href="https://meta-analysis.cz/spillovers/">Estimating Vertical Spillovers from FDI: Why Results Vary and What the True Effect Is</a><span class="authors">2011 · with Zuzana Irsova</span><span class="journal"><i>Journal of International Economics</i> 85(2), 234–244.</span></li>
 </ol>
 </section>
@@ -2700,9 +2718,9 @@ footer { flex-wrap:wrap; row-gap:16px; }
 <ol class="papers reference-list" role="list">
 <li id="pub-dad760a53d1f"><a class="paper-title" href="https://meta-analysis.cz/house_prices/">When Does Monetary Policy Sway House Prices? A Meta-Analysis</a><span class="authors">2023 · with Dominika Ehrenbergerova and Josef Bajzik</span><span class="journal"><i>IMF Economic Review</i> 71, 538–573.</span></li>
 <li id="pub-d0ea8829a7b9"><a class="paper-title" href="https://meta-analysis.cz/excess_sensitivity/">Do Consumers Really Follow a Rule of Thumb? Three Thousand Estimates from 144 Studies Say "Probably Not"</a><span class="authors">2020 · with Anna Sokolova</span><span class="journal"><i>Review of Economic Dynamics</i> 35(1), 97–122.</span></li>
-<li id="pub-dfea3e54be0f"><a class="paper-title" href="https://meta-analysis.cz/habits/">Habit Formation in Consumption: A Meta-Analysis</a><span class="authors">2017 · with Marek Rusnak and Anna Sokolova</span><span class="journal"><i>European Economic Review</i> 95(1), 142–167.</span></li>
+<li id="pub-dfea3e54be0f"><a class="paper-title" href="https://meta-analysis.cz/habits/">Habit Formation in Consumption: A Meta-Analysis</a><span class="authors">2017 · with Marek Rusnak and Anna Sokolova</span><span class="journal"><i>European Economic Review</i> 95, 142–167.</span></li>
 <li id="pub-3d2e7a538600"><a class="paper-title" href="https://meta-analysis.cz/eis/">Measuring Intertemporal Substitution: The Importance of Method Choices and Selective Reporting</a><span class="authors">2015</span><span class="journal"><i>Journal of the European Economic Association</i> 13(6), 1180–1204.</span></li>
-<li id="pub-fd6a17c316bc"><a class="paper-title" href="https://meta-analysis.cz/price_puzzle/">How to Solve the Price Puzzle? A Meta-Analysis</a><span class="authors">2013 · with Roman Horvath and Marek Rusnak</span><span class="journal"><i>Journal of Money, Credit and Banking</i> 45(1), 37–70.</span></li>
+<li id="pub-fd6a17c316bc"><a class="paper-title" href="https://meta-analysis.cz/price_puzzle/">How to Solve the Price Puzzle? A Meta-Analysis</a><span class="authors">2013 · with Marek Rusnak and Roman Horvath</span><span class="journal"><i>Journal of Money, Credit and Banking</i> 45(1), 37–70.</span></li>
 </ol>
 </section>
 <section aria-labelledby="field-4" class="field">
@@ -2717,16 +2735,16 @@ footer { flex-wrap:wrap; row-gap:16px; }
 <h3 id="field-5">Meta-research</h3>
 <ol class="papers reference-list" role="list">
 <li id="pub-08016e5446a1"><a class="paper-title" href="https://meta-analysis.cz/reproducibility/">Reproducibility and Robustness of Economics and Political Science Research</a><span class="authors">2026 · with Abel Brodeur and others (one of 347 authors)</span><span class="journal"><i>Nature</i> 652, 151–156.</span></li>
-<li id="pub-c988d02a7515"><a class="paper-title" href="https://meta-analysis.cz/maive/">Spurious Precision in Meta-Analysis of Observational Research</a><span class="authors">2025 · with Pedro Bom, Zuzana Irsova, and Heiko Rachinger</span><span class="journal"><i>Nature Communications</i> 16, 8454.</span></li>
-<li id="pub-89199a62fc7d"><a class="paper-title" href="https://meta-analysis.cz/correlations/">Reducing the biases of the conventional meta-analysis of correlations</a><span class="authors">2025 · with Tom Stanley and Chris Doucouliagos</span><span class="journal"><i>Research Synthesis Methods</i> 16, 42–59.</span></li>
+<li id="pub-c988d02a7515"><a class="paper-title" href="https://meta-analysis.cz/maive/">Spurious Precision in Meta-Analysis of Observational Research</a><span class="authors">2025 · with Zuzana Irsova, Pedro Bom, and Heiko Rachinger</span><span class="journal"><i>Nature Communications</i> 16, 8454.</span></li>
+<li id="pub-89199a62fc7d"><a class="paper-title" href="https://meta-analysis.cz/correlations/">Reducing the biases of the conventional meta-analysis of correlations</a><span class="authors">2025 · with T. D. Stanley and Hristos Doucouliagos</span><span class="journal"><i>Research Synthesis Methods</i> 16, 42–59.</span></li>
 </ol>
 </section>
-<p class="profile-links"><a href="https://scholar.google.cz/citations?user=BF0BvBkAAAAJ&amp;hl=en">Google Scholar</a><a href="https://www.scopus.com/authid/detail.uri?authorId=24453189000">Scopus</a></p>
+<p class="profile-links"><a href="https://www.scopus.com/authid/detail.uri?authorId=24453189000">Scopus</a></p>
 </section>
 </main>
 <footer>
 <p>Institute of Economic Studies<br/>Opletalova 26, 110 00 Prague, Czech Republic</p>
-<div aria-label="Academic profiles" class="profiles"><a href="https://scholar.google.cz/citations?user=BF0BvBkAAAAJ&amp;hl=en">Google Scholar</a><a href="https://orcid.org/0000-0002-3158-2539">ORCID</a><a href="https://ideas.repec.org/f/pha418.html">RePEc</a><a href="https://github.com/tjhavranek">GitHub</a><a href="https://meta-analysis.cz/komentare/">Commentary in Czech</a></div>
+<div aria-label="Academic profiles" class="profiles" role="group"><a href="https://scholar.google.cz/citations?user=BF0BvBkAAAAJ&amp;hl=en">Google Scholar</a><a href="https://orcid.org/0000-0002-3158-2539">ORCID</a><a href="https://ideas.repec.org/f/pha418.html">RePEc</a><a href="https://github.com/tjhavranek">GitHub</a><a href="https://meta-analysis.cz/komentare/">Commentary in Czech</a></div>
 </footer>
 </div>
 </body>

@@ -63,7 +63,7 @@ footer p { margin:0; }
 .profiles a { text-decoration:none; }
 @media (max-width:760px) {
 .page { padding:0 24px; }
-header { flex-direction:column-reverse; padding-top:24px; gap:32px; }
+header { flex-direction:column; padding-top:24px; gap:32px; }
 nav { gap:6px 24px; padding:0; font-size:13px; flex-wrap:wrap; }
 .identity { gap:16px; }
 .portrait { width:83px; height:83px; }
@@ -92,7 +92,19 @@ footer { flex-direction:column; gap:20px; padding-bottom:30px; }
 }
 @media print { .page { max-width:none; } nav,.skip { display:none; } header { padding-top:0; } main { margin-top:35px; } .papers li,figure { break-inside:avoid; } a { text-decoration:none; } }
 
-@media (max-width:639px){ nav a{ display:inline-block; padding-top:11px; padding-bottom:11px; } }
+@media (max-width:639px) {
+nav { flex-wrap:nowrap; column-gap:12px; row-gap:0; font-size:clamp(12px, 3.3333vw, 13px); }
+nav a { display:inline-block; position:relative; padding:4px 0; }
+nav a::after { content:""; position:absolute; inset:-9px -6px; }
+header .email, footer a { position:relative; display:inline-block; }
+header .email::after { content:""; position:absolute; inset:-8px -6px -14px; }
+footer a::after { content:""; position:absolute; inset:-11px -6px; }
+.profiles { row-gap:22px; }
+.papers .authors { font-size:13px; color:#555; }
+}
+
+.home-link { color:inherit; text-decoration:none; }
+.home-link:hover, .home-link:focus-visible { text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px; }
 </style>
 <style>
 .identity-name { font-size:32px; line-height:1.1; font-weight:400; letter-spacing:-1.1px; margin:0 0 9px; }
@@ -120,15 +132,15 @@ h3 { font-size:19px; margin-bottom:23px; }
 /* Impact uses the shared Research stylesheet above. */
 .impact-section { margin-top:36px; padding-top:25px; }
 .impact-section > div { min-width:0; }
-.impact-section p { font-size:15px; line-height:1.7; margin:0 0 12px; }
+.impact-section p { font-size:16px; line-height:1.7; margin:0 0 12px; }
 .impact-section .section-note,.checked { color:var(--grey); font-size:13px; line-height:1.6; }
 .section-note { margin-top:10px !important; }
 .checked { margin:13px 0 0; }
 .impact-section .bio { font-size:17px; line-height:1.7; }
 .impact-section .metrics { font-size:18px; line-height:1.6; }
-.compact-list { list-style:none; padding:0; margin:0; font-size:15px; line-height:1.65; }
+.compact-list { list-style:none; padding:0; margin:0; font-size:16px; line-height:1.65; }
 .compact-list li + li { margin-top:8px; }
-.awards { display:grid; grid-template-columns:85px 1fr; gap:6px 16px; margin:22px 0 0; font-size:15px; line-height:1.6; }
+.awards { display:grid; grid-template-columns:85px 1fr; gap:6px 16px; margin:22px 0 0; font-size:16px; line-height:1.6; }
 .awards dt { color:var(--grey); }
 .awards dd { margin:0; }
 .impact-section .bio-links { display:flex; flex-wrap:wrap; gap:8px 22px; font-size:13px; margin:17px 0 0; }
@@ -137,7 +149,7 @@ h3 { font-size:19px; margin-bottom:23px; }
 @media (max-width:760px) {
 .impact-section { margin-top:30px; padding-top:23px; gap:15px; }
 .impact-section .bio { font-size:16px; line-height:1.65; }
-.impact-section p,.compact-list,.awards { font-size:14px; }
+.impact-section p,.compact-list,.awards { font-size:16px; }
 .impact-section .metrics { font-size:17px; }
 .awards { grid-template-columns:74px 1fr; gap:8px 12px; margin-top:20px; }
 .section-note { margin-top:6px !important; }
@@ -167,7 +179,8 @@ footer { flex-wrap:wrap; row-gap:16px; }
   },
   "about": {
     "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
-  }
+  },
+  "dateModified": "2026-10-08"
 }</script></head>
 <body>
 <a class="skip" href="#main">Přejít k obsahu</a>
@@ -175,7 +188,7 @@ footer { flex-wrap:wrap; row-gap:16px; }
 <header>
 <div class="identity">
 <img alt="Tomáš Havránek" class="portrait" decoding="async" height="99" sizes="(max-width:760px) 64px, 76px" src="../../photo-480.jpg" srcset="../../photo-480.jpg 480w, ../../photo.jpg 960w" width="99"/>
-<div><p class="identity-name">Tomáš Havránek</p><p class="role">Profesor ekonomie<br/>Univerzita Karlova, Praha</p><a class="email" href="mailto:tomas.havranek@fsv.cuni.cz">tomas.havranek@fsv.cuni.cz</a></div>
+<div><p class="identity-name"><a class="home-link" href="../">Tomáš Havránek</a></p><p class="role">Profesor ekonomie<br/><a href="https://ies.fsv.cuni.cz/en/contacts/people/78067720">Univerzita Karlova</a>, Praha</p><a class="email" href="mailto:tomas.havranek@fsv.cuni.cz">tomas.havranek@fsv.cuni.cz</a></div>
 </div>
 <nav aria-label="Hlavní navigace"><a href="../">Úvod</a><a href="../research/">Výzkum</a><a aria-current="page" href="./">Ohlas</a><a href="https://meta-analysis.cz/">meta-analysis.cz</a><a href="../../impact/" lang="en">English</a></nav>
 </header>
@@ -185,20 +198,20 @@ footer { flex-wrap:wrap; row-gap:16px; }
 <section aria-labelledby="short-bio" class="about impact-section">
 <div><h2 id="short-bio">Stručný medailon</h2></div>
 <div>
-<p class="bio">Tomáš Havránek je profesorem ekonomie na Institutu ekonomických studií Univerzity Karlovy v Praze. Zabývá se meta-analýzou: očišťuje závěry publikovaného výzkumu o selektivní zveřejňování výsledků a o zkreslení plynoucí z designu studií. Se Zuzanou Iršovou spravuje meta-analysis.cz. Je Research Affiliate v CEPR a ve stanfordském centru METRICS a Associate Editor pro meta-analýzu v časopise Journal of Economic Surveys. Dříve byl poradcem bankovní rady České národní banky. V roce 2020 se jako první český ekonom stal členem hodnoticího panelu ERC Advanced Grants. Žije v Litomyšli, kde předsedá školské radě a pomáhá vést místní florbalový klub.</p>
-<p class="bio-links"><a href="https://tjhavranek.github.io/media/photos/">Fotografie pro média</a> <a href="https://meta-analysis.cz/about/">Profesní profil</a></p>
+<p class="bio">Tomáš Havránek je profesorem ekonomie na Institutu ekonomických studií Univerzity Karlovy v Praze. Zabývá se meta-analýzou: očišťuje závěry publikovaného výzkumu o selektivní zveřejňování výsledků a o zkreslení plynoucí z designu studií. Se Zuzanou Iršovou spravuje meta-analysis.cz. Je <span lang="en">Research Affiliate</span> v CEPR a ve stanfordském centru METRICS a <span lang="en">Associate Editor</span> pro meta-analýzu v časopise <span lang="en">Journal of Economic Surveys</span>. Dříve byl poradcem bankovní rady České národní banky. V roce 2020 se jako první český ekonom stal členem hodnoticího panelu <span lang="en">ERC Advanced Grants</span>. Žije v Litomyšli, kde předsedá školské radě a pomáhá vést městský florbalový klub.</p>
+<p class="bio-links"><a href="https://meta-analysis.cz/about/photos/">Fotografie pro média</a> <a href="https://meta-analysis.cz/about/">Profesní profil</a></p>
 </div>
 </section><section aria-labelledby="recognition" class="about impact-section">
 <div><h2 id="recognition">Citace a ocenění</h2><p class="section-note"><a href="https://meta-analysis.cz/about/">Přehled ocenění</a></p></div>
 <div>
-<p class="metrics"><a href="https://scholar.google.cz/citations?user=BF0BvBkAAAAJ&amp;hl=en">Google Scholar</a>: 10 397 citací, h-index 44 (8. října 2026).</p><p>RePEc/IDEAS, srpen 2026, za posledních 10 let: <a href="https://ideas.repec.org/top/top.czech.html">první v České republice</a>, <a href="https://ideas.repec.org/top/top.eu.html">95. v Evropské unii</a> a <a href="https://ideas.repec.org/top/top.person.all10.html">455. ze 74 012 na světě (nejlepší 1 %)</a>; patří tak k nejcitovanějším ekonomům ze střední Evropy.</p><p>Česká národní banka ho v roce 2018 ve <a href="https://www.cnb.cz/cs/o_cnb/vlog-cnb/Nejcitovanejsi-cesky-ekonom-Dum-je-pro-me-spotreba/">svém videoblogu</a> představila jako „nejcitovanějšího českého ekonoma“.</p><dl class="awards">
-<dt>2025</dt><dd>Erskine Fellowship, University of Canterbury</dd>
+<p class="metrics"><a href="https://scholar.google.cz/citations?user=BF0BvBkAAAAJ&amp;hl=en">Google Scholar</a>: 10 397 citací, h-index 44 (8. října 2026).</p><p>V žebříčku RePEc/IDEAS za posledních deset let (srpen 2026) je <a href="https://ideas.repec.org/top/top.czech.html">první v České republice</a>, <a href="https://ideas.repec.org/top/top.eu.html">95. v Evropské unii</a> a <a href="https://ideas.repec.org/top/top.person.all10.html">455. ze 74 012 registrovaných autorů na světě (nejlepší 1 %)</a>; patří tak k nejcitovanějším ekonomům ze střední Evropy.</p><p>Česká národní banka ho v roce 2018 ve <a href="https://www.cnb.cz/cs/o_cnb/vlog-cnb/Nejcitovanejsi-cesky-ekonom-Dum-je-pro-me-spotreba/">svém videoblogu</a> představila jako „nejcitovanějšího českého ekonoma“.</p><dl class="awards">
+<dt>2025</dt><dd><span lang="en">Erskine Fellowship</span>, <span lang="en">University of Canterbury</span></dd>
 <dt>2024</dt><dd>Čestné uznání předsedy Grantové agentury České republiky</dd>
-<dt>2022</dt><dd>Cena editorů časopisu Experimental Economics (s Jindřichem Matouškem a Zuzanou Iršovou)</dd>
+<dt>2022</dt><dd>Cena editorů časopisu <span lang="en">Experimental Economics</span> (s Jindřichem Matouškem a Zuzanou Iršovou)</dd>
 <dt>2012–2016</dt><dd>Cena České národní banky za ekonomický výzkum, každoročně</dd>
-<dt>2014</dt><dd>Cena za nejlepší disertační práci, UniCredit &amp; Universities Foundation</dd>
+<dt>2014</dt><dd>Cena za nejlepší disertační práci, <span lang="en">UniCredit &amp; Universities Foundation</span></dd>
 <dt>2012</dt><dd>Mladý ekonom roku, Česká společnost ekonomická (s Markem Rusnákem)</dd>
-<dt>2010</dt><dd>První cena, GDN Medals for Research on Development (se Zuzanou Iršovou)</dd>
+<dt>2010</dt><dd>První cena, <span lang="en">GDN Medals for Research on Development</span> (se Zuzanou Iršovou)</dd>
 <dt>2009</dt><dd>Cena Olgy Radzynerové, rakouská centrální banka; Cena Karla Engliše, Česká společnost ekonomická</dd>
 </dl>
 </div>
@@ -207,38 +220,38 @@ footer { flex-wrap:wrap; row-gap:16px; }
 <div>
 <p>Jeho práci cituje pět nositelů Nobelovy ceny: <a href="https://dp.quantecon.org/">Thomas Sargent</a>, <a href="https://doi.org/10.1257/aer.20250064">Simon Johnson</a>, <a href="https://doi.org/10.1093/oxrep/graf026">Joseph Stiglitz</a>, <a href="https://doi.org/10.1016/bs.hesbe.2018.12.002">Michael Kremer</a> a <a href="https://doi.org/10.1093/jeea/jvx028">David Card</a>.</p>
 <ul class="compact-list" role="list">
-<li>Prezidenti federálních rezervních bank <a href="https://www.newyorkfed.org/newsevents/speeches/2025/wil250307">John Williams (2025)</a> a <a href="https://www.frbsf.org/wp-content/uploads/SF-FED-Mary-Daly-EBC-Remarks_11-17-23_Final-Print.pdf">Mary Dalyová (2023)</a> v projevech o transmisi měnové politiky.</li>
+<li>Prezidenti regionálních bank Federálního rezervního systému <a href="https://www.newyorkfed.org/newsevents/speeches/2025/wil250307">John Williams (2025)</a> a <a href="https://www.frbsf.org/wp-content/uploads/SF-FED-Mary-Daly-EBC-Remarks_11-17-23_Final-Print.pdf">Mary Dalyová (2023)</a> ji citovali v projevech o transmisi měnové politiky.</li>
 <li><a href="https://www.ecb.europa.eu/pub/pdf/scpops/ecb.op377en.pdf">Evropská centrální banka</a>: transmise měnové politiky, 2025.</li>
 <li><a href="https://www.bankofengland.co.uk/-/media/boe/files/monetary-policy-report/2024/may/monetary-policy-report-may-2024.pdf">Bank of England</a>: zpráva o měnové politice, květen 2024.</li>
 <li><a href="https://www.bis.org/publ/arpdf/ar2024e.pdf">Banka pro mezinárodní platby (BIS)</a>: finance centrálních bank a inflace, 2024.</li>
-<li><a href="https://www.imf.org/en/Publications/WEO/Issues/2023/04/11/world-economic-outlook-april-2023">Mezinárodní měnový fond</a>: World Economic Outlook, duben 2023.</li>
+<li><a href="https://www.imf.org/en/Publications/WEO/Issues/2023/04/11/world-economic-outlook-april-2023">Mezinárodní měnový fond</a>: <span lang="en">World Economic Outlook</span>, duben 2023.</li>
 <li><a href="https://www.congress.gov/crs-product/R45208">Výzkumná služba Kongresu USA</a> (ve všech verzích své zprávy o letním čase od roku 2018) a americká <a href="https://www.epa.gov/system/files/documents/2024-03/sage_model_documentation_2_1_1.pdf">Agentura pro ochranu životního prostředí</a> (EPA, model SAGE, 2024).</li>
 <li>Další citace ve studiích <a href="https://documents.worldbank.org/curated/en/749721626709072349">Světové banky</a>, <a href="https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/05/the-effects-of-climate-policies-on-emissions_e8c0a91b/ec1f7f0d-en.pdf">OECD</a> a <a href="https://publications.jrc.ec.europa.eu/repository/handle/JRC126423">Evropské komise</a>.</li>
 </ul>
 </div>
 </section><section aria-labelledby="roles" class="about impact-section">
-<div><h2 id="roles">Odborné působení</h2><p class="section-note"><a href="https://meta-analysis.cz/about/">Profesní role</a> · <a href="https://www.tomashavranek.cz/activities">Recenzní činnost</a></p></div>
+<div><h2 id="roles">Odborné působení</h2><p class="section-note"><a href="https://meta-analysis.cz/about/">Profesní role</a> · <a href="https://meta-analysis.cz/about/">Recenzní činnost</a></p></div>
 <div>
 <ul class="compact-list" role="list">
-<li>2020: <a href="https://erc.europa.eu/sites/default/files/document/file/Panel_Members_ERC_Advanced_Grant_2020.pdf">hodnoticí panel ERC Advanced Grants</a>, ekonomie a finance.</li>
+<li>2020: <a href="https://erc.europa.eu/sites/default/files/document/file/Panel_Members_ERC_Advanced_Grant_2020.pdf">hodnoticí panel <span lang="en">ERC Advanced Grants</span></a>, ekonomie a finance.</li>
 <li>2009–2019: Česká národní banka, ekonom a poté poradce bankovní rady (2015–2019).</li>
 <li>2022–2023: člen Národní ekonomické rady vlády (NERV).</li>
 <li>Předsedá společenskovědní sekci Grantové agentury Univerzity Karlovy.</li>
-<li>Associate Editor pro meta-analýzu, Journal of Economic Surveys.</li>
-<li>Research Affiliate v <a href="https://cepr.org/about/people/tomas-havranek">CEPR</a> a ve <a href="https://metrics.stanford.edu/people/tomas-havranek">stanfordském centru METRICS</a>; spoluvede síť MAER-Net.</li>
+<li><span lang="en">Associate Editor</span> pro meta-analýzu, <span lang="en">Journal of Economic Surveys</span>.</li>
+<li><span lang="en">Research Affiliate</span> v <a href="https://cepr.org/about/people/tomas-havranek">CEPR</a> a ve <a href="https://metrics.stanford.edu/people/tomas-havranek">stanfordském centru METRICS</a>; spoluvede síť MAER-Net.</li>
 </ul>
-<p style="margin-top:16px">Přes 250 recenzních posudků (k 8. říjnu 2026), mimo jiné pro Science, Nature, American Economic Review, Journal of Political Economy a Journal of Clinical Epidemiology.</p>
+<p style="margin-top:16px">Recenzoval přes 250 rukopisů, mimo jiné pro <span lang="en">Science</span>, <span lang="en">Nature</span>, <span lang="en">American Economic Review</span>, <span lang="en">Journal of Political Economy</span> a <span lang="en">Journal of Clinical Epidemiology</span>.</p>
 </div>
 </section><section aria-labelledby="commentary" class="about impact-section">
 <div><h2 id="commentary">Komentáře</h2></div>
 <div>
 <p>Sloupky, rozhovory a videa najdete v <a href="https://meta-analysis.cz/komentare/">archivu komentářů</a>.</p>
 </div>
-</section><p class="record-link">Úplný přehled ohlasu výzkumu včetně zdrojů: <a href="https://meta-analysis.cz/impact/">meta-analysis.cz/impact</a>.</p>
+</section><p class="record-link">Všechny zdroje a podrobnosti: <a class="nowrap" href="https://meta-analysis.cz/impact/">meta-analysis.cz/impact</a>.</p>
 </main>
 <footer>
 <p>Institut ekonomických studií<br/>Opletalova 26, 110 00 Praha, Česká republika</p>
-<div aria-label="Odborné profily" class="profiles"><a href="https://scholar.google.cz/citations?user=BF0BvBkAAAAJ&amp;hl=en">Google Scholar</a><a href="https://orcid.org/0000-0002-3158-2539">ORCID</a><a href="https://ideas.repec.org/f/pha418.html">RePEc</a><a href="https://github.com/tjhavranek">GitHub</a><a href="https://meta-analysis.cz/komentare/">Komentáře</a></div>
+<div aria-label="Odborné profily" class="profiles" role="group"><a href="https://scholar.google.cz/citations?user=BF0BvBkAAAAJ&amp;hl=en">Google Scholar</a><a href="https://orcid.org/0000-0002-3158-2539">ORCID</a><a href="https://ideas.repec.org/f/pha418.html">RePEc</a><a href="https://github.com/tjhavranek">GitHub</a><a href="https://meta-analysis.cz/komentare/">Komentáře</a></div>
 </footer>
 </div>
 </body>

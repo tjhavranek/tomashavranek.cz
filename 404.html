@@ -57,7 +57,7 @@ footer p { margin:0; }
 .profiles a { text-decoration:none; }
 @media (max-width:760px) {
 .page { padding:0 24px; }
-header { flex-direction:column-reverse; padding-top:24px; gap:32px; }
+header { flex-direction:column; padding-top:24px; gap:32px; }
 nav { gap:6px 24px; padding:0; font-size:13px; flex-wrap:wrap; }
 .identity { gap:16px; }
 .portrait { width:83px; height:83px; }
@@ -87,6 +87,27 @@ footer { flex-direction:column; gap:20px; padding-bottom:30px; }
 @media print { .page { max-width:none; } nav,.skip { display:none; } header { padding-top:0; } main { margin-top:35px; } .papers li,figure { break-inside:avoid; } a { text-decoration:none; } }
 /* Revision chart: full-width horizontal and vertical layouts. */
 .chart-heading { margin:0 0 22px; font-size:15px; font-weight:400; line-height:1.4; }
+@media (max-width:639px) {
+p.statement { font-size:23px; }
+.papers .authors { font-size:13px; color:#555; }
+.section-head>a { display:inline-flex; align-items:center; min-height:44px; padding-inline:8px; margin-inline-end:-8px; }
+}
+
+@media (max-width:639px) {
+nav { flex-wrap:nowrap; column-gap:12px; row-gap:0; font-size:clamp(12px, 3.3333vw, 13px); }
+nav a { display:inline-block; position:relative; padding:4px 0; }
+nav a::after { content:""; position:absolute; inset:-9px -6px; }
+header .email, footer a { position:relative; display:inline-block; }
+header .email::after { content:""; position:absolute; inset:-8px -6px -14px; }
+footer a::after { content:""; position:absolute; inset:-11px -6px; }
+.profiles { row-gap:22px; }
+.papers .authors { font-size:13px; color:#555; }
+}
+
+.home-link { color:inherit; text-decoration:none; }
+.home-link:hover, .home-link:focus-visible { text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px; }
+</style>
+<style>
 .ma-chart {
   --ma-ink: #171717; --ma-grey: #686868; --ma-shrank: #795a52;
   --ma-grew: #476e70; --ma-neutral: #777777; --ma-rule: #c9c5c2;
@@ -125,11 +146,8 @@ footer { flex-direction:column; gap:20px; padding-bottom:30px; }
 .ma-chart .ma-point:is(:hover, :focus) .ma-dot { r: 9; }
 .ma-chart .ma-point:is(:hover, :focus) .ma-focus { opacity: 1; }
 .ma-chart .ma-off-value { fill: var(--ma-grew); font-size: 17px; }
-.ma-chart .ma-phone .ma-tick { font-size: 14px; }
-.ma-chart .ma-phone .ma-label { font-size: 15px; }
-.ma-chart .ma-phone .ma-value { font-size: 17px; }
-.ma-chart .ma-phone .ma-reference-label, .ma-chart .ma-phone .ma-median-label { font-size: 14px; }
-.ma-chart .ma-phone .ma-legend { font-size: 14px; }
+.ma-chart .ma-phone text { font-size: 18px; }
+.ma-chart .ma-phone .ma-value { font-size: 19px; }
 @media (max-width: 639px) {
   .ma-chart .ma-desktop { display: none; }
   .ma-chart .ma-phone { display: block; }
@@ -141,15 +159,7 @@ footer { flex-direction:column; gap:20px; padding-bottom:30px; }
 @media (forced-colors: active) {
   .ma-chart .ma-point:is(:hover, :focus) .ma-focus { stroke: Highlight; }
 }
-@media (max-width:639px) {
-p.statement { font-size:23px; }
-.papers .authors { font-size:13px; color:#555; }
-.section-head>a { display:inline-flex; align-items:center; min-height:44px; padding-inline:8px; margin-inline-end:-8px; }
-}
-
-@media (max-width:639px){ nav a{ display:inline-block; padding-top:11px; padding-bottom:11px; } }
-</style>
-<link href="fonts/fonts.css" rel="stylesheet"/><link href="favicon.svg" rel="icon" type="image/svg+xml"/><link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/><style>
+</style><link href="fonts/fonts.css" rel="stylesheet"/><link href="favicon.svg" rel="icon" type="image/svg+xml"/><link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/><style>
 /* On white: #171717 = 17.9:1, #686868 = 5.6:1 (WCAG AA). */
 body,h1,h2,figcaption,.reading,.paper-title,.journal,.about p,footer {
   font-family:'Source Serif 4',Georgia,'Times New Roman',serif;
@@ -159,21 +169,21 @@ footer { flex-wrap:wrap; row-gap:16px; }
 :focus-visible { outline:2px solid var(--ink); outline-offset:5px; }
 .skip:focus { z-index:10; }
 @media print { body { color:#000; } .machine-link { display:none; } }
-</style><link href="https://tjhavranek.github.io/tomashavranek.cz/404.html" rel="canonical"/><meta content="Page not found — Tomas Havranek" property="og:title"/><meta content="Page not found. Stránka nenalezena." property="og:description"/><meta content="https://tjhavranek.github.io/tomashavranek.cz/404.html" property="og:url"/><meta content="https://tjhavranek.github.io/tomashavranek.cz/photo.jpg" property="og:image"/><meta content="Tomas Havranek" property="og:image:alt"/><meta content="960" property="og:image:width"/><meta content="960" property="og:image:height"/><meta content="en_GB" property="og:locale"/><meta content="cs_CZ" property="og:locale:alternate"/><meta content="website" property="og:type"/><meta content="Tomas Havranek" property="og:site_name"/><meta content="#ffffff" name="theme-color"/><meta content="noindex" name="robots"/><style>.identity-name{font-size:32px;line-height:1.1;margin:0 0 9px;letter-spacing:-1.1px} @media(max-width:760px){.identity-name{font-size:27px}}</style></head>
+</style><link href="https://tjhavranek.github.io/tomashavranek.cz/404.html" rel="canonical"/><meta content="Page not found — Tomas Havranek" property="og:title"/><meta content="Page not found. Stránka nenalezena." property="og:description"/><meta content="https://tjhavranek.github.io/tomashavranek.cz/404.html" property="og:url"/><meta content="https://tjhavranek.github.io/tomashavranek.cz/photo.jpg" property="og:image"/><meta content="Tomas Havranek" property="og:image:alt"/><meta content="960" property="og:image:width"/><meta content="960" property="og:image:height"/><meta content="en_GB" property="og:locale"/><meta content="cs_CZ" property="og:locale:alternate"/><meta content="website" property="og:type"/><meta content="Tomas Havranek" property="og:site_name"/><meta content="#ffffff" name="theme-color"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "url": "https://tjhavranek.github.io/tomashavranek.cz/404.html", "name": "Page not found", "dateModified": "2026-10-08"}</script><meta content="noindex" name="robots"/><style>.identity-name{font-size:32px;line-height:1.1;margin:0 0 9px;letter-spacing:-1.1px} @media(max-width:760px){.identity-name{font-size:27px}}</style></head>
 <body>
 <a class="skip" href="404.html#main">Skip to content</a>
 <div class="page">
 <header>
 <div class="identity">
 <img alt="Tomas Havranek" class="portrait" decoding="async" height="99" sizes="(max-width:760px) 83px, 99px" src="photo-480.jpg" srcset="photo-480.jpg 480w, photo.jpg 960w" width="99"/>
-<div><p class="identity-name">Tomas Havranek</p><p class="role">Professor of economics<br/><a href="https://ies.fsv.cuni.cz/en/contacts/people/78067720">Charles University</a>, Prague</p><a class="email" href="mailto:tomas.havranek@fsv.cuni.cz">tomas.havranek@fsv.cuni.cz</a></div>
+<div><p class="identity-name"><a class="home-link" href="./">Tomas Havranek</a></p><p class="role">Professor of economics<br/><a href="https://ies.fsv.cuni.cz/en/contacts/people/78067720">Charles University</a>, Prague</p><a class="email" href="mailto:tomas.havranek@fsv.cuni.cz">tomas.havranek@fsv.cuni.cz</a></div>
 </div>
-<nav aria-label="Main navigation"><a href="./">Home</a><a href="research/">Research</a><a href="impact/">Impact</a><a href="https://meta-analysis.cz/">meta-analysis.cz</a><a href="cs/" lang="cs">Česky</a></nav>
+<nav aria-label="Main navigation"><a href="./">Home</a><a href="research/">Research</a><a href="impact/">Impact</a><a href="https://meta-analysis.cz/">meta-analysis.cz</a><a href="cs/" lang="cs">Cesky</a></nav>
 </header>
 <main id="main"><h1 class="statement">Page not found</h1><p>The address may have changed. <a href="./">Home</a> · <a href="research/">Research</a></p><p lang="cs">Stránka nenalezena. Adresa se mohla změnit. <a href="cs/">Úvod</a> · <a href="cs/research/">Výzkum</a></p></main>
 <footer id="contact">
 <p>Institute of Economic Studies<br/>Opletalova 26, 110 00 Prague, Czech Republic</p>
-<div aria-label="Academic profiles" class="profiles"><a href="https://scholar.google.cz/citations?user=BF0BvBkAAAAJ&amp;hl=en">Google Scholar</a><a href="https://orcid.org/0000-0002-3158-2539">ORCID</a><a href="https://ideas.repec.org/f/pha418.html">RePEc</a><a href="https://github.com/tjhavranek">GitHub</a><a href="https://meta-analysis.cz/komentare/">Commentary in Czech</a></div>
+<div aria-label="Academic profiles" class="profiles" role="group"><a href="https://scholar.google.cz/citations?user=BF0BvBkAAAAJ&amp;hl=en">Google Scholar</a><a href="https://orcid.org/0000-0002-3158-2539">ORCID</a><a href="https://ideas.repec.org/f/pha418.html">RePEc</a><a href="https://github.com/tjhavranek">GitHub</a><a href="https://meta-analysis.cz/komentare/">Commentary in Czech</a></div>
 </footer>
 </div>
 </body>

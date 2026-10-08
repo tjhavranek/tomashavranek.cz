@@ -5,7 +5,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="Tomas Havranek, Professor of Economics at Charles University, Prague. Tomáš Havránek: meta-analysis and meta-research on how research conclusions change once we correct for selective reporting and address biases in study design." name="description"/>
-<title>Tomas Havranek — Meta-analysis &amp; selective reporting</title>
+<title>Tomas Havranek – Meta-analysis &amp; selective reporting</title>
 
 
 
@@ -62,7 +62,7 @@ footer p { margin:0; }
 .profiles a { text-decoration:none; }
 @media (max-width:760px) {
 .page { padding:0 24px; }
-header { flex-direction:column-reverse; padding-top:24px; gap:32px; }
+header { flex-direction:column; padding-top:24px; gap:32px; }
 nav { gap:6px 24px; padding:0; font-size:13px; flex-wrap:wrap; }
 .identity { gap:16px; }
 .portrait { width:83px; height:83px; }
@@ -92,198 +92,26 @@ footer { flex-direction:column; gap:20px; padding-bottom:30px; }
 @media print { .page { max-width:none; } nav,.skip { display:none; } header { padding-top:0; } main { margin-top:35px; } .papers li,figure { break-inside:avoid; } a { text-decoration:none; } }
 /* Revision chart: full-width horizontal and vertical layouts. */
 .chart-heading { margin:0 0 22px; font-size:15px; font-weight:400; line-height:1.4; }
-.ma-chart {
-  --ma-ink: #171717; --ma-grey: #686868; --ma-shrank: #795a52;
-  --ma-grew: #476e70; --ma-neutral: #777777; --ma-rule: #c9c5c2;
-  width: 100%; max-width: none; min-width: 0; margin: 0;
-  grid-column: 1 / -1;
-  color: var(--ma-ink); font-family: 'Source Serif 4', Georgia, serif;
-  font-weight: 400; font-style: normal; line-height: 1.3;
-  container-type: inline-size;
-}
-.ma-chart svg { display: block; width: 100%; height: auto; overflow: hidden; font: inherit; }
-.ma-chart .ma-phone { display: none; max-width: 400px; margin-inline: auto; }
-.ma-chart text { font-family: inherit; font-weight: 400; font-variant-numeric: lining-nums tabular-nums; }
-.ma-chart .ma-tick { fill: var(--ma-grey); font-size: 15px; }
-.ma-chart .ma-axis-title { fill: var(--ma-grey); font-size: 14px; }
-.ma-chart .ma-legend { font-size: 15px; }
-.ma-chart .ma-shrank { --ma-color: var(--ma-shrank); }
-.ma-chart .ma-grew { --ma-color: var(--ma-grew); }
-.ma-chart .ma-unchanged { --ma-color: var(--ma-neutral); }
-.ma-chart .ma-legend circle { fill: var(--ma-color); }
-.ma-chart .ma-legend text { fill: var(--ma-grey); }
-.ma-chart .ma-guide { stroke: var(--ma-neutral); stroke-width: 1; }
-.ma-chart .ma-median { stroke: var(--ma-shrank); stroke-width: 1; stroke-dasharray: 3 4; }
-.ma-chart .ma-reference-label { fill: var(--ma-grey); font-size: 15px; }
-.ma-chart .ma-median-label { fill: var(--ma-shrank); font-size: 15px; }
-.ma-chart .ma-axis { stroke: var(--ma-rule); stroke-width: 1; fill: none; }
-.ma-chart .ma-label { fill: var(--ma-ink); font-size: 17px; }
-.ma-chart .ma-value { fill: var(--ma-color); font-size: 18px; }
-.ma-chart .ma-leader { stroke: var(--ma-color); stroke-width: .85; fill: none; pointer-events: none; }
-.ma-chart .ma-point { cursor: pointer; outline: none; text-decoration: none; }
-.ma-chart .ma-hit { fill: transparent; pointer-events: all; }
-.ma-chart .ma-dot { fill: var(--ma-color); }
-.ma-chart .ma-focus { fill: none; stroke: var(--ma-ink); stroke-width: 1.8; opacity: 0; }
-.ma-chart .ma-chevron { fill: none; stroke: var(--ma-color); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
-.ma-chart .ma-point :is(.ma-dot, .ma-focus, .ma-chevron, text) { pointer-events: none; }
-.ma-chart .ma-point .ma-off-value { pointer-events: all; }
-.ma-chart .ma-point:is(:hover, :focus) .ma-dot { r: 9; }
-.ma-chart .ma-point:is(:hover, :focus) .ma-focus { opacity: 1; }
-.ma-chart .ma-off-value { fill: var(--ma-grew); font-size: 17px; }
-.ma-chart .ma-phone .ma-tick { font-size: 14px; }
-.ma-chart .ma-phone .ma-label { font-size: 15px; }
-.ma-chart .ma-phone .ma-value { font-size: 17px; }
-.ma-chart .ma-phone .ma-reference-label, .ma-chart .ma-phone .ma-median-label { font-size: 14px; }
-.ma-chart .ma-phone .ma-legend { font-size: 14px; }
-@media (max-width: 639px) {
-  .ma-chart .ma-desktop { display: none; }
-  .ma-chart .ma-phone { display: block; }
-}
-@container (max-width: 639px) {
-  .ma-chart .ma-desktop { display: none; }
-  .ma-chart .ma-phone { display: block; }
-}
-@media (forced-colors: active) {
-  .ma-chart .ma-point:is(:hover, :focus) .ma-focus { stroke: Highlight; }
-}
 @media (max-width:639px) {
 p.statement { font-size:23px; }
 .papers .authors { font-size:13px; color:#555; }
 .section-head>a { display:inline-flex; align-items:center; min-height:44px; padding-inline:8px; margin-inline-end:-8px; }
 }
 
-@media (max-width:639px){ nav a{ display:inline-block; padding-top:11px; padding-bottom:11px; } }
-</style>
-<link href="fonts/fonts.css" rel="stylesheet"/><link href="favicon.svg" rel="icon" type="image/svg+xml"/><link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/><style>
-/* On white: #171717 = 17.9:1, #686868 = 5.6:1 (WCAG AA). */
-body,h1,h2,figcaption,.reading,.paper-title,.journal,.about p,footer {
-  font-family:'Source Serif 4',Georgia,'Times New Roman',serif;
+@media (max-width:639px) {
+nav { flex-wrap:nowrap; column-gap:12px; row-gap:0; font-size:clamp(12px, 3.3333vw, 13px); }
+nav a { display:inline-block; position:relative; padding:4px 0; }
+nav a::after { content:""; position:absolute; inset:-9px -6px; }
+header .email, footer a { position:relative; display:inline-block; }
+header .email::after { content:""; position:absolute; inset:-8px -6px -14px; }
+footer a::after { content:""; position:absolute; inset:-11px -6px; }
+.profiles { row-gap:22px; }
+.papers .authors { font-size:13px; color:#555; }
 }
-.machine-link { flex-basis:100%; font-size:12px; }
-footer { flex-wrap:wrap; row-gap:16px; }
-:focus-visible { outline:2px solid var(--ink); outline-offset:5px; }
-.skip:focus { z-index:10; }
-@media print { body { color:#000; } .machine-link { display:none; } }
-</style><link href="https://tjhavranek.github.io/tomashavranek.cz/" rel="canonical"/><link href="https://tjhavranek.github.io/tomashavranek.cz/" hreflang="en" rel="alternate"/><link href="https://tjhavranek.github.io/tomashavranek.cz/cs/" hreflang="cs" rel="alternate"/><link href="https://tjhavranek.github.io/tomashavranek.cz/" hreflang="x-default" rel="alternate"/><meta content="Tomas Havranek — Meta-analysis &amp; selective reporting" property="og:title"/><meta content="Tomas Havranek, Professor of Economics at Charles University, Prague. Tomáš Havránek: meta-analysis and meta-research on how research conclusions change once we correct for selective reporting and address biases in study design." property="og:description"/><meta content="https://tjhavranek.github.io/tomashavranek.cz/" property="og:url"/><meta content="https://tjhavranek.github.io/tomashavranek.cz/photo.jpg" property="og:image"/><meta content="Tomas Havranek" property="og:image:alt"/><meta content="960" property="og:image:width"/><meta content="960" property="og:image:height"/><meta content="en_GB" property="og:locale"/><meta content="cs_CZ" property="og:locale:alternate"/><meta content="website" property="og:type"/><meta content="Tomas Havranek" property="og:site_name"/><meta content="#ffffff" name="theme-color"/><script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "ProfilePage",
-  "@id": "https://tjhavranek.github.io/tomashavranek.cz/#profile",
-  "url": "https://tjhavranek.github.io/tomashavranek.cz/",
-  "name": "Tomas Havranek — Meta-analysis & selective reporting",
-  "description": "Tomas Havranek, Professor of Economics at Charles University, Prague. Tomáš Havránek: meta-analysis and meta-research on how research conclusions change once we correct for selective reporting and address biases in study design.",
-  "inLanguage": "en",
-  "mainEntity": {
-    "@type": "Person",
-    "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person",
-    "url": "https://tjhavranek.github.io/tomashavranek.cz/",
-    "name": "Tomas Havranek",
-    "alternateName": "Tomáš Havránek",
-    "honorificPrefix": "Prof.",
-    "jobTitle": "Professor of Economics",
-    "email": "tomas.havranek@fsv.cuni.cz",
-    "image": "https://tjhavranek.github.io/tomashavranek.cz/photo.jpg",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Charles University",
-      "url": "https://ies.fsv.cuni.cz/en/contacts/people/78067720",
-      "department": {
-        "@type": "Organization",
-        "name": "Institute of Economic Studies"
-      }
-    },
-    "affiliation": [
-      {
-        "@type": "Organization",
-        "name": "Charles University",
-        "url": "https://ies.fsv.cuni.cz/en/contacts/people/78067720",
-        "department": {
-          "@type": "Organization",
-          "name": "Institute of Economic Studies"
-        }
-      },
-      {
-        "@type": "Organization",
-        "name": "Centre for Economic Policy Research (CEPR)",
-        "url": "https://cepr.org/about/people/tomas-havranek"
-      },
-      {
-        "@type": "Organization",
-        "name": "Meta-Research Innovation Center at Stanford (METRICS)",
-        "url": "https://metrics.stanford.edu/people/tomas-havranek"
-      }
-    ],
-    "memberOf": [
-      {
-        "@type": "Organization",
-        "name": "Centre for Economic Policy Research (CEPR)",
-        "url": "https://cepr.org/about/people/tomas-havranek"
-      },
-      {
-        "@type": "Organization",
-        "name": "Meta-Research Innovation Center at Stanford (METRICS)",
-        "url": "https://metrics.stanford.edu/people/tomas-havranek"
-      }
-    ],
-    "alumniOf": [
-      {
-        "@type": "Organization",
-        "name": "Charles University"
-      },
-      {
-        "@type": "Organization",
-        "name": "University of Helsinki"
-      }
-    ],
-    "sameAs": [
-      "https://orcid.org/0000-0002-3158-2539",
-      "https://scholar.google.cz/citations?user=BF0BvBkAAAAJ&hl=en",
-      "https://ideas.repec.org/f/pha418.html",
-      "https://github.com/tjhavranek",
-      "https://www.wikidata.org/wiki/Q41800151",
-      "https://cs.wikipedia.org/wiki/Tom%C3%A1%C5%A1_Havr%C3%A1nek_(ekonom)",
-      "https://cepr.org/about/people/tomas-havranek",
-      "https://metrics.stanford.edu/people/tomas-havranek",
-      "https://ies.fsv.cuni.cz/en/contacts/people/78067720",
-      "https://meta-analysis.cz/"
-    ],
-    "award": [
-      "Erskine Fellowship, University of Canterbury (2025)",
-      "Honorable mention from the President of the Czech Science Foundation, Czech Science Foundation (2024)",
-      "Experimental Economics Editors’ Prize, Experimental Economics (2022)",
-      "Economic Research Award, Czech National Bank (2012–2016, each year)",
-      "Best PhD Thesis Award, UniCredit & Universities Foundation (2014)",
-      "Young Economist of the Year, Czech Economic Society (2012)",
-      "First prize, Medals for Research on Development, Global Development Network (2010)",
-      "Olga Radzyner Award, Oesterreichische Nationalbank (2009)",
-      "Karel Engliš Award, Czech Economic Society (2009)"
-    ],
-    "knowsAbout": [
-      "Meta-analysis",
-      "Publication bias",
-      "Meta-research",
-      "Economics"
-    ]
-  }
-}</script></head>
-<body>
-<a class="skip" href="#main">Skip to content</a>
-<div class="page">
-<header>
-<div class="identity">
-<img alt="Tomas Havranek" class="portrait" decoding="async" height="99" sizes="(max-width:760px) 83px, 99px" src="photo-480.jpg" srcset="photo-480.jpg 480w, photo.jpg 960w" width="99"/>
-<div><h1>Tomas Havranek</h1><p class="role">Professor of economics<br/><a href="https://ies.fsv.cuni.cz/en/contacts/people/78067720">Charles University</a>, Prague</p><a class="email" href="mailto:tomas.havranek@fsv.cuni.cz">tomas.havranek@fsv.cuni.cz</a></div>
-</div>
-<nav aria-label="Main navigation"><a aria-current="page" href="./">Home</a><a href="research/">Research</a><a href="impact/">Impact</a><a href="https://meta-analysis.cz/">meta-analysis.cz</a><a href="cs/" lang="cs">Česky</a></nav>
-</header>
-<main id="main">
-<section aria-label="Research statement and an example" class="premise">
-<div>
-<p class="statement">I am an economist who uses <span class="nowrap">meta-analysis</span> to find out how research conclusions change once we correct for selective reporting and address biases in study design.</p>
-</div>
-<figure class="ma-chart" data-snapshot="2026-09-25" lang="en">
-<p class="chart-heading">How our meta-analyses changed the published estimates</p>
 
-
+.home-link { color:inherit; text-decoration:none; }
+.home-link:hover, .home-link:focus-visible { text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px; }
+</style>
 <style>
 .ma-chart {
   --ma-ink: #171717; --ma-grey: #686868; --ma-shrank: #795a52;
@@ -323,11 +151,8 @@ footer { flex-wrap:wrap; row-gap:16px; }
 .ma-chart .ma-point:is(:hover, :focus) .ma-dot { r: 9; }
 .ma-chart .ma-point:is(:hover, :focus) .ma-focus { opacity: 1; }
 .ma-chart .ma-off-value { fill: var(--ma-grew); font-size: 17px; }
-.ma-chart .ma-phone .ma-tick { font-size: 14px; }
-.ma-chart .ma-phone .ma-label { font-size: 15px; }
-.ma-chart .ma-phone .ma-value { font-size: 17px; }
-.ma-chart .ma-phone .ma-reference-label, .ma-chart .ma-phone .ma-median-label { font-size: 14px; }
-.ma-chart .ma-phone .ma-legend { font-size: 14px; }
+.ma-chart .ma-phone text { font-size: 18px; }
+.ma-chart .ma-phone .ma-value { font-size: 19px; }
 @media (max-width: 639px) {
   .ma-chart .ma-desktop { display: none; }
   .ma-chart .ma-phone { display: block; }
@@ -339,8 +164,149 @@ footer { flex-wrap:wrap; row-gap:16px; }
 @media (forced-colors: active) {
   .ma-chart .ma-point:is(:hover, :focus) .ma-focus { stroke: Highlight; }
 }
-</style><svg aria-describedby="ma-en-desktop-desc" aria-labelledby="ma-en-desktop-title" class="ma-desktop" height="360" lang="en" role="group" viewbox="0 0 980 360" width="980" xmlns="http://www.w3.org/2000/svg">
-<title id="ma-en-desktop-title">How our meta-analyses changed the published estimates</title>
+</style><link href="fonts/fonts.css" rel="stylesheet"/><link href="favicon.svg" rel="icon" type="image/svg+xml"/><link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/><style>
+/* On white: #171717 = 17.9:1, #686868 = 5.6:1 (WCAG AA). */
+body,h1,h2,figcaption,.reading,.paper-title,.journal,.about p,footer {
+  font-family:'Source Serif 4',Georgia,'Times New Roman',serif;
+}
+.machine-link { flex-basis:100%; font-size:12px; }
+footer { flex-wrap:wrap; row-gap:16px; }
+:focus-visible { outline:2px solid var(--ink); outline-offset:5px; }
+.skip:focus { z-index:10; }
+@media print { body { color:#000; } .machine-link { display:none; } }
+</style><link href="https://tjhavranek.github.io/tomashavranek.cz/" rel="canonical"/><link href="https://tjhavranek.github.io/tomashavranek.cz/" hreflang="en" rel="alternate"/><link href="https://tjhavranek.github.io/tomashavranek.cz/cs/" hreflang="cs" rel="alternate"/><link href="https://tjhavranek.github.io/tomashavranek.cz/" hreflang="x-default" rel="alternate"/><meta content="Tomas Havranek – Meta-analysis &amp; selective reporting" property="og:title"/><meta content="Tomas Havranek, Professor of Economics at Charles University, Prague. Tomáš Havránek: meta-analysis and meta-research on how research conclusions change once we correct for selective reporting and address biases in study design." property="og:description"/><meta content="https://tjhavranek.github.io/tomashavranek.cz/" property="og:url"/><meta content="https://tjhavranek.github.io/tomashavranek.cz/photo.jpg" property="og:image"/><meta content="Tomas Havranek" property="og:image:alt"/><meta content="960" property="og:image:width"/><meta content="960" property="og:image:height"/><meta content="en_GB" property="og:locale"/><meta content="cs_CZ" property="og:locale:alternate"/><meta content="website" property="og:type"/><meta content="Tomas Havranek" property="og:site_name"/><meta content="#ffffff" name="theme-color"/><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "@id": "https://tjhavranek.github.io/tomashavranek.cz/#profile",
+  "url": "https://tjhavranek.github.io/tomashavranek.cz/",
+  "name": "Tomas Havranek – Meta-analysis & selective reporting",
+  "description": "Tomas Havranek, Professor of Economics at Charles University, Prague. Tomáš Havránek: meta-analysis and meta-research on how research conclusions change once we correct for selective reporting and address biases in study design.",
+  "inLanguage": "en",
+  "mainEntity": {
+    "@type": "Person",
+    "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person",
+    "url": "https://tjhavranek.github.io/tomashavranek.cz/",
+    "name": "Tomas Havranek",
+    "alternateName": "Tomáš Havránek",
+    "honorificPrefix": "Prof.",
+    "jobTitle": "Professor of Economics",
+    "email": "tomas.havranek@fsv.cuni.cz",
+    "image": "https://tjhavranek.github.io/tomashavranek.cz/photo.jpg",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Charles University",
+      "url": "https://cuni.cz/",
+      "department": {
+        "@type": "Organization",
+        "name": "Institute of Economic Studies"
+      }
+    },
+    "affiliation": [
+      {
+        "@type": "Organization",
+        "name": "Charles University",
+        "url": "https://cuni.cz/",
+        "department": {
+          "@type": "Organization",
+          "name": "Institute of Economic Studies"
+        }
+      },
+      {
+        "@type": "Organization",
+        "name": "Centre for Economic Policy Research (CEPR)",
+        "url": "https://cepr.org/"
+      },
+      {
+        "@type": "Organization",
+        "name": "Meta-Research Innovation Center at Stanford (METRICS)",
+        "url": "https://metrics.stanford.edu/"
+      }
+    ],
+    "memberOf": [
+      {
+        "@type": "Organization",
+        "name": "Centre for Economic Policy Research (CEPR)",
+        "url": "https://cepr.org/"
+      },
+      {
+        "@type": "Organization",
+        "name": "Meta-Research Innovation Center at Stanford (METRICS)",
+        "url": "https://metrics.stanford.edu/"
+      }
+    ],
+    "alumniOf": [
+      {
+        "@type": "Organization",
+        "name": "Charles University"
+      }
+    ],
+    "sameAs": [
+      "https://orcid.org/0000-0002-3158-2539",
+      "https://scholar.google.cz/citations?user=BF0BvBkAAAAJ&hl=en",
+      "https://ideas.repec.org/f/pha418.html",
+      "https://github.com/tjhavranek",
+      "https://www.wikidata.org/wiki/Q41800151",
+      "https://cs.wikipedia.org/wiki/Tom%C3%A1%C5%A1_Havr%C3%A1nek_(ekonom)",
+      "https://cepr.org/about/people/tomas-havranek",
+      "https://metrics.stanford.edu/people/tomas-havranek",
+      "https://ies.fsv.cuni.cz/en/contacts/people/78067720"
+    ],
+    "subjectOf": {
+      "@type": "WebSite",
+      "@id": "https://meta-analysis.cz/#website",
+      "url": "https://meta-analysis.cz/",
+      "name": "meta-analysis.cz",
+      "creator": [
+        {
+          "@id": "https://tjhavranek.github.io/tomashavranek.cz/#person"
+        },
+        {
+          "@type": "Person",
+          "name": "Zuzana Irsova"
+        }
+      ]
+    },
+    "award": [
+      "Erskine Fellowship, University of Canterbury (2025)",
+      "Honorable mention from the President of the Czech Science Foundation (2024)",
+      "Experimental Economics Editors’ Prize (2022), with Jindrich Matousek, Zuzana Irsova",
+      "Economic Research Award, Czech National Bank (2012–2016, each year)",
+      "Best PhD Thesis Award, UniCredit & Universities Foundation (2014)",
+      "Young Economist of the Year, Czech Economic Society (2012), with Marek Rusnak",
+      "First prize, Medals for Research on Development, Global Development Network (2010), with Zuzana Irsova",
+      "Olga Radzyner Award, Oesterreichische Nationalbank (2009)",
+      "Karel Engliš Award, Czech Economic Society (2009)"
+    ],
+    "knowsAbout": [
+      "Meta-analysis",
+      "Publication bias",
+      "Meta-research",
+      "Economics"
+    ]
+  },
+  "dateModified": "2026-10-08"
+}</script></head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="page">
+<header>
+<div class="identity">
+<img alt="Tomas Havranek" class="portrait" decoding="async" height="99" sizes="(max-width:760px) 83px, 99px" src="photo-480.jpg" srcset="photo-480.jpg 480w, photo.jpg 960w" width="99"/>
+<div><h1><a class="home-link" href="./">Tomas Havranek</a></h1><p class="role">Professor of economics<br/><a href="https://ies.fsv.cuni.cz/en/contacts/people/78067720">Charles University</a>, Prague</p><a class="email" href="mailto:tomas.havranek@fsv.cuni.cz">tomas.havranek@fsv.cuni.cz</a></div>
+</div>
+<nav aria-label="Main navigation"><a aria-current="page" href="./">Home</a><a href="research/">Research</a><a href="impact/">Impact</a><a href="https://meta-analysis.cz/">meta-analysis.cz</a><a href="cs/" lang="cs">Cesky</a></nav>
+</header>
+<main id="main">
+<section aria-label="Research statement and an example" class="premise">
+<div>
+<p class="statement">I am an economist who uses <span class="nowrap">meta-analysis</span> to find out how research conclusions change once we correct for selective reporting and address biases in study design.</p>
+</div>
+<figure class="ma-chart" data-snapshot="2026-09-25" lang="en">
+<p class="chart-heading">How our meta-analyses revised the published evidence</p>
+
+
+<svg aria-describedby="ma-en-desktop-desc" aria-labelledby="ma-en-desktop-title" class="ma-desktop" height="360" lang="en" role="group" viewbox="0 0 980 360" width="980" xmlns="http://www.w3.org/2000/svg">
+<title id="ma-en-desktop-title">How our meta-analyses revised the published evidence</title>
 <desc id="ma-en-desktop-desc">44 meta-analyses. Revision in absolute magnitude: 100 × (|corrected| / |reported| − 1). 31 effects shrank toward zero, 11 grew away from zero, and two are plotted as unchanged. Median −41%. Three off-scale points: price puzzle +394%, structural reforms +631%, Czech FDI productivity +826%. FDI spillover determinants is at zero by the source's rule. Each point links to its paper. Horizontal position encodes revision; vertical stacking has no meaning. Snapshot: 25 September 2026.</desc>
 <g class="ma-legend">
 <g class="ma-shrank"><circle cx="616" cy="20" r="3.5"></circle><text class="ma-legend-word" text-anchor="start" x="626" y="25">shrank</text></g>
@@ -364,7 +330,7 @@ footer { flex-wrap:wrap; row-gap:16px; }
 <text class="ma-tick" text-anchor="middle" x="673.6" y="322">+100%</text>
 <line class="ma-axis" x1="832" x2="832" y1="296" y2="302"></line>
 <text class="ma-tick" text-anchor="middle" x="832" y="322">+150%</text>
-<text class="ma-axis-title" text-anchor="start" x="40" y="350">Revision in absolute magnitude (%)</text>
+<text class="ma-axis-title" text-anchor="start" x="40" y="350">Change from the average reported estimate (%)</text>
 <g class="ma-shrank ma-annotation" data-for="eis">
 <line class="ma-leader" x1="55.7" x2="68" y1="139.97" y2="127"></line>
 <text class="ma-label" text-anchor="start" x="40" y="64">intertemporal</text>
@@ -386,9 +352,8 @@ footer { flex-wrap:wrap; row-gap:16px; }
 <text class="ma-label" text-anchor="start" x="662" y="247">skill substitution</text>
 <text class="ma-value" text-anchor="start" x="662" y="273">+122%</text>
 </g>
-<a aria-describedby="ma-en-desktop-eis-note" aria-label="intertemporal substitution: reported 0.5, corrected 0.0145 (−97%)" class="ma-point ma-shrank" data-pct="-97" data-slug="eis" href="https://meta-analysis.cz/eis/" role="link" tabindex="0">
-<title>intertemporal substitution: reported 0.5, corrected 0.0145 (−97%)</title>
-<desc id="ma-en-desktop-eis-note">Approximate comparison; see the linked paper for details.</desc>
+<a aria-label="intertemporal substitution: reported 0.5, corrected 0.0145 (−97%). Whole-literature corrected mean; the 0.3–0.4 on its paper page is for asset holders." class="ma-point ma-shrank" data-pct="-97" data-slug="eis" href="https://meta-analysis.cz/eis/" role="link" tabindex="0">
+<title>intertemporal substitution: reported 0.5, corrected 0.0145 (−97%). Whole-literature corrected mean; the 0.3–0.4 on its paper page is for asset holders.</title>
 <circle class="ma-hit" cx="49.5" cy="146.5" r="13"></circle>
 <circle class="ma-dot" cx="49.5" cy="146.5" r="7.5"></circle>
 <circle class="ma-focus" cx="49.5" cy="146.5" r="11.5"></circle>
@@ -439,9 +404,8 @@ footer { flex-wrap:wrap; row-gap:16px; }
 <circle class="ma-dot" cx="144.54" cy="132.58" r="7.5"></circle>
 <circle class="ma-focus" cx="144.54" cy="132.58" r="11.5"></circle>
 </a>
-<a aria-describedby="ma-en-desktop-resource_curse-note" aria-label="resource curse: reported −0.078, corrected 0.026 (−67%). The correction also reversed the sign." class="ma-point ma-shrank" data-pct="-67" data-slug="resource_curse" href="https://meta-analysis.cz/resource_curse/" role="link" tabindex="0">
-<title>resource curse: reported −0.078, corrected 0.026 (−67%). The correction also reversed the sign.</title>
-<desc id="ma-en-desktop-resource_curse-note">Approximate comparison; see the linked paper for details.</desc>
+<a aria-label="resource curse: reported −0.078, corrected 0.026 (−67%). The correction reversed the sign." class="ma-point ma-shrank" data-pct="-67" data-slug="resource_curse" href="https://meta-analysis.cz/resource_curse/" role="link" tabindex="0">
+<title>resource curse: reported −0.078, corrected 0.026 (−67%). The correction reversed the sign.</title>
 <circle class="ma-hit" cx="144.54" cy="182.05" r="13"></circle>
 <circle class="ma-dot" cx="144.54" cy="182.05" r="7.5"></circle>
 <circle class="ma-focus" cx="144.54" cy="182.05" r="11.5"></circle>
@@ -540,9 +504,8 @@ footer { flex-wrap:wrap; row-gap:16px; }
 <circle class="ma-dot" cx="230.08" cy="120.77" r="7.5"></circle>
 <circle class="ma-focus" cx="230.08" cy="120.77" r="11.5"></circle>
 </a>
-<a aria-describedby="ma-en-desktop-beauty-note" aria-label="beauty premium: reported 5, corrected 3 (−40%)" class="ma-point ma-shrank" data-pct="-40" data-slug="beauty" href="https://meta-analysis.cz/beauty/" role="link" tabindex="0">
-<title>beauty premium: reported 5, corrected 3 (−40%)</title>
-<desc id="ma-en-desktop-beauty-note">Approximate comparison; see the linked paper for details.</desc>
+<a aria-label="beauty premium: reported 5, corrected 3 (−40%). Conservative end of the paper's range; the 1.1% on its paper page is a different quantity." class="ma-point ma-shrank" data-pct="-40" data-slug="beauty" href="https://meta-analysis.cz/beauty/" role="link" tabindex="0">
+<title>beauty premium: reported 5, corrected 3 (−40%). Conservative end of the paper's range; the 1.1% on its paper page is a different quantity.</title>
 <circle class="ma-hit" cx="230.08" cy="198.73" r="13"></circle>
 <circle class="ma-dot" cx="230.08" cy="198.73" r="7.5"></circle>
 <circle class="ma-focus" cx="230.08" cy="198.73" r="11.5"></circle>
@@ -594,23 +557,20 @@ footer { flex-wrap:wrap; row-gap:16px; }
 <circle class="ma-dot" cx="344.13" cy="197.74" r="7.5"></circle>
 <circle class="ma-focus" cx="344.13" cy="197.74" r="11.5"></circle>
 </a>
-<a aria-describedby="ma-en-desktop-bma-note" aria-label="FDI spillover determinants: reported −0.002, corrected 0.021 (0%); unchanged by the source's rule" class="ma-point ma-unchanged" data-pct="0" data-slug="bma" href="https://meta-analysis.cz/bma/" role="link" tabindex="0">
-<title>FDI spillover determinants: reported −0.002, corrected 0.021 (0%); unchanged by the source's rule</title>
-<desc id="ma-en-desktop-bma-note">Approximate comparison; see the linked paper for details. The source finds no publication bias worth correcting, so this point is placed at zero by rule.</desc>
+<a aria-label="FDI spillover determinants: reported −0.002, corrected 0.021 (0%). No publication bias worth correcting; plotted at zero." class="ma-point ma-unchanged" data-pct="0" data-slug="bma" href="https://meta-analysis.cz/bma/" role="link" tabindex="0">
+<title>FDI spillover determinants: reported −0.002, corrected 0.021 (0%). No publication bias worth correcting; plotted at zero.</title>
 <circle class="ma-hit" cx="356.8" cy="126.02" r="13"></circle>
 <circle class="ma-dot" cx="356.8" cy="126.02" r="7.5"></circle>
 <circle class="ma-focus" cx="356.8" cy="126.02" r="11.5"></circle>
 </a>
-<a aria-describedby="ma-en-desktop-habits-note" aria-label="habit formation: reported 0.4, corrected 0.4 (0%)" class="ma-point ma-unchanged" data-pct="0" data-slug="habits" href="https://meta-analysis.cz/habits/" role="link" tabindex="0">
-<title>habit formation: reported 0.4, corrected 0.4 (0%)</title>
-<desc id="ma-en-desktop-habits-note">Approximate comparison; see the linked paper for details.</desc>
+<a aria-label="habit formation: reported 0.4, corrected 0.4 (0%). No publication bias worth correcting; plotted at zero." class="ma-point ma-unchanged" data-pct="0" data-slug="habits" href="https://meta-analysis.cz/habits/" role="link" tabindex="0">
+<title>habit formation: reported 0.4, corrected 0.4 (0%). No publication bias worth correcting; plotted at zero.</title>
 <circle class="ma-hit" cx="356.8" cy="221.01" r="13"></circle>
 <circle class="ma-dot" cx="356.8" cy="221.01" r="7.5"></circle>
 <circle class="ma-focus" cx="356.8" cy="221.01" r="11.5"></circle>
 </a>
-<a aria-describedby="ma-en-desktop-forward-note" aria-label="forward premium puzzle: reported −0.602, corrected 0.611 (+1%). The correction also reversed the sign." class="ma-point ma-grew" data-pct="1" data-slug="forward" href="https://meta-analysis.cz/forward/" role="link" tabindex="0">
-<title>forward premium puzzle: reported −0.602, corrected 0.611 (+1%). The correction also reversed the sign.</title>
-<desc id="ma-en-desktop-forward-note">Approximate comparison; see the linked paper for details.</desc>
+<a aria-label="forward premium puzzle: reported −0.602, corrected 0.611 (+1%). The correction reversed the sign." class="ma-point ma-grew" data-pct="1" data-slug="forward" href="https://meta-analysis.cz/forward/" role="link" tabindex="0">
+<title>forward premium puzzle: reported −0.602, corrected 0.611 (+1%). The correction reversed the sign.</title>
 <circle class="ma-hit" cx="359.97" cy="99.71" r="13"></circle>
 <circle class="ma-dot" cx="359.97" cy="99.71" r="7.5"></circle>
 <circle class="ma-focus" cx="359.97" cy="99.71" r="11.5"></circle>
@@ -635,9 +595,8 @@ footer { flex-wrap:wrap; row-gap:16px; }
 <circle class="ma-dot" cx="575.39" cy="173" r="7.5"></circle>
 <circle class="ma-focus" cx="575.39" cy="173" r="11.5"></circle>
 </a>
-<a aria-describedby="ma-en-desktop-competition-note" aria-label="bank competition: reported −0.012, corrected 0.022 (+83%). The correction also reversed the sign." class="ma-point ma-grew" data-pct="83" data-slug="competition" href="https://meta-analysis.cz/competition/" role="link" tabindex="0">
-<title>bank competition: reported −0.012, corrected 0.022 (+83%). The correction also reversed the sign.</title>
-<desc id="ma-en-desktop-competition-note">Approximate comparison; see the linked paper for details.</desc>
+<a aria-label="bank competition: reported −0.012, corrected 0.022 (+83%). The correction reversed the sign." class="ma-point ma-grew" data-pct="83" data-slug="competition" href="https://meta-analysis.cz/competition/" role="link" tabindex="0">
+<title>bank competition: reported −0.012, corrected 0.022 (+83%). The correction reversed the sign.</title>
 <circle class="ma-hit" cx="619.74" cy="173" r="13"></circle>
 <circle class="ma-dot" cx="619.74" cy="173" r="7.5"></circle>
 <circle class="ma-focus" cx="619.74" cy="173" r="11.5"></circle>
@@ -661,27 +620,24 @@ footer { flex-wrap:wrap; row-gap:16px; }
 <circle class="ma-dot" cx="812.99" cy="154.53" r="7.5"></circle>
 <circle class="ma-focus" cx="812.99" cy="154.53" r="11.5"></circle>
 </a>
-<a aria-describedby="ma-en-desktop-price_puzzle-note" aria-label="price puzzle: reported −0.067, corrected −0.331 (+394%)" class="ma-point ma-grew" data-pct="394" data-slug="price_puzzle" href="https://meta-analysis.cz/price_puzzle/" role="link" tabindex="0">
-<title>price puzzle: reported −0.067, corrected −0.331 (+394%)</title>
-<desc id="ma-en-desktop-price_puzzle-note">Approximate comparison; see the linked paper for details.</desc>
+<a aria-label="price puzzle: reported −0.067, corrected −0.331 (+394%). Horizon-dependent comparison." class="ma-point ma-grew" data-pct="394" data-slug="price_puzzle" href="https://meta-analysis.cz/price_puzzle/" role="link" tabindex="0">
+<title>price puzzle: reported −0.067, corrected −0.331 (+394%). Horizon-dependent comparison.</title>
 <circle class="ma-hit" cx="832" cy="131" r="13"></circle>
 <path class="ma-chevron" d="M 846 127 l 4 4 -4 4"></path>
 <text class="ma-off-value" text-anchor="start" x="859" y="136">+394%</text>
 <circle class="ma-dot" cx="832" cy="131" r="7.5"></circle>
 <circle class="ma-focus" cx="832" cy="131" r="11.5"></circle>
 </a>
-<a aria-describedby="ma-en-desktop-reforms-note" aria-label="structural reforms: reported −0.052, corrected −0.38 (+631%)" class="ma-point ma-grew" data-pct="631" data-slug="reforms" href="https://meta-analysis.cz/reforms/" role="link" tabindex="0">
-<title>structural reforms: reported −0.052, corrected −0.38 (+631%)</title>
-<desc id="ma-en-desktop-reforms-note">Approximate comparison; see the linked paper for details.</desc>
+<a aria-label="structural reforms: reported −0.052, corrected −0.38 (+631%). Small comparator base." class="ma-point ma-grew" data-pct="631" data-slug="reforms" href="https://meta-analysis.cz/reforms/" role="link" tabindex="0">
+<title>structural reforms: reported −0.052, corrected −0.38 (+631%). Small comparator base.</title>
 <circle class="ma-hit" cx="832" cy="173" r="13"></circle>
 <path class="ma-chevron" d="M 846 169 l 4 4 -4 4"></path>
 <text class="ma-off-value" text-anchor="start" x="859" y="178">+631%</text>
 <circle class="ma-dot" cx="832" cy="173" r="7.5"></circle>
 <circle class="ma-focus" cx="832" cy="173" r="11.5"></circle>
 </a>
-<a aria-describedby="ma-en-desktop-fdi-note" aria-label="Czech FDI productivity: reported −0.119, corrected 1.1 (+826%). The correction also reversed the sign." class="ma-point ma-grew" data-pct="826" data-slug="fdi" href="https://meta-analysis.cz/fdi/" role="link" tabindex="0">
-<title>Czech FDI productivity: reported −0.119, corrected 1.1 (+826%). The correction also reversed the sign.</title>
-<desc id="ma-en-desktop-fdi-note">Approximate comparison; see the linked paper for details.</desc>
+<a aria-label="Czech FDI productivity: reported −0.119, corrected 1.1 (+826%). Partly a projection to 2018. The correction reversed the sign." class="ma-point ma-grew" data-pct="826" data-slug="fdi" href="https://meta-analysis.cz/fdi/" role="link" tabindex="0">
+<title>Czech FDI productivity: reported −0.119, corrected 1.1 (+826%). Partly a projection to 2018. The correction reversed the sign.</title>
 <circle class="ma-hit" cx="832" cy="215" r="13"></circle>
 <path class="ma-chevron" d="M 846 211 l 4 4 -4 4"></path>
 <text class="ma-off-value" text-anchor="start" x="859" y="220">+826%</text>
@@ -689,32 +645,33 @@ footer { flex-wrap:wrap; row-gap:16px; }
 <circle class="ma-focus" cx="832" cy="215" r="11.5"></circle>
 </a>
 </svg><svg aria-describedby="ma-en-phone-desc" aria-labelledby="ma-en-phone-title" class="ma-phone" height="808" lang="en" role="group" viewbox="0 0 340 808" width="340" xmlns="http://www.w3.org/2000/svg">
-<title id="ma-en-phone-title">How our meta-analyses changed the published estimates</title>
+<title id="ma-en-phone-title">How our meta-analyses revised the published evidence</title>
 <desc id="ma-en-phone-desc">44 meta-analyses. Revision in absolute magnitude: 100 × (|corrected| / |reported| − 1). 31 effects shrank toward zero, 11 grew away from zero, and two are plotted as unchanged. Median −41%. Three off-scale points: price puzzle +394%, structural reforms +631%, Czech FDI productivity +826%. FDI spillover determinants is at zero by the source's rule. Each point links to its paper. Revision increases from top to bottom; horizontal stacking has no meaning. Snapshot: 25 September 2026.</desc>
 <g class="ma-legend">
-<g class="ma-shrank"><circle cx="18" cy="20" r="3.5"></circle><text class="ma-legend-word" text-anchor="start" x="28" y="25">shrank</text></g>
-<g class="ma-grew"><circle cx="129" cy="20" r="3.5"></circle><text class="ma-legend-word" text-anchor="start" x="139" y="25">grew</text></g>
-<g class="ma-unchanged"><circle cx="236" cy="20" r="3.5"></circle><text class="ma-legend-word" text-anchor="start" x="246" y="25">unchanged</text></g>
+<g class="ma-shrank"><circle cx="8" cy="20" r="3.5"></circle><text class="ma-legend-word" text-anchor="start" x="18" y="25">shrank</text></g>
+<g class="ma-grew"><circle cx="121" cy="20" r="3.5"></circle><text class="ma-legend-word" text-anchor="start" x="131" y="25">grew</text></g>
+<g class="ma-unchanged"><circle cx="224" cy="20" r="3.5"></circle><text class="ma-legend-word" text-anchor="start" x="234" y="25">unchanged</text></g>
 </g>
-<text class="ma-axis-title" text-anchor="start" x="14" y="65">Revision in absolute magnitude (%)</text>
-<line class="ma-axis" x1="60" x2="60" y1="108" y2="678"></line>
-<line class="ma-guide" x1="72" x2="326" y1="336" y2="336"></line>
-<line class="ma-median" x1="72" x2="270" y1="242.52" y2="242.52"></line>
+<text class="ma-axis-title" text-anchor="start" x="8" y="50">Change from the average</text>
+<text class="ma-axis-title" text-anchor="start" x="8" y="73">reported estimate (%)</text>
+<line class="ma-axis" x1="76" x2="76" y1="108" y2="678"></line>
+<line class="ma-guide" x1="88" x2="326" y1="336" y2="336"></line>
+<line class="ma-median" x1="88" x2="254" y1="242.52" y2="242.52"></line>
 <text class="ma-reference-label" text-anchor="end" x="326" y="364">no change</text>
-<text class="ma-median-label" text-anchor="start" x="282" y="215.52">median</text>
-<text class="ma-median-label" text-anchor="start" x="282" y="237.52">−41%</text>
-<line class="ma-axis" x1="54" x2="60" y1="108" y2="108"></line>
-<text class="ma-tick" text-anchor="end" x="47" y="113">−100%</text>
-<line class="ma-axis" x1="54" x2="60" y1="222" y2="222"></line>
-<text class="ma-tick" text-anchor="end" x="47" y="227">−50%</text>
-<line class="ma-axis" x1="54" x2="60" y1="336" y2="336"></line>
-<text class="ma-tick" text-anchor="end" x="47" y="341">0%</text>
-<line class="ma-axis" x1="54" x2="60" y1="450" y2="450"></line>
-<text class="ma-tick" text-anchor="end" x="47" y="455">+50%</text>
-<line class="ma-axis" x1="54" x2="60" y1="564" y2="564"></line>
-<text class="ma-tick" text-anchor="end" x="47" y="569">+100%</text>
-<line class="ma-axis" x1="54" x2="60" y1="678" y2="678"></line>
-<text class="ma-tick" text-anchor="end" x="47" y="683">+150%</text>
+<text class="ma-median-label" text-anchor="start" x="266" y="215.52">median</text>
+<text class="ma-median-label" text-anchor="start" x="266" y="237.52">−41%</text>
+<line class="ma-axis" x1="70" x2="76" y1="108" y2="108"></line>
+<text class="ma-tick" text-anchor="start" x="4" y="113">−100%</text>
+<line class="ma-axis" x1="70" x2="76" y1="222" y2="222"></line>
+<text class="ma-tick" text-anchor="start" x="4" y="227">−50%</text>
+<line class="ma-axis" x1="70" x2="76" y1="336" y2="336"></line>
+<text class="ma-tick" text-anchor="start" x="4" y="341">0%</text>
+<line class="ma-axis" x1="70" x2="76" y1="450" y2="450"></line>
+<text class="ma-tick" text-anchor="start" x="4" y="455">+50%</text>
+<line class="ma-axis" x1="70" x2="76" y1="564" y2="564"></line>
+<text class="ma-tick" text-anchor="start" x="4" y="569">+100%</text>
+<line class="ma-axis" x1="70" x2="76" y1="678" y2="678"></line>
+<text class="ma-tick" text-anchor="start" x="4" y="683">+150%</text>
 <g class="ma-shrank ma-annotation" data-for="eis">
 <line class="ma-leader" x1="161.67" x2="203" y1="111.07" y2="92"></line>
 <text class="ma-label" text-anchor="start" x="212" y="92">intertemporal</text>
@@ -723,8 +680,9 @@ footer { flex-wrap:wrap; row-gap:16px; }
 </g>
 <g class="ma-shrank ma-annotation" data-for="beauty">
 <line class="ma-leader" x1="206.84" x2="208" y1="253.77" y2="268"></line>
-<text class="ma-label" text-anchor="start" x="217" y="278">beauty premium</text>
-<text class="ma-value" text-anchor="start" x="217" y="302">−40%</text>
+<text class="ma-label" text-anchor="start" x="225" y="278">beauty</text>
+<text class="ma-label" text-anchor="start" x="225" y="302">premium</text>
+<text class="ma-value" text-anchor="start" x="225" y="326">−40%</text>
 </g>
 <g class="ma-grew ma-annotation" data-for="finance_growth">
 <line class="ma-leader" x1="189" x2="221" y1="411.41" y2="412"></line>
@@ -738,9 +696,8 @@ footer { flex-wrap:wrap; row-gap:16px; }
 <text class="ma-label" text-anchor="start" x="216" y="617">substitution</text>
 <text class="ma-value" text-anchor="start" x="216" y="641">+122%</text>
 </g>
-<a aria-describedby="ma-en-phone-eis-note" aria-label="intertemporal substitution: reported 0.5, corrected 0.0145 (−97%)" class="ma-point ma-shrank" data-pct="-97" data-slug="eis" href="https://meta-analysis.cz/eis/" role="link" tabindex="0">
-<title>intertemporal substitution: reported 0.5, corrected 0.0145 (−97%)</title>
-<desc id="ma-en-phone-eis-note">Approximate comparison; see the linked paper for details.</desc>
+<a aria-label="intertemporal substitution: reported 0.5, corrected 0.0145 (−97%). Whole-literature corrected mean; the 0.3–0.4 on its paper page is for asset holders." class="ma-point ma-shrank" data-pct="-97" data-slug="eis" href="https://meta-analysis.cz/eis/" role="link" tabindex="0">
+<title>intertemporal substitution: reported 0.5, corrected 0.0145 (−97%). Whole-literature corrected mean; the 0.3–0.4 on its paper page is for asset holders.</title>
 <circle class="ma-hit" cx="153.5" cy="114.84" r="13"></circle>
 <circle class="ma-dot" cx="153.5" cy="114.84" r="7.5"></circle>
 <circle class="ma-focus" cx="153.5" cy="114.84" r="11.5"></circle>
@@ -791,9 +748,8 @@ footer { flex-wrap:wrap; row-gap:16px; }
 <circle class="ma-dot" cx="127.27" cy="183.24" r="7.5"></circle>
 <circle class="ma-focus" cx="127.27" cy="183.24" r="11.5"></circle>
 </a>
-<a aria-describedby="ma-en-phone-resource_curse-note" aria-label="resource curse: reported −0.078, corrected 0.026 (−67%). The correction also reversed the sign." class="ma-point ma-shrank" data-pct="-67" data-slug="resource_curse" href="https://meta-analysis.cz/resource_curse/" role="link" tabindex="0">
-<title>resource curse: reported −0.078, corrected 0.026 (−67%). The correction also reversed the sign.</title>
-<desc id="ma-en-phone-resource_curse-note">Approximate comparison; see the linked paper for details.</desc>
+<a aria-label="resource curse: reported −0.078, corrected 0.026 (−67%). The correction reversed the sign." class="ma-point ma-shrank" data-pct="-67" data-slug="resource_curse" href="https://meta-analysis.cz/resource_curse/" role="link" tabindex="0">
+<title>resource curse: reported −0.078, corrected 0.026 (−67%). The correction reversed the sign.</title>
 <circle class="ma-hit" cx="153.77" cy="183.24" r="13"></circle>
 <circle class="ma-dot" cx="153.77" cy="183.24" r="7.5"></circle>
 <circle class="ma-focus" cx="153.77" cy="183.24" r="11.5"></circle>
@@ -892,9 +848,8 @@ footer { flex-wrap:wrap; row-gap:16px; }
 <circle class="ma-dot" cx="113.5" cy="244.8" r="7.5"></circle>
 <circle class="ma-focus" cx="113.5" cy="244.8" r="11.5"></circle>
 </a>
-<a aria-describedby="ma-en-phone-beauty-note" aria-label="beauty premium: reported 5, corrected 3 (−40%)" class="ma-point ma-shrank" data-pct="-40" data-slug="beauty" href="https://meta-analysis.cz/beauty/" role="link" tabindex="0">
-<title>beauty premium: reported 5, corrected 3 (−40%)</title>
-<desc id="ma-en-phone-beauty-note">Approximate comparison; see the linked paper for details.</desc>
+<a aria-label="beauty premium: reported 5, corrected 3 (−40%). Conservative end of the paper's range; the 1.1% on its paper page is a different quantity." class="ma-point ma-shrank" data-pct="-40" data-slug="beauty" href="https://meta-analysis.cz/beauty/" role="link" tabindex="0">
+<title>beauty premium: reported 5, corrected 3 (−40%). Conservative end of the paper's range; the 1.1% on its paper page is a different quantity.</title>
 <circle class="ma-hit" cx="206.11" cy="244.8" r="13"></circle>
 <circle class="ma-dot" cx="206.11" cy="244.8" r="7.5"></circle>
 <circle class="ma-focus" cx="206.11" cy="244.8" r="11.5"></circle>
@@ -946,23 +901,20 @@ footer { flex-wrap:wrap; row-gap:16px; }
 <circle class="ma-dot" cx="220.69" cy="326.88" r="7.5"></circle>
 <circle class="ma-focus" cx="220.69" cy="326.88" r="11.5"></circle>
 </a>
-<a aria-describedby="ma-en-phone-bma-note" aria-label="FDI spillover determinants: reported −0.002, corrected 0.021 (0%); unchanged by the source's rule" class="ma-point ma-unchanged" data-pct="0" data-slug="bma" href="https://meta-analysis.cz/bma/" role="link" tabindex="0">
-<title>FDI spillover determinants: reported −0.002, corrected 0.021 (0%); unchanged by the source's rule</title>
-<desc id="ma-en-phone-bma-note">Approximate comparison; see the linked paper for details. The source finds no publication bias worth correcting, so this point is placed at zero by rule.</desc>
+<a aria-label="FDI spillover determinants: reported −0.002, corrected 0.021 (0%). No publication bias worth correcting; plotted at zero." class="ma-point ma-unchanged" data-pct="0" data-slug="bma" href="https://meta-analysis.cz/bma/" role="link" tabindex="0">
+<title>FDI spillover determinants: reported −0.002, corrected 0.021 (0%). No publication bias worth correcting; plotted at zero.</title>
 <circle class="ma-hit" cx="192.6" cy="336" r="13"></circle>
 <circle class="ma-dot" cx="192.6" cy="336" r="7.5"></circle>
 <circle class="ma-focus" cx="192.6" cy="336" r="11.5"></circle>
 </a>
-<a aria-describedby="ma-en-phone-habits-note" aria-label="habit formation: reported 0.4, corrected 0.4 (0%)" class="ma-point ma-unchanged" data-pct="0" data-slug="habits" href="https://meta-analysis.cz/habits/" role="link" tabindex="0">
-<title>habit formation: reported 0.4, corrected 0.4 (0%)</title>
-<desc id="ma-en-phone-habits-note">Approximate comparison; see the linked paper for details.</desc>
+<a aria-label="habit formation: reported 0.4, corrected 0.4 (0%). No publication bias worth correcting; plotted at zero." class="ma-point ma-unchanged" data-pct="0" data-slug="habits" href="https://meta-analysis.cz/habits/" role="link" tabindex="0">
+<title>habit formation: reported 0.4, corrected 0.4 (0%). No publication bias worth correcting; plotted at zero.</title>
 <circle class="ma-hit" cx="121.41" cy="336" r="13"></circle>
 <circle class="ma-dot" cx="121.41" cy="336" r="7.5"></circle>
 <circle class="ma-focus" cx="121.41" cy="336" r="11.5"></circle>
 </a>
-<a aria-describedby="ma-en-phone-forward-note" aria-label="forward premium puzzle: reported −0.602, corrected 0.611 (+1%). The correction also reversed the sign." class="ma-point ma-grew" data-pct="1" data-slug="forward" href="https://meta-analysis.cz/forward/" role="link" tabindex="0">
-<title>forward premium puzzle: reported −0.602, corrected 0.611 (+1%). The correction also reversed the sign.</title>
-<desc id="ma-en-phone-forward-note">Approximate comparison; see the linked paper for details.</desc>
+<a aria-label="forward premium puzzle: reported −0.602, corrected 0.611 (+1%). The correction reversed the sign." class="ma-point ma-grew" data-pct="1" data-slug="forward" href="https://meta-analysis.cz/forward/" role="link" tabindex="0">
+<title>forward premium puzzle: reported −0.602, corrected 0.611 (+1%). The correction reversed the sign.</title>
 <circle class="ma-hit" cx="244.62" cy="338.28" r="13"></circle>
 <circle class="ma-dot" cx="244.62" cy="338.28" r="7.5"></circle>
 <circle class="ma-focus" cx="244.62" cy="338.28" r="11.5"></circle>
@@ -987,9 +939,8 @@ footer { flex-wrap:wrap; row-gap:16px; }
 <circle class="ma-dot" cx="180" cy="493.32" r="7.5"></circle>
 <circle class="ma-focus" cx="180" cy="493.32" r="11.5"></circle>
 </a>
-<a aria-describedby="ma-en-phone-competition-note" aria-label="bank competition: reported −0.012, corrected 0.022 (+83%). The correction also reversed the sign." class="ma-point ma-grew" data-pct="83" data-slug="competition" href="https://meta-analysis.cz/competition/" role="link" tabindex="0">
-<title>bank competition: reported −0.012, corrected 0.022 (+83%). The correction also reversed the sign.</title>
-<desc id="ma-en-phone-competition-note">Approximate comparison; see the linked paper for details.</desc>
+<a aria-label="bank competition: reported −0.012, corrected 0.022 (+83%). The correction reversed the sign." class="ma-point ma-grew" data-pct="83" data-slug="competition" href="https://meta-analysis.cz/competition/" role="link" tabindex="0">
+<title>bank competition: reported −0.012, corrected 0.022 (+83%). The correction reversed the sign.</title>
 <circle class="ma-hit" cx="180" cy="525.24" r="13"></circle>
 <circle class="ma-dot" cx="180" cy="525.24" r="7.5"></circle>
 <circle class="ma-focus" cx="180" cy="525.24" r="11.5"></circle>
@@ -1013,45 +964,42 @@ footer { flex-wrap:wrap; row-gap:16px; }
 <circle class="ma-dot" cx="180" cy="664.32" r="7.5"></circle>
 <circle class="ma-focus" cx="180" cy="664.32" r="11.5"></circle>
 </a>
-<a aria-describedby="ma-en-phone-price_puzzle-note" aria-label="price puzzle: reported −0.067, corrected −0.331 (+394%)" class="ma-point ma-grew" data-pct="394" data-slug="price_puzzle" href="https://meta-analysis.cz/price_puzzle/" role="link" tabindex="0">
-<title>price puzzle: reported −0.067, corrected −0.331 (+394%)</title>
-<desc id="ma-en-phone-price_puzzle-note">Approximate comparison; see the linked paper for details.</desc>
+<a aria-label="price puzzle: reported −0.067, corrected −0.331 (+394%). Horizon-dependent comparison." class="ma-point ma-grew" data-pct="394" data-slug="price_puzzle" href="https://meta-analysis.cz/price_puzzle/" role="link" tabindex="0">
+<title>price puzzle: reported −0.067, corrected −0.331 (+394%). Horizon-dependent comparison.</title>
 <circle class="ma-hit" cx="117" cy="723" r="13"></circle>
 <path class="ma-chevron" d="M 113 740 l 4 4 4 -4"></path>
 <text class="ma-off-value" text-anchor="middle" x="117" y="770">+394%</text>
 <circle class="ma-dot" cx="117" cy="723" r="7.5"></circle>
 <circle class="ma-focus" cx="117" cy="723" r="11.5"></circle>
 </a>
-<a aria-describedby="ma-en-phone-reforms-note" aria-label="structural reforms: reported −0.052, corrected −0.38 (+631%)" class="ma-point ma-grew" data-pct="631" data-slug="reforms" href="https://meta-analysis.cz/reforms/" role="link" tabindex="0">
-<title>structural reforms: reported −0.052, corrected −0.38 (+631%)</title>
-<desc id="ma-en-phone-reforms-note">Approximate comparison; see the linked paper for details.</desc>
+<a aria-label="structural reforms: reported −0.052, corrected −0.38 (+631%). Small comparator base." class="ma-point ma-grew" data-pct="631" data-slug="reforms" href="https://meta-analysis.cz/reforms/" role="link" tabindex="0">
+<title>structural reforms: reported −0.052, corrected −0.38 (+631%). Small comparator base.</title>
 <circle class="ma-hit" cx="180" cy="723" r="13"></circle>
 <path class="ma-chevron" d="M 176 740 l 4 4 4 -4"></path>
 <text class="ma-off-value" text-anchor="middle" x="180" y="770">+631%</text>
 <circle class="ma-dot" cx="180" cy="723" r="7.5"></circle>
 <circle class="ma-focus" cx="180" cy="723" r="11.5"></circle>
 </a>
-<a aria-describedby="ma-en-phone-fdi-note" aria-label="Czech FDI productivity: reported −0.119, corrected 1.1 (+826%). The correction also reversed the sign." class="ma-point ma-grew" data-pct="826" data-slug="fdi" href="https://meta-analysis.cz/fdi/" role="link" tabindex="0">
-<title>Czech FDI productivity: reported −0.119, corrected 1.1 (+826%). The correction also reversed the sign.</title>
-<desc id="ma-en-phone-fdi-note">Approximate comparison; see the linked paper for details.</desc>
+<a aria-label="Czech FDI productivity: reported −0.119, corrected 1.1 (+826%). Partly a projection to 2018. The correction reversed the sign." class="ma-point ma-grew" data-pct="826" data-slug="fdi" href="https://meta-analysis.cz/fdi/" role="link" tabindex="0">
+<title>Czech FDI productivity: reported −0.119, corrected 1.1 (+826%). Partly a projection to 2018. The correction reversed the sign.</title>
 <circle class="ma-hit" cx="243" cy="723" r="13"></circle>
 <path class="ma-chevron" d="M 239 740 l 4 4 4 -4"></path>
 <text class="ma-off-value" text-anchor="middle" x="243" y="770">+826%</text>
 <circle class="ma-dot" cx="243" cy="723" r="7.5"></circle>
 <circle class="ma-focus" cx="243" cy="723" r="11.5"></circle>
 </a>
-</svg><figcaption>Each dot is one meta-analysis. Most effects shrink (median −41%); some grow. <a href="https://meta-analysis.cz/results/">All headline results</a>.</figcaption>
+</svg><figcaption>Each dot is one meta-analysis. Most effects shrink (median −41%); some grow. <a href="https://meta-analysis.cz/results/">All results and caveats: meta-analysis.cz/results.</a></figcaption>
 </figure>
 </section>
 <section aria-labelledby="selected-research" class="research">
-<div class="section-head"><h2 id="selected-research">Selected research</h2><a href="research/">All papers</a></div>
+<div class="section-head"><h2 id="selected-research">Selected research</h2><a href="research/">More research</a></div>
 <p class="reading">If you only have time for two of my papers, try the ones on <a href="https://meta-analysis.cz/maive/">spurious precision</a> and on <a href="https://meta-analysis.cz/beauty/">beauty and professional success</a>.</p>
 <ol class="papers">
 <li><a class="paper-title" href="https://meta-analysis.cz/incentives/">Financial Incentives and Performance: A Meta-Analysis of Experiments in Economics</a><span class="authors">2026 · with Petr Cala, Zuzana Irsova, Martina Luskova, Jindrich Matousek, and Jiri Novak</span><span class="journal"><i>Journal of Political Economy Microeconomics</i>, forthcoming.</span></li>
 <li><a class="paper-title" href="https://meta-analysis.cz/class/">Publication Bias and Model Uncertainty in Measuring the Effect of Class Size on Achievement</a><span class="authors">2026 · with Matej Opatrny, Zuzana Irsova, and Milan Scasny</span><span class="journal"><i>Journal of Labor Economics</i>, forthcoming.</span></li>
 <li><a class="paper-title" href="https://meta-analysis.cz/reproducibility/">Reproducibility and Robustness of Economics and Political Science Research</a><span class="authors">2026 · with Abel Brodeur and others (one of 347 authors)</span><span class="journal"><i>Nature</i> 652, 151–156.</span></li>
-<li><a class="paper-title" href="https://meta-analysis.cz/maive/">Spurious Precision in Meta-Analysis of Observational Research</a><span class="authors">2025 · with Pedro Bom, Zuzana Irsova, and Heiko Rachinger</span><span class="journal"><i>Nature Communications</i> 16, 8454.</span></li>
-<li><a class="paper-title" href="https://meta-analysis.cz/skill/">Publication and Attenuation Biases in Measuring Skill Substitution</a><span class="authors">2024 · with Lubica Laslopova, Olesia Zeynalova, and Zuzana Irsova</span><span class="journal"><i>Review of Economics and Statistics</i> 106(5), 1187–1200.</span></li>
+<li><a class="paper-title" href="https://meta-analysis.cz/maive/">Spurious Precision in Meta-Analysis of Observational Research</a><span class="authors">2025 · with Zuzana Irsova, Pedro Bom, and Heiko Rachinger</span><span class="journal"><i>Nature Communications</i> 16, 8454.</span></li>
+<li><a class="paper-title" href="https://meta-analysis.cz/skill/">Publication and Attenuation Biases in Measuring Skill Substitution</a><span class="authors">2024 · with Zuzana Irsova, Lubica Laslopova, and Olesia Zeynalova</span><span class="journal"><i>Review of Economics and Statistics</i> 106(5), 1187–1200.</span></li>
 <li><a class="paper-title" href="https://meta-analysis.cz/eis/">Measuring Intertemporal Substitution: The Importance of Method Choices and Selective Reporting</a><span class="authors">2015</span><span class="journal"><i>Journal of the European Economic Association</i> 13(6), 1180–1204.</span></li>
 </ol>
 <p class="hub">Papers, data and code are at <a href="https://meta-analysis.cz/">meta-analysis.cz</a>.<br/>Our meta-analysis app is at <a class="nowrap" href="https://www.easymeta.org/">easymeta.org</a>.</p>
@@ -1063,7 +1011,7 @@ footer { flex-wrap:wrap; row-gap:16px; }
 </main>
 <footer id="contact">
 <p>Institute of Economic Studies<br/>Opletalova 26, 110 00 Prague, Czech Republic</p>
-<div aria-label="Academic profiles" class="profiles"><a href="https://scholar.google.cz/citations?user=BF0BvBkAAAAJ&amp;hl=en">Google Scholar</a><a href="https://orcid.org/0000-0002-3158-2539">ORCID</a><a href="https://ideas.repec.org/f/pha418.html">RePEc</a><a href="https://github.com/tjhavranek">GitHub</a><a href="https://meta-analysis.cz/komentare/">Commentary in Czech</a></div>
+<div aria-label="Academic profiles" class="profiles" role="group"><a href="https://scholar.google.cz/citations?user=BF0BvBkAAAAJ&amp;hl=en">Google Scholar</a><a href="https://orcid.org/0000-0002-3158-2539">ORCID</a><a href="https://ideas.repec.org/f/pha418.html">RePEc</a><a href="https://github.com/tjhavranek">GitHub</a><a href="https://meta-analysis.cz/komentare/">Commentary in Czech</a></div>
 </footer>
 </div>
 </body>
