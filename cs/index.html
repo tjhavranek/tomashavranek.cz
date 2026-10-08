@@ -111,6 +111,8 @@ footer a::after { content:""; position:absolute; inset:-11px -6px; }
 
 .home-link { color:inherit; text-decoration:none; }
 .home-link:hover, .home-link:focus-visible { text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px; }
+
+@media (max-width:389px){ nav{ column-gap:9px; } }
 </style>
 <style>
 .ma-chart {
@@ -292,9 +294,9 @@ footer { flex-wrap:wrap; row-gap:16px; }
 <header>
 <div class="identity">
 <img alt="Tomáš Havránek" class="portrait" decoding="async" height="99" sizes="(max-width:760px) 83px, 99px" src="../photo-480.jpg" srcset="../photo-480.jpg 480w, ../photo.jpg 960w" width="99"/>
-<div><h1><a class="home-link" href="./">Tomáš Havránek</a></h1><p class="role">Profesor ekonomie<br/><a href="https://ies.fsv.cuni.cz/en/contacts/people/78067720">Univerzita Karlova</a>, Praha</p><a class="email" href="mailto:tomas.havranek@fsv.cuni.cz">tomas.havranek@fsv.cuni.cz</a></div>
+<div><h1><a aria-current="page" class="home-link" href="./">Tomáš Havránek</a></h1><p class="role">Profesor ekonomie<br/><a href="https://ies.fsv.cuni.cz/en/contacts/people/78067720">Univerzita Karlova</a>, Praha</p><a class="email" href="mailto:tomas.havranek@fsv.cuni.cz">tomas.havranek@fsv.cuni.cz</a></div>
 </div>
-<nav aria-label="Hlavní navigace"><a aria-current="page" href="./">Úvod</a><a href="research/">Výzkum</a><a href="impact/">Ohlas</a><a href="https://meta-analysis.cz/">meta-analysis.cz</a><a href="../" lang="en">English</a></nav>
+<nav aria-label="Hlavní navigace"><a href="research/">Výzkum</a><a href="impact/">Ohlas</a><a href="https://meta-analysis.cz/komentare/">Komentáře</a><a href="https://meta-analysis.cz/">meta-analysis.cz</a><a href="../" lang="en">English</a></nav>
 </header>
 <main id="main">
 <section aria-label="Výzkumné zaměření a ukázka výsledků" class="premise">
@@ -990,6 +992,10 @@ footer { flex-wrap:wrap; row-gap:16px; }
 </a>
 </svg><figcaption>Každý bod je jedna meta-analýza. Většina odhadů se zmenší (medián −41 %), některé se zvětší. <a href="https://meta-analysis.cz/results/">Všechny výsledky a poznámky: meta-analysis.cz/results.</a></figcaption>
 </figure>
+</section>
+<section aria-labelledby="commentary-title" class="research commentary">
+<div class="section-head"><h2 id="commentary-title">Komentáře a rozhovory</h2></div>
+<p class="hub">O ekonomice píšu pro Seznam Zprávy, Hospodářské noviny a další média, nejčastěji o inflaci, ČNB, bydlení a vzdělávání. Všechny texty, sloupky pro litomyšlskou Lilii, rozhovory i videa jsou na <a class="nowrap" href="https://meta-analysis.cz/komentare/">meta-analysis.cz/komentare</a>.</p>
 </section>
 <section aria-labelledby="selected-research" class="research">
 <div class="section-head"><h2 id="selected-research">Vybrané práce</h2><a href="research/">Další výzkum</a></div>
