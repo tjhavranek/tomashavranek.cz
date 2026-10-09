@@ -37,4 +37,4 @@ Allow: /
 User-agent: Bytespider
 Allow: /
 
-Sitemap: https://tjhavranek.github.io/tomashavranek.cz/sitemap.xml
+Sitemap: https://www.tomashavranek.cz/sitemap.xml
