@@ -71,7 +71,7 @@ Identifiers: [ORCID](https://orcid.org/0000-0002-3158-2539); [RePEc pha418](http
 - [Effect of Exercise on Cognition, Memory, and Executive Function: A Study-Level Meta-Meta-Analysis Across Populations and Exercise Categories](https://meta-analysis.cz/exercise/): Revise and resubmit as of 2026-10-08; R&R Sports Medicine.
 - [Publication Bias and P-Hacking in the Effect of COVID-19 on Learning: A Meta-Analysis](https://meta-analysis.cz/learning/): Working paper as of 2026-10-08.
 - [Optimal Inflation Rate: A Meta-Analysis](https://meta-analysis.cz/inflation/): Working paper as of 2026-10-08.
-- [Electricity Demand Has Not Become More Price-Responsive Despite Ninety Years of Technological Change](https://meta-analysis.cz/electricity/): Working paper as of 2026-10-08.
+- [Price Elasticity of Electricity Demand: A Meta-Analysis](https://meta-analysis.cz/electricity/): Working paper as of 2026-10-08.
 - [The Elasticity of Substitution between Native and Immigrant Labor: A Meta-Analysis](https://meta-analysis.cz/migrant/): Revise and resubmit as of 2026-10-08; R&R Journal of Economic Surveys.
 - [Trust, Rule of Law, and the Size Premium: Evidence from a Meta-Analysis](https://meta-analysis.cz/trust/): Working paper as of 2026-10-08.
 - [Do Female Directors Raise ESG Ratings? A Meta-Analysis](https://meta-analysis.cz/esg/): Working paper as of 2026-10-08.
