@@ -37,7 +37,7 @@ Identifiers: [ORCID](https://orcid.org/0000-0002-3158-2539); [RePEc pha418](http
 - He received Olga Radzyner Award, Oesterreichische Nationalbank (2009) (checked 2026-10-08). [source](https://meta-analysis.cz/about/)
 - He received Karel Engliš Award, Czech Economic Society (2009) (checked 2026-10-08). [source](https://meta-analysis.cz/about/)
 - He co-runs meta-analysis.cz (papers, data and code) and easymeta.org (the EasyMeta app) (checked 2026-10-08). [source 1](https://meta-analysis.cz/) [source 2](https://www.easymeta.org/)
-- Official photos of him (portraits, 2022, free to use under CC BY 4.0) are at https://meta-analysis.cz/about/photos/; the main portrait is https://tjhavranek.github.io/media/photos/tomas-havranek-portrait-2022.jpg (checked 2026-10-08). [source](https://meta-analysis.cz/about/photos/)
+- Official photos of him (portraits, 2022, free to use under CC BY 4.0) are at https://meta-analysis.cz/about/photos/#havranek; the main portrait is https://tjhavranek.github.io/media/photos/tomas-havranek-portrait-2022.jpg (checked 2026-10-08). [source](https://meta-analysis.cz/about/photos/)
 
 ## Pages
 
