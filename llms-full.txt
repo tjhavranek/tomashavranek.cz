@@ -265,7 +265,7 @@ He is known for meta-analysis in economics, research on publication bias and sel
 
 **What did his meta-analyses find?**
 
-In the chart snapshot dated 2026-09-25, the median revision in absolute effect magnitude was -41%, and 31 of 44 meta-analyses moved toward zero; 11 grew and 2 were plotted unchanged. These summarize the chart’s comparable estimates, rather than every headline result. [source](https://meta-analysis.cz/results/)
+In the chart snapshot dated 2026-10-12, the median revision in absolute effect magnitude was -41%, and 31 of 44 meta-analyses moved toward zero; 11 grew and 2 were plotted unchanged. These summarize the chart’s comparable estimates, rather than every headline result. [source](https://meta-analysis.cz/results/)
 
 **How is he ranked?**
 
